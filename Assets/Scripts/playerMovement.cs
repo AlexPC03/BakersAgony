@@ -5,6 +5,8 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     private Rigidbody2D body;
+    public GameObject healthbar;
+    public GameObject playerBody;
 
     private float horizontal;
     private float vertical;
@@ -12,7 +14,8 @@ public class playerMovement : MonoBehaviour
     public float runSpeed = 20.0f;
 
     [Header("LifeParameters")]
-    public int MaxLife;
+    private int maxMaxLife;
+    public int maxLife;
     public int health;
     public float invulneravilityTime;
     private float PassedTime;
@@ -21,8 +24,9 @@ public class playerMovement : MonoBehaviour
 
     void Start()
     {
+        maxMaxLife = 12;
         PassedTime = 0;
-        health = MaxLife;
+        health = maxLife;
         body = GetComponent<Rigidbody2D>();
     }
 
@@ -32,17 +36,48 @@ public class playerMovement : MonoBehaviour
         {
             PassedTime += Time.deltaTime;
         }
+        if(maxLife<0)
+        {
+            maxLife = 0;
+        }
+        if(maxLife>maxMaxLife)
+        {
+            maxLife = maxMaxLife;
+        }
         if(health<0)
         {
             health = 0;
         }
-        if(health>MaxLife)
+        if(health>maxLife)
         {
-            health = MaxLife;
+            health = maxLife;
         }
+
+        healthbar.GetComponent<Animator>().SetInteger("Health", health);
+
         // Gives a value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+        if(horizontal>0)
+        {
+            playerBody.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if(horizontal<0)
+        {
+            playerBody.GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        GetComponent<Animator>().SetFloat("vertical", vertical);
+
+        if(horizontal==0 && vertical==0)
+        {
+            GetComponent<Animator>().SetBool("moving", false);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("moving", true);
+        }
     }
 
     void FixedUpdate()
@@ -68,8 +103,12 @@ public class playerMovement : MonoBehaviour
 
     public void TakeDamage()
     {
-
         health -= 1;
         PassedTime = 0;
+    }
+
+    public void RecoverLife()
+    {
+        health += 1;
     }
 }
