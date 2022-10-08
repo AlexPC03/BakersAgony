@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class zPosition : MonoBehaviour
 {
+    public float difference;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +14,6 @@ public class zPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position =new Vector3(transform.position.x, transform.position.y, transform.position.y/10) ;
-        //transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.y / 10);
-
+        transform.position =new Vector3(transform.position.x, transform.position.y, (transform.position.y+difference)/ 10) ;
     }
 }

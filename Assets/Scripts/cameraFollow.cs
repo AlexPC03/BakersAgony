@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    private GameObject follow;
+    public GameObject follow;
     public float smoothTime;
 
     private Vector2 velocity;
@@ -12,7 +12,6 @@ public class cameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        follow = GameObject.Find("Player");
 
     }
 

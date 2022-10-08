@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyMovementSimple : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
+    private SpriteRenderer sp;
+    private Animator anim;
     private GameObject player;
 
     [Header("Atributes")]
@@ -22,11 +24,15 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
         StartVida();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckOrientation();
+
         actualDistance = (player.transform.position - transform.position).magnitude;
 
         if(actualDistance<range)
@@ -58,6 +64,21 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
         else if(actualDistance > range * 1.25)
         {
             rb.velocity = Vector2.zero;
+        }
+
+        anim.SetFloat("Yvelocity", rb.velocity.y);
+        anim.SetBool("stopped", rb.velocity == Vector2.zero);
+    }
+
+    private void CheckOrientation()
+    {
+        if(rb.velocity.x<-0.01)
+        {
+            sp.flipX = false;
+        }
+        else if (rb.velocity.x > 0.01)
+        {
+            sp.flipX = true;
         }
     }
 }
