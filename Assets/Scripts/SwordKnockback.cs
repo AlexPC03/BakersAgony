@@ -6,6 +6,7 @@ public class SwordKnockback : MonoBehaviour
 {
     protected GameObject Player;
     protected GameObject SwordBase;
+    public Sprite InventorySword;
 
     public float Swordspeed;
     public float neededSpeed;

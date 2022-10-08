@@ -17,7 +17,6 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
     public float  actualDistance;
     public float xDistance, yDistance;
     public bool charging;
-    public bool playerInSight;
     // Start is called before the first frame update
     void Start()
     {
