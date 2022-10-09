@@ -6,12 +6,21 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
     private GameObject player;
+    private SpriteRenderer sp;
+    private Animator anim;
 
     [Header("Atributes")]
     public float range;
     public float speed;
     public float chargeSpeed;
     public float chargeRecover;
+    public chargeDirection directionFromCharge;
+    public enum chargeDirection
+    {
+        Vertical,
+        Horizontal,
+        Both
+    }
 
     [Header("Information")]
     public float  actualDistance;
@@ -23,12 +32,15 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
         StartVida();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         charging = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         actualDistance = (player.transform.position - transform.position).magnitude;
         xDistance = player.transform.position.x - transform.position.x;
         yDistance = player.transform.position.y - transform.position.y;
@@ -41,6 +53,8 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
         {
             rb.velocity = Vector2.zero;
         }
+        anim.SetFloat("Yvelocity", rb.velocity.y);
+        anim.SetBool("Stopped", rb.velocity == Vector2.zero);
     }
 
     private void Align()
@@ -70,38 +84,75 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
                 }
             }
 
-            if (xDistance < 0.05 && xDistance > -0.05)
+            if (xDistance < 0.01 && xDistance > -0.01 )
             {
-                charging = true;
-                if (yDistance < 0)
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                if(directionFromCharge == chargeDirection.Vertical || directionFromCharge == chargeDirection.Both)
                 {
-                    Charge(Vector2.down);
+                    charging = true;
+                    if (yDistance < 0)
+                    {
+
+                        Charge(Vector2.down);
+                    }
+                    else
+                    {
+                        Charge(Vector2.up);
+                    }
                 }
                 else
                 {
-                    Charge(Vector2.up);
+                    if (yDistance < 0)
+                    {
+                        rb.AddForce(Vector2.down * speed, ForceMode2D.Force);
+                    }
+                    else
+                    {
+                        rb.AddForce(Vector2.up * speed, ForceMode2D.Force);
+                    }
                 }
+
             }
-            if (yDistance < 0.05 && yDistance > -0.05)
+            if (yDistance < 0.01 && yDistance > -0.01)
             {
-                charging = true;
-                if (xDistance < 0)
+                rb.velocity = new Vector2(rb.velocity.x,0);
+                if (directionFromCharge == chargeDirection.Horizontal || directionFromCharge == chargeDirection.Both)
                 {
-                    Charge(Vector2.left);
+                    charging = true;
+                    if (xDistance < 0)
+                    {
+
+                        Charge(Vector2.left);
+                    }
+                    else
+                    {
+
+                        Charge(Vector2.right);
+                    }
                 }
                 else
                 {
-                    Charge(Vector2.right);
+                    if (xDistance < 0)
+                    {
+                        rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                    }
+                    else
+                    {
+                        rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                    }
                 }
+
             }
         }
     }
 
     private void Charge(Vector2 direction)
     {
+        anim.SetTrigger("Charge");
         rb.velocity = Vector2.zero;
         rb.AddForce(direction * chargeSpeed, ForceMode2D.Impulse);
         Invoke("StopCharging", chargeRecover);
+        Invoke("CheckOrientation", 0.1f);
     }
 
     private void StopCharging()
@@ -110,18 +161,15 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
         charging = false;
     }
 
-    //Intento de deteción
-
-    //private bool InSight(Transform target)
-    //{
-    //    RaycastHit hit;
-    //    if (Physics.Linecast(transform.position, target.transform.position, out hit))
-    //    {
-    //        if (hit.transform.tag == "Player")
-    //        {
-    //            return true;
-    //        }
-    //    }
-    //    return false;
-    //}
+    private void CheckOrientation()
+    {
+        if (rb.velocity.x < -0.01)
+        {
+            sp.flipX = false;
+        }
+        else if (rb.velocity.x > 0.01)
+        {
+            sp.flipX = true;
+        }
+    }
 }

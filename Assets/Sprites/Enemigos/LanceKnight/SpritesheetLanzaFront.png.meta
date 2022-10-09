@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6dd4831c2e6986b4f8584c1b83a58186
+guid: 060c35326d250f644ae38d188e748d3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5555261719169128976
-    second: SpritesheetMagoPanBack_0
+      213: -8975959302114446960
+    second: SpritesheetLanzaFront_0
   - first:
-      213: 1430783057571281265
-    second: SpritesheetMagoPanBack_1
+      213: 7335809216279047940
+    second: SpritesheetLanzaFront_1
   - first:
-      213: -662823126916422709
-    second: SpritesheetMagoPanBack_2
+      213: 4656475906541990719
+    second: SpritesheetLanzaFront_2
   - first:
-      213: 1387219258447908068
-    second: SpritesheetMagoPanBack_3
+      213: -8011876103362818988
+    second: SpritesheetLanzaFront_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_0
+      name: SpritesheetLanzaFront_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1978
-        width: 904
-        height: 1474
+        x: 278
+        y: 2100
+        width: 1629
+        height: 1414
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5299246eeb7e2b0800000000000000
-      internalID: -5555261719169128976
+      spriteID: 091fa17429cfe6380800000000000000
+      internalID: -8975959302114446960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_1
+      name: SpritesheetLanzaFront_1
       rect:
         serializedVersion: 2
-        x: 2428
-        y: 1978
-        width: 904
-        height: 1474
+        x: 2211
+        y: 2068
+        width: 1629
+        height: 1414
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179fe293c992bd310800000000000000
-      internalID: 1430783057571281265
+      spriteID: 40f695c8d970ec560800000000000000
+      internalID: 7335809216279047940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_2
+      name: SpritesheetLanzaFront_2
       rect:
         serializedVersion: 2
-        x: 478
-        y: 58
-        width: 904
-        height: 1474
+        x: 278
+        y: 178
+        width: 1629
+        height: 1414
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3ab3bb0ed2dc6f0800000000000000
-      internalID: -662823126916422709
+      spriteID: f33b99a7a202f9040800000000000000
+      internalID: 4656475906541990719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_3
+      name: SpritesheetLanzaFront_3
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 58
-        width: 904
-        height: 1474
+        x: 2211
+        y: 148
+        width: 1629
+        height: 1414
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4e55d094604310800000000000000
-      internalID: 1387219258447908068
+      spriteID: 45c4e9af12910d090800000000000000
+      internalID: -8011876103362818988
       vertices: []
       indices: 
       edges: []

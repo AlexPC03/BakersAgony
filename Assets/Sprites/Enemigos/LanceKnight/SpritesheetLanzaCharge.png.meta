@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: 6dd4831c2e6986b4f8584c1b83a58186
+guid: e820fb434b053a445ba7f9019dc5ab7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5555261719169128976
-    second: SpritesheetMagoPanBack_0
+      213: 6980254270778239701
+    second: SpritesheetLanzaCharge_0
   - first:
-      213: 1430783057571281265
-    second: SpritesheetMagoPanBack_1
+      213: -3390632534906634379
+    second: SpritesheetLanzaCharge_1
   - first:
-      213: -662823126916422709
-    second: SpritesheetMagoPanBack_2
+      213: 8340272883909027857
+    second: SpritesheetLanzaCharge_2
   - first:
-      213: 1387219258447908068
-    second: SpritesheetMagoPanBack_3
+      213: -6172928470873686837
+    second: SpritesheetLanzaCharge_3
+  - first:
+      213: 307850317221692563
+    second: SpritesheetLanzaCharge_4
+  - first:
+      213: -7635602834167702137
+    second: SpritesheetLanzaCharge_5
+  - first:
+      213: -8109034335355317680
+    second: SpritesheetLanzaCharge_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_0
+      name: SpritesheetLanzaCharge_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1978
-        width: 904
-        height: 1474
+        x: 102
+        y: 4019
+        width: 1564
+        height: 1502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5299246eeb7e2b0800000000000000
-      internalID: -5555261719169128976
+      spriteID: 5dae3abb648ded060800000000000000
+      internalID: 6980254270778239701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_1
+      name: SpritesheetLanzaCharge_1
       rect:
         serializedVersion: 2
-        x: 2428
-        y: 1978
-        width: 904
-        height: 1474
+        x: 1983
+        y: 3929
+        width: 1564
+        height: 1502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179fe293c992bd310800000000000000
-      internalID: 1430783057571281265
+      spriteID: 57ff1018cad02f0d0800000000000000
+      internalID: -3390632534906634379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_2
+      name: SpritesheetLanzaCharge_2
       rect:
         serializedVersion: 2
-        x: 478
-        y: 58
-        width: 904
-        height: 1474
+        x: 3900
+        y: 4019
+        width: 1564
+        height: 1502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3ab3bb0ed2dc6f0800000000000000
-      internalID: -662823126916422709
+      spriteID: 118683fcff99eb370800000000000000
+      internalID: 8340272883909027857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_3
+      name: SpritesheetLanzaCharge_3
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 58
-        width: 904
-        height: 1474
+        x: 59
+        y: 2098
+        width: 1564
+        height: 1502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +189,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4e55d094604310800000000000000
-      internalID: 1387219258447908068
+      spriteID: bccbda5e24a555aa0800000000000000
+      internalID: -6172928470873686837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetLanzaCharge_4
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 2098
+        width: 1564
+        height: 1502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3948df18b34b54400800000000000000
+      internalID: 307850317221692563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetLanzaCharge_5
+      rect:
+        serializedVersion: 2
+        x: 3898
+        y: 2098
+        width: 1564
+        height: 1502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd77f6da3e80690800000000000000
+      internalID: -7635602834167702137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetLanzaCharge_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 208
+        width: 1564
+        height: 1502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05253b94c3ce67f80800000000000000
+      internalID: -8109034335355317680
       vertices: []
       indices: 
       edges: []

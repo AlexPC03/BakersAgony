@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6dd4831c2e6986b4f8584c1b83a58186
+guid: e3239d7a22af1804db78eb24a373c195
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5555261719169128976
-    second: SpritesheetMagoPanBack_0
+      213: 2289789714775002429
+    second: SpritesheetLanzaBack_0
   - first:
-      213: 1430783057571281265
-    second: SpritesheetMagoPanBack_1
+      213: -3474575956735227463
+    second: SpritesheetLanzaBack_1
   - first:
-      213: -662823126916422709
-    second: SpritesheetMagoPanBack_2
+      213: -4880378314617362931
+    second: SpritesheetLanzaBack_2
   - first:
-      213: 1387219258447908068
-    second: SpritesheetMagoPanBack_3
+      213: 4044131738796049833
+    second: SpritesheetLanzaBack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_0
+      name: SpritesheetLanzaBack_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1978
-        width: 904
-        height: 1474
+        x: 0
+        y: 2128
+        width: 1629
+        height: 1414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5299246eeb7e2b0800000000000000
-      internalID: -5555261719169128976
+      spriteID: d3dc18f1d97f6cf10800000000000000
+      internalID: 2289789714775002429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_1
+      name: SpritesheetLanzaBack_1
       rect:
         serializedVersion: 2
-        x: 2428
-        y: 1978
-        width: 904
-        height: 1474
+        x: 1906
+        y: 2068
+        width: 1629
+        height: 1414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179fe293c992bd310800000000000000
-      internalID: 1430783057571281265
+      spriteID: 9b90fa19393d7cfc0800000000000000
+      internalID: -3474575956735227463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_2
+      name: SpritesheetLanzaBack_2
       rect:
         serializedVersion: 2
-        x: 478
-        y: 58
-        width: 904
-        height: 1474
+        x: 0
+        y: 212
+        width: 1629
+        height: 1414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3ab3bb0ed2dc6f0800000000000000
-      internalID: -662823126916422709
+      spriteID: d0666bbb7c9654cb0800000000000000
+      internalID: -4880378314617362931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoPanBack_3
+      name: SpritesheetLanzaBack_3
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 58
-        width: 904
-        height: 1474
+        x: 1906
+        y: 148
+        width: 1629
+        height: 1414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4e55d094604310800000000000000
-      internalID: 1387219258447908068
+      spriteID: 9a542d3c364af1830800000000000000
+      internalID: 4044131738796049833
       vertices: []
       indices: 
       edges: []

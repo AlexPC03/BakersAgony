@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 97511a7087346604fade9289da97fbb1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -762594711082456165
+    second: SpritesheetMagoPanAtack_0
+  - first:
+      213: 6469820033031772886
+    second: SpritesheetMagoPanAtack_1
+  - first:
+      213: 408431142033796213
+    second: SpritesheetMagoPanAtack_2
+  - first:
+      213: 2738988953935007456
+    second: SpritesheetMagoPanAtack_3
+  - first:
+      213: -2092512784401833117
+    second: SpritesheetMagoPanAtack_4
+  - first:
+      213: 3867003431043363303
+    second: SpritesheetMagoPanAtack_5
+  - first:
+      213: 3911661354627384937
+    second: SpritesheetMagoPanAtack_6
+  - first:
+      213: 4216653752100139437
+    second: SpritesheetMagoPanAtack_7
+  - first:
+      213: 8023389671465181083
+    second: SpritesheetMagoPanAtack_8
+  - first:
+      213: -6553499078507639552
+    second: SpritesheetMagoPanAtack_9
+  - first:
+      213: -7862307619463230589
+    second: SpritesheetMagoPanAtack_10
+  - first:
+      213: 8048668923087254349
+    second: SpritesheetMagoPanAtack_11
+  - first:
+      213: 5278185042249419126
+    second: SpritesheetMagoPanAtack_12
+  - first:
+      213: 2062558410807273175
+    second: SpritesheetMagoPanAtack_13
+  - first:
+      213: -650782456278990876
+    second: SpritesheetMagoPanAtack_14
+  - first:
+      213: 4577819603750533322
+    second: SpritesheetMagoPanAtack_15
+  - first:
+      213: -801618147028853197
+    second: SpritesheetMagoPanAtack_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_0
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ba6529628ba65f0800000000000000
+      internalID: -762594711082456165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_1
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da909d9a0b69c950800000000000000
+      internalID: 6469820033031772886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_2
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ca120b5f90ba500800000000000000
+      internalID: 408431142033796213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_3
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eec30b11f7d20620800000000000000
+      internalID: 2738988953935007456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_4
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363e3cd85b6e5f2e0800000000000000
+      internalID: -2092512784401833117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 3896
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e17e8cd12b5aa530800000000000000
+      internalID: 3867003431043363303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_6
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 3896
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9664034f643094630800000000000000
+      internalID: 3911661354627384937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_7
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 3896
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da13fba2f30948a30800000000000000
+      internalID: 4216653752100139437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_8
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 3896
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f583e756ec85f60800000000000000
+      internalID: 8023389671465181083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_9
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 3896
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dc3bd5f4b4d05a0800000000000000
+      internalID: -6553499078507639552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_10
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b0c0b50e873e290800000000000000
+      internalID: -7862307619463230589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_11
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43775bedbd92bf60800000000000000
+      internalID: 8048668923087254349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_12
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6798e06b451ef3940800000000000000
+      internalID: 5278185042249419126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_13
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d669ac52fdaf9c10800000000000000
+      internalID: 2062558410807273175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_14
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef3f63ddc4f7f6f0800000000000000
+      internalID: -650782456278990876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_15
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 56
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8be5fdcaea78f30800000000000000
+      internalID: 4577819603750533322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoPanAtack_16
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 56
+        width: 910
+        height: 1477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e96dcda8410e4f0800000000000000
+      internalID: -801618147028853197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
