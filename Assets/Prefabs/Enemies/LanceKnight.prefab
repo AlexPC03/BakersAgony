@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2298039718481450361}
   - component: {fileID: 2298039718481450367}
   - component: {fileID: 2298039718481450366}
-  - component: {fileID: 4002657942187797886}
-  - component: {fileID: 715863057917317430}
   - component: {fileID: 6375076705301093017}
-  m_Layer: 0
+  - component: {fileID: 2280019329853342944}
+  - component: {fileID: 1371812645955768283}
+  m_Layer: 7
   m_Name: LanceKnight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -147,58 +147,6 @@ MonoBehaviour:
   xDistance: 0
   yDistance: 0
   charging: 0
---- !u!61 &4002657942187797886
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298039718481450365}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0011487603, y: -0.4585735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4809091, y: 1.2854545}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1556894, y: 0.5156073}
-  m_EdgeRadius: 0
---- !u!61 &715863057917317430
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298039718481450365}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.006247163, y: -0.50785506}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4809091, y: 1.2854545}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8051946, y: 0.23963997}
-  m_EdgeRadius: 0
 --- !u!95 &6375076705301093017
 Animator:
   serializedVersion: 3
@@ -218,3 +166,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &2280019329853342944
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298039718481450365}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012380703, y: -0.41566128}
+  m_Size: {x: 1.0387226, y: 0.45413563}
+  m_Direction: 1
+--- !u!70 &1371812645955768283
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298039718481450365}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010611854, y: -0.4191985}
+  m_Size: {x: 1.134236, y: 0.53903705}
+  m_Direction: 1

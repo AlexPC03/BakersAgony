@@ -16,7 +16,6 @@ public class BreadMageProyectileMovement : ProyectileBasicSystem
         if(seeker)
         {
             rb.drag = 1f;
-            transform.LookAt(targetPos);
         }
         else
         {

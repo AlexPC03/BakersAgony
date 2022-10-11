@@ -27,7 +27,6 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
         StartVida();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-
         storedPositions = new List<Vector3>();
 
         if (headTransform==null)
@@ -40,6 +39,10 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
             {
                 fromVertical = false;
             }
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(7, 7);
         }
     }
 

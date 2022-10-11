@@ -36,10 +36,9 @@ public class ProyectileBasicSystem : MonoBehaviour
             collision.SendMessage("TakeDamage");
             Dissapear();
         }
-        if (collision.tag == "Enemy" && friendlyFire)
+        if (collision.tag == "Enemy" && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null)
         {
             collision.SendMessage("TakeDamage", 10);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * 5, ForceMode2D.Impulse);
         }
     }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3643129767050515234}
   - component: {fileID: 5355282545095658328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.9
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4573661829655379719}
   - component: {fileID: 7573059795409864702}
   - component: {fileID: 2333339138949296486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SimpleMage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
