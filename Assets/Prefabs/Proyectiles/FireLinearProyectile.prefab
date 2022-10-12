@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.53296876, b: 0, a: 1}
+  m_Sprite: {fileID: -699010248389847153, guid: b432c8c99c1386342bdc91b70f4c91ed, type: 3}
+  m_Color: {r: 1, g: 0.6918396, b: 0.3443396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,6 +125,8 @@ MonoBehaviour:
   velocity: 3
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 0
+  rotate: 1
+  rotateVelocity: 90
   dragForce: 0.1
   livingTime: 5
 --- !u!50 &6364243207959168994
@@ -413,7 +415,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2

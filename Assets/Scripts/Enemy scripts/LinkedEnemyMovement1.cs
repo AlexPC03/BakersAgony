@@ -6,6 +6,8 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
     private GameObject player;
+    private SpriteRenderer sp;
+    private Animator anim;
     private List<Vector3> storedPositions;
 
 
@@ -28,6 +30,8 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         storedPositions = new List<Vector3>();
+        sp = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
 
         if (headTransform==null)
         {
@@ -50,7 +54,10 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
     // Update is called once per frame
     void Update()
     {
-        if(headTransform == null)
+        anim.SetBool("head", headTransform == null);
+        anim.SetFloat("Yvelocity", rb.velocity.y);
+        CheckOrientation();
+        if (headTransform == null)
         {
             actualDistance = (player.transform.position - transform.position).magnitude;
             xDistance = player.transform.position.x - transform.position.x;
@@ -160,6 +167,18 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
             {
                 rb.velocity = new Vector3(0, rb.velocity.y, 0);
             }
+        }
+    }
+
+    private void CheckOrientation()
+    {
+        if (rb.velocity.x > -0.01)
+        {
+            sp.flipX = false;
+        }
+        else if (rb.velocity.x < 0.01)
+        {
+            sp.flipX = true;
         }
     }
 }

@@ -8,6 +8,7 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
     private SpriteRenderer sp;
     private Animator anim;
     private GameObject player;
+    public bool inverted;
 
     [Header("Atributes")]
     public float range;
@@ -31,7 +32,14 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
     // Update is called once per frame
     void Update()
     {
-        CheckOrientation();
+        if(inverted)
+        {
+            CheckOrientationInverse();
+        }
+        else
+        {
+            CheckOrientation();
+        }
 
         actualDistance = (player.transform.position - transform.position).magnitude;
 
@@ -77,6 +85,18 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
             sp.flipX = false;
         }
         else if (rb.velocity.x > 0.01)
+        {
+            sp.flipX = true;
+        }
+    }
+
+    private void CheckOrientationInverse()
+    {
+        if (rb.velocity.x > -0.01)
+        {
+            sp.flipX = false;
+        }
+        else if (rb.velocity.x < 0.01)
         {
             sp.flipX = true;
         }

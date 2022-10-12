@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: e71de6f6b999922489d7da1dc7047d6e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 706502848627507041
+    second: SpritesheetMage2Attack_0
+  - first:
+      213: 7061036824740803239
+    second: SpritesheetMage2Attack_1
+  - first:
+      213: 7512121482392415866
+    second: SpritesheetMage2Attack_2
+  - first:
+      213: 541903734579131380
+    second: SpritesheetMage2Attack_3
+  - first:
+      213: 2688918847715407622
+    second: SpritesheetMage2Attack_4
+  - first:
+      213: -8785529979760759944
+    second: SpritesheetMage2Attack_5
+  - first:
+      213: 8153346254766419614
+    second: SpritesheetMage2Attack_6
+  - first:
+      213: 1143904123896388176
+    second: SpritesheetMage2Attack_7
+  - first:
+      213: 47876373362860257
+    second: SpritesheetMage2Attack_8
+  - first:
+      213: -1678084274181226760
+    second: SpritesheetMage2Attack_9
+  - first:
+      213: 2574118498416720130
+    second: SpritesheetMage2Attack_10
+  - first:
+      213: -5297897833750250662
+    second: SpritesheetMage2Attack_11
+  - first:
+      213: 8209226058547934747
+    second: SpritesheetMage2Attack_12
+  - first:
+      213: -8317544784932091512
+    second: SpritesheetMage2Attack_13
+  - first:
+      213: -8865185026264648394
+    second: SpritesheetMage2Attack_14
+  - first:
+      213: 6596705277177164144
+    second: SpritesheetMage2Attack_15
+  - first:
+      213: 219070335113838436
+    second: SpritesheetMage2Attack_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_0
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 5814
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f7e3df8900ec900800000000000000
+      internalID: 706502848627507041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_1
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b0a4c497ddf160800000000000000
+      internalID: 7061036824740803239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_2
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 5814
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ea493ffaa604860800000000000000
+      internalID: 7512121482392415866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_3
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3fb02539a358700800000000000000
+      internalID: 541903734579131380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_4
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607fdeb0275f05520800000000000000
+      internalID: 2688918847715407622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 3896
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ba0d8f707831680800000000000000
+      internalID: -8785529979760759944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_6
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e2d1e6831862170800000000000000
+      internalID: 8153346254766419614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_7
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 3896
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ad2f17db6ffdf00800000000000000
+      internalID: 1143904123896388176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_8
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e06d63de471aa000800000000000000
+      internalID: 47876373362860257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_9
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe32465e3f36b8e0800000000000000
+      internalID: -1678084274181226760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_10
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1974
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209f3e3d22b19b320800000000000000
+      internalID: 2574118498416720130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_11
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b310b5df51a76b0800000000000000
+      internalID: -5297897833750250662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_12
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 1974
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1631ac1b970de170800000000000000
+      internalID: 8209226058547934747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_13
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88948ba1615229c80800000000000000
+      internalID: -8317544784932091512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_14
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6353269303988f480800000000000000
+      internalID: -8865185026264648394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_15
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 56
+        width: 905
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071f61eaf743c8b50800000000000000
+      internalID: 6596705277177164144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMage2Attack_16
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 56
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f39412f4b4a0300800000000000000
+      internalID: 219070335113838436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
