@@ -9,6 +9,8 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
     private Animator anim;
     private GameObject player;
     public bool inverted;
+    public bool separate;
+
 
     [Header("Atributes")]
     public float range;
@@ -74,6 +76,7 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
             rb.velocity = Vector2.zero;
         }
 
+
         anim.SetFloat("Yvelocity", rb.velocity.y);
         anim.SetBool("stopped", rb.velocity == Vector2.zero);
     }
@@ -99,6 +102,14 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
         else if (rb.velocity.x < 0.01)
         {
             sp.flipX = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(separate && collision.tag=="Enemy")
+        {
+            rb.AddForce(transform.position - collision.transform.position,ForceMode2D.Impulse);
         }
     }
 }
