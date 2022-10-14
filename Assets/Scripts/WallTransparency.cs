@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class WallTransparency : MonoBehaviour
 {
+    public Sprite[] wallList;
+    
     // Start is called before the first frame update
     void Start()
     {
+            
+       
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = wallList[Random.Range(0,wallList.Length)];
         
     }
 
