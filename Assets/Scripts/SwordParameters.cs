@@ -26,7 +26,11 @@ public class SwordParameters : SwordKnockback
             }
             if(coll.tag!="UnstoppableProyectile")
             {
-                coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit, ForceMode2D.Impulse);
+                if (coll.gameObject.GetComponent<Rigidbody2D>() != null)
+                {
+                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit, ForceMode2D.Impulse);
+
+                }
             }
         }
     }

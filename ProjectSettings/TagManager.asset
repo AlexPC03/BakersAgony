@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - UnstoppableProyectile
+  - Door
+  - Room
+  - Spawner
   layers:
   - Default
   - TransparentFX

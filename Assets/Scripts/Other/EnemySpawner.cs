@@ -32,7 +32,5 @@ public class EnemySpawner : MonoBehaviour
     public void StartRoom()
     {
         Instantiate(enemyToSpawn,transform.position,new Quaternion(0,0,0,0));
-
-        Destroy(gameObject);
     }
 }
