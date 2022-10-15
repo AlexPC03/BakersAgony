@@ -44,10 +44,6 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
                 fromVertical = false;
             }
         }
-        else
-        {
-            Physics2D.IgnoreLayerCollision(7, 7);
-        }
     }
 
 
@@ -85,18 +81,17 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
 
             if (storedPositions.Count == 0)
             {
-                storedPositions.Add(headTransform.transform.position); //store the players currect position
+                storedPositions.Add(headTransform.transform.position); //store the target currect position
                 return;
             }
             else if (storedPositions[storedPositions.Count - 1] != player.transform.position)
             {
-                //Debug.Log("Add to list");
                 storedPositions.Add(headTransform.transform.position); //store the position every frame
             }
             if (storedPositions.Count > distanceFromHead)
             {
                 transform.position = storedPositions[0]; //move
-                storedPositions.RemoveAt(0); //delete the position that player just move to
+                storedPositions.RemoveAt(0); //delete the position that target just move to
             }
         }
     }

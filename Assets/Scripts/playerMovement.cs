@@ -6,12 +6,17 @@ public class playerMovement : MonoBehaviour
 {
     private Rigidbody2D body;
     public GameObject healthbar;
+    public GameObject maxHealthbar;
     public GameObject playerBody;
 
     private float horizontal;
     private float vertical;
+
+
     public float moveLimiter = 0.7f;
     public float runSpeed = 20.0f;
+
+    public int corn = 0;
 
     [Header("LifeParameters")]
     private int maxMaxLife;
@@ -54,10 +59,11 @@ public class playerMovement : MonoBehaviour
         }
 
         healthbar.GetComponent<Animator>().SetInteger("Health", health);
+        maxHealthbar.GetComponent<Animator>().SetInteger("MaxHealth", maxLife);
 
-        // Gives a value between -1 and 1
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        // valor entre -1 y 1
+        horizontal = Input.GetAxisRaw("Horizontal"); // -1 es izquierda
+        vertical = Input.GetAxisRaw("Vertical"); // -1 es derecha
 
         if(horizontal>0)
         {
@@ -82,9 +88,9 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        if (horizontal != 0 && vertical != 0) // movimiento diagonal
         {
-            // limit movement speed diagonally, so you move at 70% speed
+            // limitar velocidad diagonal
             horizontal *= moveLimiter;
             vertical *= moveLimiter;
         }
@@ -110,5 +116,10 @@ public class playerMovement : MonoBehaviour
     public void RecoverLife()
     {
         health += 1;
+    }
+
+    public void addCorn(int points)
+    {
+        corn += points;
     }
 }

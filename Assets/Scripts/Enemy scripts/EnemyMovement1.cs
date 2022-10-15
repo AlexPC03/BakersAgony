@@ -40,7 +40,7 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
     // Update is called once per frame
     void Update()
     {
-
+        CheckOrientation();
         actualDistance = (player.transform.position - transform.position).magnitude;
         xDistance = player.transform.position.x - transform.position.x;
         yDistance = player.transform.position.y - transform.position.y;

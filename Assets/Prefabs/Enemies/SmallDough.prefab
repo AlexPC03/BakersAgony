@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3aabf2ee005c24f85046e3873fe243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
+  corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  cornWeight: 0.05
   maxVida: 20
   deathTime: 0.5
   vida: 0
@@ -144,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difference: 0
+  difference: -0.6
 --- !u!70 &7077688490523988369
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difference: -0.527
+  difference: -0.6
 --- !u!95 &7573059795409864702
 Animator:
   serializedVersion: 3
@@ -279,6 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c3ac07e64bb4d498c8d1afc386799e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
+  corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  cornWeight: 0.25
   maxVida: 25
   deathTime: 0.5
   vida: 0
@@ -289,6 +292,8 @@ MonoBehaviour:
   minShootRange: 5
   maxShootRange: 10
   speed: 0.4
+  wait: 0
   actualDistance: 0
   canShoot: 0
   shootTimer: 0
+  firstShoot: 0

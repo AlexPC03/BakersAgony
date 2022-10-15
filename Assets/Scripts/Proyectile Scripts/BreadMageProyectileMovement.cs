@@ -17,7 +17,7 @@ public class BreadMageProyectileMovement : ProyectileBasicSystem
         target = GameObject.FindGameObjectWithTag("Player");
         if(seeker)
         {
-            rb.drag = 1f;
+
         }
         else
         {

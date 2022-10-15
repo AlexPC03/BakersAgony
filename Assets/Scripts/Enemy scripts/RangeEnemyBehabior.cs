@@ -8,6 +8,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     private GameObject player;
     private SpriteRenderer sp;
     private Animator anim;
+    private GameObject proy;
 
     [Header("Atributes")]
     public Vector3 shootPosition;
@@ -17,11 +18,13 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     public float minShootRange;
     public float maxShootRange;
     public float speed;
+    public bool wait;
 
     [Header("Information")]
     public float actualDistance;
     public bool canShoot;
     public float shootTimer;
+    public bool firstShoot;
 
 
 
@@ -34,6 +37,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         canShoot = true;
+        firstShoot = false;
     }
 
     // Update is called once per frame
@@ -41,6 +45,13 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     {
         CheckOrientation();
 
+        if (wait && firstShoot)
+        {
+            if (proy != null)
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
         actualDistance = (player.transform.position - transform.position).magnitude;
 
         if (shootTimer>nextShootTime && !canShoot)
@@ -82,9 +93,17 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
 
     public void Shoot()
     {
+        firstShoot = true;
         shootTimer = 0;
-        GameObject proy= Instantiate(proyectile, transform.position+shootPosition,new Quaternion(0,0,0,0));
-        proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+        proy= Instantiate(proyectile, transform.position+shootPosition,new Quaternion(0,0,0,0));
+        if(proy.GetComponent<BreadMageProyectileMovement>()!=null)
+        {
+            proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+        }
+        else if(proy.GetComponent<BumeranProyectileMovement>() != null)
+        {
+            proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+        }
     }
 
     private void CheckOrientation()
