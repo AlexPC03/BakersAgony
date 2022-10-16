@@ -7,6 +7,8 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class PedestalController : MonoBehaviour
 {
     private GameObject thisObject;
+    public bool shop;
+    public int price;
     public GameObject[] list;
     public bool inRange=false;
     // Start is called before the first frame update
