@@ -22,7 +22,7 @@ public class SwordParameters : SwordKnockback
         {
             if (coll.tag == "Enemy")
             {
-                coll.SendMessage("TakeDamage", damage);
+                coll.SendMessage("TakeDamage", damage*Player.GetComponent<playerMovement>().attack);
             }
             if(coll.tag!="UnstoppableProyectile")
             {
@@ -45,7 +45,7 @@ public class SwordParameters : SwordKnockback
         rot = otherSword.localRotation;
 
         otherSword.SetParent(gameObject.transform.parent);
-        otherSword.transform.position = Vector3.zero;
+        otherSword.transform.localPosition = Vector3.zero;
         transform.SetParent(SwordObj.transform);
         transform.localPosition = pos;
         transform.localRotation = rot;

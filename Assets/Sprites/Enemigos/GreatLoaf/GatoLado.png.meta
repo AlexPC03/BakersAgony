@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 653204c5167339641a84c3ba272e36af
+guid: e54361e8abe45ee40a2d31761efe2b1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5211999601642890912
-    second: GatoArriba_0
+      213: -5754347918551297668
+    second: GatoLado_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GatoArriba_0
+      name: GatoLado_0
       rect:
         serializedVersion: 2
-        x: 360
+        x: 77
         y: 270
-        width: 1200
-        height: 1590
+        width: 1627
+        height: 1500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06919960af14ba7b0800000000000000
-      internalID: -5211999601642890912
+      spriteID: c71ddb05e037420b0800000000000000
+      internalID: -5754347918551297668
       vertices: []
       indices: 
       edges: []

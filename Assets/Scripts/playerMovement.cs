@@ -13,7 +13,9 @@ public class playerMovement : MonoBehaviour
     public GameObject playerBody;
     public GameObject lightSpot;
     public GameObject lightWorld;
+    public int sala;
 
+    public float attack = 1f;
 
     private float horizontal;
     private float vertical;
@@ -22,7 +24,7 @@ public class playerMovement : MonoBehaviour
 
 
     public float moveLimiter = 0.7f;
-    public float runSpeed = 20.0f;
+    public float runSpeed;
 
     public int corn = 0;
 
@@ -162,6 +164,23 @@ public class playerMovement : MonoBehaviour
         corn -= points;
     }
 
+    public void increaseMaxHealth()
+    {
+        maxLife += 2;
+    }
+    public void increaseVelocity()
+    {
+        runSpeed += 1.5f;
+    }
+    public void increaseAttack()
+    {
+        attack += 0.2f;
+    }
+
+    public void nextRoom()
+    {
+        sala++;
+    }
     public void SceneChange()
     {
         SceneManager.LoadScene("MainMenu");
