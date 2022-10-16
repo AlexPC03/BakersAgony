@@ -104,12 +104,4 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
             sp.flipX = true;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(separate && collision.tag=="Enemy")
-        {
-            rb.AddForce(transform.position - collision.transform.position,ForceMode2D.Impulse);
-        }
-    }
 }

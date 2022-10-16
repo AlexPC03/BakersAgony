@@ -34,4 +34,20 @@ public class SwordParameters : SwordKnockback
             }
         }
     }
+
+    public void Pick()
+    {
+        Vector3 pos;
+        Quaternion rot;
+        Transform otherSword;
+        otherSword=SwordObj.transform.GetChild(0);
+        pos = otherSword.localPosition;
+        rot = otherSword.localRotation;
+
+        otherSword.SetParent(gameObject.transform.parent);
+        otherSword.transform.position = Vector3.zero;
+        transform.SetParent(SwordObj.transform);
+        transform.localPosition = pos;
+        transform.localRotation = rot;
+    }
 }

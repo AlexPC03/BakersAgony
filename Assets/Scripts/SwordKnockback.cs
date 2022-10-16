@@ -6,6 +6,7 @@ public class SwordKnockback : MonoBehaviour
 {
     protected GameObject Player;
     protected GameObject SwordBase;
+    protected GameObject SwordObj;
     public Sprite InventorySword;
 
     public float Swordspeed;
@@ -19,6 +20,7 @@ public class SwordKnockback : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         SwordBase = GameObject.Find("Sword");
+        SwordObj = GameObject.Find("SwordObject");
         SwordBase.GetComponent<rotateSword>().force = rotationForce;
         SwordBase.GetComponent<Rigidbody2D>().angularDrag = deceleration;
     }

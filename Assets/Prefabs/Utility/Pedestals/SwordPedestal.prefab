@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2190689111993584701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2190689111993584688}
+  - component: {fileID: 2190689111993584691}
+  - component: {fileID: 2190689111993584690}
+  m_Layer: 0
+  m_Name: SwordPedestal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2190689111993584688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190689111993584701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2190689111993584691
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190689111993584701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &2190689111993584690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190689111993584701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e65ffee21a36824ab81ce2855ceeb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - {fileID: 1652923218217536371, guid: 354e204490a4b4447b265b7e48048209, type: 3}
+  - {fileID: 7238661566863224746, guid: 59076ad8eaac93544868c685de316124, type: 3}
+  - {fileID: 7361843765769946167, guid: d6f4a917f4bd6ef42b5abf5a37ba848c, type: 3}
+  - {fileID: 1399252697395500159, guid: 80284569b7425444690aca408864e523, type: 3}
+  - {fileID: 8375680368315074126, guid: 9dcb8cd71cc42f74e9a18f8729fcc7de, type: 3}
+  - {fileID: 8207853216876253936, guid: 08cf5c1598ed1d44d9461b757c32b00e, type: 3}
+  - {fileID: 8175245128852613570, guid: ec501604a8365094c99ae3213409f274, type: 3}
+  - {fileID: 8484976727713454627, guid: 1560e248fff50034e99dad5be3fcc576, type: 3}
+  - {fileID: 7005607629150338109, guid: 0dc50f4e172d94049a90cb4928e3c6f9, type: 3}
+  - {fileID: 2798648570822369341, guid: 1ac965b512d250c42b23e6b13f90bdea, type: 3}
+  inRange: 0

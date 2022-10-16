@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
     private Rigidbody2D body;
+    private SpriteRenderer sp;
     public GameObject healthbar;
     public GameObject maxHealthbar;
     public GameObject playerBody;
+    public GameObject lightSpot;
+    public GameObject lightWorld;
+
 
     private float horizontal;
     private float vertical;
+
+    public Color lerpedColor = Color.white;
 
 
     public float moveLimiter = 0.7f;
@@ -33,10 +41,14 @@ public class playerMovement : MonoBehaviour
         PassedTime = 0;
         health = maxLife;
         body = GetComponent<Rigidbody2D>();
+        sp = playerBody.GetComponent<SpriteRenderer>();
+        invulnerable = false;
+
     }
 
     void Update()
     {
+        sp.color = lerpedColor;
         if (PassedTime <= invulneravilityTime)
         {
             PassedTime += Time.deltaTime;
@@ -56,6 +68,13 @@ public class playerMovement : MonoBehaviour
         if(health>maxLife)
         {
             health = maxLife;
+        }
+        if(health<=0)
+        {
+            lightWorld.SetActive(false);
+            lightSpot.SetActive(false);
+            body.velocity = Vector2.zero;
+            Invoke("SceneChange", 1.5f);
         }
 
         healthbar.GetComponent<Animator>().SetInteger("Health", health);
@@ -84,6 +103,15 @@ public class playerMovement : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("moving", true);
         }
+
+        if (invulnerable)
+        {
+            lerpedColor = Color.Lerp(Color.white, Color.yellow, Mathf.PingPong(Time.time * 5, 1));
+        }
+        else
+        {
+            lerpedColor = Color.white;
+        }
     }
 
     void FixedUpdate()
@@ -105,12 +133,18 @@ public class playerMovement : MonoBehaviour
         { 
             invulnerable = true;
         }
+
+
     }
 
     public void TakeDamage()
     {
-        health -= 1;
-        PassedTime = 0;
+        if(!invulnerable)
+        {
+            health -= 1;
+            PassedTime = 0;
+        }
+
     }
 
     public void RecoverLife()
@@ -121,5 +155,15 @@ public class playerMovement : MonoBehaviour
     public void addCorn(int points)
     {
         corn += points;
+    }
+
+    public void loseCorn(int points)
+    {
+        corn -= points;
+    }
+
+    public void SceneChange()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorControler : MonoBehaviour
 {
+    private Animator anim;
     public Collider2D coll;
     public GameObject[] rooms;
     public GameObject nextRoom;
@@ -12,6 +13,7 @@ public class DoorControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         initiated = false;
         nextRoom = rooms[Random.Range(0, rooms.Length)];
     }
@@ -28,6 +30,8 @@ public class DoorControler : MonoBehaviour
         {
             coll.enabled = false;
         }
+        anim.SetBool("Closed", enemies);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,7 +39,7 @@ public class DoorControler : MonoBehaviour
         if(collision.gameObject.tag=="Player" && !initiated)
         {
             initiated = true;
-            Instantiate(nextRoom,transform.position+new Vector3(0,14,0),new Quaternion(0,0,0,0));
+            Instantiate(nextRoom,transform.position+new Vector3(0,21,0),new Quaternion(0,0,0,0));
         }
     }
 
