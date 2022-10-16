@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class DoorControler : MonoBehaviour
 {
+    private GameObject player;
     private Animator anim;
     public Collider2D coll;
     public GameObject[] rooms;
+    public GameObject rewardRoom;
+    public GameObject shopRoom;
     public GameObject nextRoom;
     public bool initiated;
     public bool enemies;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         initiated = false;
         nextRoom = rooms[Random.Range(0, rooms.Length)];
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if(player.transform.position.y-transform.position.y>75)
+        {
+            deleteObjects();
+        }
+    }
+
     void FixedUpdate()
     {
         enemies = GameObject.FindWithTag("Enemy") != null;
-        if (GameObject.FindWithTag("Enemy")!=null)
+        if (GameObject.FindWithTag("Enemy")!=null || initiated)
         {
             coll.enabled = true;
         }
@@ -30,17 +42,33 @@ public class DoorControler : MonoBehaviour
         {
             coll.enabled = false;
         }
-        anim.SetBool("Closed", enemies);
+        anim.SetBool("Closed", coll.enabled);
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag=="Player" && !initiated)
+        if(collision.gameObject==player && !initiated)
         {
             initiated = true;
-            Instantiate(nextRoom,transform.position+new Vector3(0,21,0),new Quaternion(0,0,0,0));
+            if(player.GetComponent<playerMovement>().sala % 4 !=0 && player.GetComponent<playerMovement>().sala % 9 != 0)
+            {
+                Instantiate(nextRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else if(player.GetComponent<playerMovement>().sala % 4 == 0)
+            {
+                Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else if (player.GetComponent<playerMovement>().sala % 9 == 0)
+            {
+                Instantiate(shopRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            player.SendMessage("nextRoom");
         }
     }
-
+    private void deleteObjects()
+    {
+        GameObject obj=transform.root.gameObject;
+        Destroy(obj);
+    }
 }

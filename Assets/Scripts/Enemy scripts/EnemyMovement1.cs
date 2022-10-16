@@ -167,7 +167,7 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
         {
             sp.flipX = false;
         }
-        else if (rb.velocity.x > 0.01)
+        else if (rb.velocity.x > 0.1)
         {
             sp.flipX = true;
         }
