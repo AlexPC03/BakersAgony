@@ -96,5 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412bc3e229529eb4aa2a97bdf2921f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   used: 0
   times: 1

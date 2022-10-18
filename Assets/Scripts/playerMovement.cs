@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+    public ParticleSystem par;
     private Rigidbody2D body;
     private SpriteRenderer sp;
     public GameObject healthbar;
@@ -41,7 +42,7 @@ public class playerMovement : MonoBehaviour
     {
         maxMaxLife = 12;
         PassedTime = 0;
-        health = maxLife;
+        health = maxLife-1;
         body = GetComponent<Rigidbody2D>();
         sp = playerBody.GetComponent<SpriteRenderer>();
         invulnerable = false;
@@ -108,7 +109,7 @@ public class playerMovement : MonoBehaviour
 
         if (invulnerable)
         {
-            lerpedColor = Color.Lerp(Color.white, Color.yellow, Mathf.PingPong(Time.time * 5, 1));
+            lerpedColor = Color.Lerp(Color.white, Color.clear, Mathf.PingPong(Time.time * 10, 1));
         }
         else
         {
@@ -145,6 +146,7 @@ public class playerMovement : MonoBehaviour
         {
             health -= 1;
             PassedTime = 0;
+            par.Play();
         }
 
     }
@@ -183,6 +185,6 @@ public class playerMovement : MonoBehaviour
     }
     public void SceneChange()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("SampleScene");
     }
 }

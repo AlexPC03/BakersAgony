@@ -8,6 +8,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public GameObject corncub;
     [Range(0, 1)]
     public float cornWeight;
+    public GameObject head;
     [Header("LifeParameters")]
     public float maxVida;
     public float deathTime;
@@ -27,6 +28,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<Rigidbody2D>().angularVelocity = 0f;
             GetComponent<Collider2D>().enabled = false;
+            if(GetComponent<ParticleSystem>()!=null)
+            {
+                GetComponent<ParticleSystem>().Play();
+            }
 
             Destroy(gameObject, deathTime);
         }
@@ -46,6 +51,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     }
     private void OnDestroy()
     {
+        if(head!=null)
+        {
+            Instantiate(head, transform.position, new Quaternion(0, 0, 0, 0));
+        }
         if(corn!=null && corncub!=null)
         {
             if (cornWeight > 0.75 && Random.Range(0, 100) < cornWeight * 100)

@@ -11,6 +11,7 @@ public class PedestalController : MonoBehaviour
 
     private ParticleSystem.EmissionModule em;
     private GameObject thisObject;
+    public bool destroyOnPick;
     public bool shop;
     public int price;
     public GameObject[] list;
@@ -18,6 +19,10 @@ public class PedestalController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(destroyOnPick)
+        {
+            gameObject.tag = "Enemy";
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         sp = GetComponent<SpriteRenderer>();
         em = GetComponent<ParticleSystem>().emission;
@@ -56,7 +61,10 @@ public class PedestalController : MonoBehaviour
                         shop = false;
                     }
                 }
-
+                if (destroyOnPick)
+                {
+                    Destroy(gameObject, 0.1f);
+                }
             }
             if(thisObject.GetComponent<SpriteRenderer>().enabled == false)
             {
@@ -83,6 +91,7 @@ public class PedestalController : MonoBehaviour
                         em.enabled = true;
                     }
                 }
+
             }     
         }
     }
