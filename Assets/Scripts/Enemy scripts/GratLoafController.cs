@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement1 : EnemyBasicLifeSystem
+public class GratLoafController : BossController
 {
     private Rigidbody2D rb;
     private GameObject player;
     private Animator anim;
+    private float timeTo=0;
 
     [Header("Atributes")]
+    public GameObject enemyToSpawn;
+    public float spawnRate;
     public float range;
     public float speed;
     public float chargeSpeed;
@@ -22,13 +25,13 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
     }
 
     [Header("Information")]
-    public float  actualDistance;
+    public float actualDistance;
     public float xDistance, yDistance;
     public bool charging;
     // Start is called before the first frame update
     void Start()
     {
-        StartVida();
+        StartBoss();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -52,22 +55,24 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
             rb.velocity = Vector2.zero;
         }
         anim.SetFloat("Yvelocity", rb.velocity.y);
-        anim.SetBool("Stopped", rb.velocity == Vector2.zero);
+        anim.SetBool("Xmoving", rb.velocity.x != 0);
+        anim.SetBool("Ymoving", rb.velocity.y != 0);
+        timeTo += Time.deltaTime;
     }
 
     private void Align()
     {
-        if(!charging)
+        if (!charging)
         {
-            if(Mathf.Abs(xDistance) < Mathf.Abs(yDistance))
+            if (Mathf.Abs(xDistance) < Mathf.Abs(yDistance))
             {
-                if(xDistance<0)
+                if (xDistance < 0)
                 {
-                    rb.AddForce(Vector2.left*speed, ForceMode2D.Force);
+                    rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
                 }
                 else
                 {
-                    rb.AddForce(Vector2.right*speed, ForceMode2D.Force);
+                    rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
                 }
             }
             else
@@ -82,10 +87,10 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
                 }
             }
 
-            if (xDistance < 0.01 && xDistance > -0.01 )
+            if (xDistance < 0.01 && xDistance > -0.01)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-                if(directionFromCharge == chargeDirection.Vertical || directionFromCharge == chargeDirection.Both)
+                if (directionFromCharge == chargeDirection.Vertical || directionFromCharge == chargeDirection.Both)
                 {
                     charging = true;
                     if (yDistance < 0)
@@ -113,7 +118,7 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
             }
             if (yDistance < 0.01 && yDistance > -0.01)
             {
-                rb.velocity = new Vector2(rb.velocity.x,0);
+                rb.velocity = new Vector2(rb.velocity.x, 0);
                 if (directionFromCharge == chargeDirection.Horizontal || directionFromCharge == chargeDirection.Both)
                 {
                     charging = true;
@@ -139,14 +144,12 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
                         rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
                     }
                 }
-
             }
         }
     }
 
     private void Charge(Vector2 direction)
     {
-        anim.SetTrigger("Charge");
         rb.velocity = Vector2.zero;
         rb.AddForce(direction * chargeSpeed, ForceMode2D.Impulse);
         Invoke("StopCharging", chargeRecover);
@@ -161,13 +164,22 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
 
     private void CheckOrientation()
     {
-        if (rb.velocity.x < -0.01)
+        if (rb.velocity.x > -0.01)
         {
             sp.flipX = false;
         }
-        else if (rb.velocity.x > 0.1)
+        else if (rb.velocity.x < 0.1)
         {
             sp.flipX = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer==6 && timeTo>spawnRate)
+        {
+            Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
+            timeTo = 0;
         }
     }
 }

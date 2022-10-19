@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    protected SpriteRenderer sp;
     public GameObject corn;
     public GameObject corncub;
     [Range(0, 1)]
@@ -18,6 +19,8 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public void StartVida()
     {
         vida = maxVida;
+        sp = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -40,6 +43,12 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public void TakeDamage(float damage)
     {
         vida -= damage;
+        sp.color = Color.red;
+        Invoke("ChangeBack", 0.1f);
+    }
+    private void ChangeBack()
+    {
+        sp.color = Color.white;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,16 +66,17 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         }
         if(corn!=null && corncub!=null)
         {
-            if (cornWeight > 0.75 && Random.Range(0, 100) < cornWeight * 100)
+            if (cornWeight > 0.9 && Random.Range(0, 100) < cornWeight * 100)
             {
                 Instantiate(corncub, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                if (Random.Range(0, 100) < (cornWeight * 100) - 10)
+                Instantiate(corncub, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
+                if (Random.Range(0, 100) < (cornWeight * 100) - 5)
                 {
                     Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                    if (Random.Range(0, 100) < (cornWeight * 100) - 20)
+                    if (Random.Range(0, 100) < (cornWeight * 100) - 10)
                     {
                         Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                        if (Random.Range(0, 100) < (cornWeight * 100) - 30)
+                        if (Random.Range(0, 100) < (cornWeight * 100) - 15)
                         {
                             Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f,0.2f), Random.Range(-0.2f, 0.2f),0), new Quaternion(0, 0, 0, 0));
                         }

@@ -10,6 +10,9 @@ public class DoorControler : MonoBehaviour
     public GameObject[] rooms;
     public GameObject rewardRoom;
     public GameObject shopRoom;
+    public GameObject bossRoom1;
+    public GameObject bossRewardRoom;
+
     public GameObject nextRoom;
     public bool initiated;
     public bool enemies;
@@ -51,10 +54,15 @@ public class DoorControler : MonoBehaviour
         if(collision.gameObject==player && !initiated)
         {
             initiated = true;
-            if(player.GetComponent<playerMovement>().sala % 4 !=0 && player.GetComponent<playerMovement>().sala % 9 != 0)
+            if(player.GetComponent<playerMovement>().sala==15)
             {
-                Instantiate(nextRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
+            else if (player.GetComponent<playerMovement>().sala == 16)
+            {
+                Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+
             else if(player.GetComponent<playerMovement>().sala % 4 == 0)
             {
                 Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
@@ -62,6 +70,10 @@ public class DoorControler : MonoBehaviour
             else if (player.GetComponent<playerMovement>().sala % 9 == 0)
             {
                 Instantiate(shopRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else
+            {
+                Instantiate(nextRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
             player.SendMessage("nextRoom");
         }

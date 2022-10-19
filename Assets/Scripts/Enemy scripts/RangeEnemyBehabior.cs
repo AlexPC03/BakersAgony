@@ -6,7 +6,6 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
     private GameObject player;
-    private SpriteRenderer sp;
     private Animator anim;
     private GameObject proy;
 
@@ -34,7 +33,6 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         StartVida();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-        sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         canShoot = true;
         firstShoot = false;

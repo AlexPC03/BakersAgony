@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyMovementSimple : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
-    private SpriteRenderer sp;
     private Animator anim;
     private GameObject player;
     public bool inverted;
@@ -27,7 +26,6 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
         StartVida();
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-        sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 

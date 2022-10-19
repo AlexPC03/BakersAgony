@@ -6,7 +6,6 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
 {
     private Rigidbody2D rb;
     private GameObject player;
-    private SpriteRenderer sp;
     private Animator anim;
     private List<Vector3> storedPositions;
 
@@ -30,7 +29,6 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         storedPositions = new List<Vector3>();
-        sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
         if (headTransform==null)

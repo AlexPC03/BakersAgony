@@ -4,25 +4,44 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    private GameObject player;
+
     private SpriteRenderer sp;
 
 
     public GameObject[] enemyList;
     public GameObject enemyToSpawn;
+    public bool byDistance;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(byDistance)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+
         sp = GetComponent<SpriteRenderer>();
         sp.enabled = false;
         enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
-        StartRoom();
+        if (!byDistance)
+        {
+            StartRoom();
+        }
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (byDistance && (player.transform.position - transform.position).magnitude < distance)
+        {
+            StartRoom();
+            Destroy(gameObject);
+        }
     }
     private void FixedUpdate()
     {

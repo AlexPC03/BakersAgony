@@ -182,6 +182,7 @@ public class playerMovement : MonoBehaviour
     public void nextRoom()
     {
         sala++;
+        lightWorld.GetComponent<Light2D>().intensity = Random.Range(0.3f, 0.7f);
     }
     public void SceneChange()
     {
