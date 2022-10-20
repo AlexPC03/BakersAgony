@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8616631451335678255}
   m_Layer: 0
   m_Name: AlphaBunHead
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,17 +105,20 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 1
   head: {fileID: 0}
-  maxVida: 200
+  maxVida: 450
   deathTime: 2
   vida: 0
   isHead: 1
   headTransform: {fileID: 0}
   distanceFromHead: 75
+  bodyParts: []
   range: 150
   nearRange: 5
   speed: 4
   nearSpeed: 3.75
-  targetChangeTime: 15
+  targetChangeTime: 5
+  shootTime: 10
+  proyectile: {fileID: 6364243207959169023, guid: b55cabfde69b93848a56e3e8c01bace6, type: 3}
   actualDistance: 0
 --- !u!50 &8616631451335678251
 Rigidbody2D:

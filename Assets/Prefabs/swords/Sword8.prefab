@@ -126,7 +126,7 @@ MonoBehaviour:
   InventorySword: {fileID: 7720529332082432886, guid: 1325ea3a0a880d246b87120c07eded0e, type: 3}
   Swordspeed: 0
   neededSpeed: 125
-  damage: 14
+  damage: 16
   forceHit: 5
   rotationForce: 10
   deceleration: 1

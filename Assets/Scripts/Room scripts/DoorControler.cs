@@ -12,6 +12,7 @@ public class DoorControler : MonoBehaviour
     public GameObject shopRoom;
     public bool boss;
     public GameObject bossRoom1;
+    public GameObject bossRoom2;
     public GameObject bossRewardRoom;
 
     public GameObject nextRoom;
@@ -37,8 +38,8 @@ public class DoorControler : MonoBehaviour
 
     void FixedUpdate()
     {
-        enemies = GameObject.FindWithTag("Enemy") != null;
-        if (GameObject.FindWithTag("Enemy")!=null || initiated)
+        enemies = GameObject.FindWithTag("Enemy") != null || GameObject.FindWithTag("Boss") != null;
+        if (GameObject.FindWithTag("Enemy")!=null || GameObject.FindWithTag("Boss") != null || initiated)
         {
             coll.enabled = true;
         }
@@ -59,18 +60,23 @@ public class DoorControler : MonoBehaviour
             {
                 Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if(player.GetComponent<playerMovement>().sala==19)
+            else if (player.GetComponent<playerMovement>().sala == 34)
+            {
+                Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else if(player.GetComponent<playerMovement>().sala==17)
             {
                 Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if(player.GetComponent<playerMovement>().sala % 4 == 0)
-            {
-                Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
-            }
-            else if (player.GetComponent<playerMovement>().sala % 9 == 0)
+            else if (player.GetComponent<playerMovement>().sala % 8 == 0)
             {
                 Instantiate(shopRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
+            else if(player.GetComponent<playerMovement>().sala % 3 == 0)
+            {
+                Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+
             else
             {
                 Instantiate(nextRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));

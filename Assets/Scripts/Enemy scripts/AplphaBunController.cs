@@ -10,12 +10,16 @@ public class AplphaBunController : BossController
     private List<Vector3> storedPositions;
     private Vector3 targetPos;
     private float timeto=0;
+    private float timetoShoot = 0;
+    private GameObject proy;
+
 
 
     [Header("Linking atributes")]
     public bool isHead;
     public GameObject headTransform;
     public float distanceFromHead;
+    public GameObject[] bodyParts;
 
     [Header("Atributes")]
     public float range;
@@ -23,6 +27,8 @@ public class AplphaBunController : BossController
     public float speed;
     public float nearSpeed;
     public float targetChangeTime;
+    public float shootTime;
+    public GameObject proyectile;
 
     [Header("Information")]
     public float actualDistance;
@@ -46,9 +52,15 @@ public class AplphaBunController : BossController
     {
         CheckOrientation();
         timeto += Time.deltaTime;
+        timetoShoot += Time.deltaTime;
+
         if (headTransform == null)
         {
-            anim.SetFloat("Yvelocity", rb.velocity.y); ;
+            if(anim!=null)
+            {
+                anim.SetFloat("Yvelocity", rb.velocity.y);
+
+            }
             actualDistance = (player.transform.position - transform.position).magnitude;
             if (actualDistance < range)
             {
@@ -84,9 +96,18 @@ public class AplphaBunController : BossController
             targetPos = player.transform.position - new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
             targetChangeTime = Random.Range(3,7);
         }
-        if(!isHead&&headTransform==null)
+        if(timetoShoot> shootTime && head==null && isHead)
         {
-            TakeDamage(maxVida);
+            timetoShoot = 0;
+            Shoot();
+            shootTime = Random.Range(2f, 8f);
+        }
+        if(isHead && vida<=0 && headTransform==null)
+        {
+            foreach(GameObject obj in GameObject.FindGameObjectsWithTag("BodyBun"))
+            {
+                obj.SendMessage("TakeDamage", 1000);
+            }
         }
     }
 
@@ -100,6 +121,20 @@ public class AplphaBunController : BossController
         else if (rb.velocity.x < 0.01)
         {
             sp.flipX = true;
+        }
+    }
+    public void Shoot()
+    {
+        int random = Random.Range(0, bodyParts.Length);
+        GameObject part = bodyParts[random];
+        proy = Instantiate(proyectile, part.transform.position, new Quaternion(0, 0, 0, 0));
+        if (proy.GetComponent<BreadMageProyectileMovement>() != null)
+        {
+            proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+        }
+        else if (proy.GetComponent<BumeranProyectileMovement>() != null)
+        {
+            proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
         }
     }
 

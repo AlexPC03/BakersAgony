@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025053546, y: 0.27995116}
+  m_Offset: {x: -0.0025053546, y: 0.114853084}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1318752, y: 0.3728054}
+  m_Size: {x: 0.1318752, y: 0.73699224}
   m_EdgeRadius: 0
 --- !u!212 &2798648570822369329
 SpriteRenderer:
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventorySword: {fileID: -5434777673215694336, guid: 1325ea3a0a880d246b87120c07eded0e, type: 3}
   Swordspeed: 0
-  neededSpeed: 0
-  damage: 7.5
+  neededSpeed: 80
+  damage: 10
   forceHit: 3
   rotationForce: 10
   deceleration: 4

@@ -50,6 +50,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlphaBunHead
       objectReference: {fileID: 0}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.data[0]
+      value: 
+      objectReference: {fileID: 6115510761435940425}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.data[1]
+      value: 
+      objectReference: {fileID: 5260665044937402779}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.data[2]
+      value: 
+      objectReference: {fileID: 3898060950240422108}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.data[3]
+      value: 
+      objectReference: {fileID: 3267582458329496319}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: bodyParts.Array.data[4]
+      value: 
+      objectReference: {fileID: 3267582458329496319}
     - target: {fileID: 8616631451335678254, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: m_RootOrder
       value: 0

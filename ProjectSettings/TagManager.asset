@@ -9,6 +9,8 @@ TagManager:
   - Door
   - Room
   - Spawner
+  - BodyBun
+  - Boss
   layers:
   - Default
   - TransparentFX

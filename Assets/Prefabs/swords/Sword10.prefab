@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventorySword: {fileID: -949001312262874613, guid: 1325ea3a0a880d246b87120c07eded0e, type: 3}
   Swordspeed: 0
-  neededSpeed: 80
+  neededSpeed: 0
   damage: 13.5
   forceHit: 3
   rotationForce: 10

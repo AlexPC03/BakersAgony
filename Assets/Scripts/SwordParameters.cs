@@ -20,7 +20,7 @@ public class SwordParameters : SwordKnockback
     {
         if (Mathf.Abs(Swordspeed) > neededSpeed)
         {
-            if (coll.tag == "Enemy")
+            if (coll.tag == "Enemy" || coll.tag == "Boss")
             {
                 coll.SendMessage("TakeDamage", damage*Player.GetComponent<playerMovement>().attack);
             }
@@ -28,8 +28,14 @@ public class SwordParameters : SwordKnockback
             {
                 if (coll.gameObject.GetComponent<Rigidbody2D>() != null)
                 {
-                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit, ForceMode2D.Impulse);
-
+                    if(coll.tag == "Boss")
+                    {
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce(((coll.transform.position - Player.transform.position).normalized * forceHit * Player.GetComponent<playerMovement>().attack)/3, ForceMode2D.Impulse);
+                    }
+                    else
+                    {
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * Player.GetComponent<playerMovement>().attack, ForceMode2D.Impulse);
+                    }
                 }
             }
         }
