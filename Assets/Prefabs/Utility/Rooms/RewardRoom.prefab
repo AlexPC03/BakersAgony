@@ -431,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4283574714896743469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.25, y: 5.7472, z: -0.1}
+  m_LocalPosition: {x: 19.25, y: 2.8722, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 995548440939465406}
@@ -483,7 +483,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 38.496727}
+  m_Size: {x: 11.533409, y: 32.746727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4635880082864634466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.25, y: 5.7472, z: -0.1}
+  m_LocalPosition: {x: -19.25, y: 2.8722, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 995548440939465406}
@@ -566,7 +566,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 38.496727}
+  m_Size: {x: 11.533409, y: 32.746727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7495,10 +7495,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
       propertyPath: rewardRoom
-      value: 
-      objectReference: {fileID: 995548440640868721}
-    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
-      propertyPath: rooms.Array.data[0]
       value: 
       objectReference: {fileID: 995548440640868721}
     - target: {fileID: 912994531124313200, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}

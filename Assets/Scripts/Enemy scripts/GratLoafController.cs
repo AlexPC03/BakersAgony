@@ -58,6 +58,7 @@ public class GratLoafController : BossController
         anim.SetBool("Xmoving", rb.velocity.x != 0);
         anim.SetBool("Ymoving", rb.velocity.y != 0);
         timeTo += Time.deltaTime;
+
     }
 
     private void Align()
@@ -178,6 +179,7 @@ public class GratLoafController : BossController
     {
         if(collision.gameObject.layer==6 && timeTo>spawnRate)
         {
+            Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
             Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
             timeTo = 0;
         }

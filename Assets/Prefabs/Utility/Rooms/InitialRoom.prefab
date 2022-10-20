@@ -738,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255680249556732568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.25, y: 5.7472, z: -0.1}
+  m_LocalPosition: {x: 19.25, y: 2.2472, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 985584811221351435}
@@ -790,7 +790,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 38.496727}
+  m_Size: {x: 11.533409, y: 31.496727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -821,7 +821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4623106088069106903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.25, y: 5.7472, z: -0.1}
+  m_LocalPosition: {x: -19.25, y: 2.3722, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 985584811221351435}
@@ -873,7 +873,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 38.496727}
+  m_Size: {x: 11.533409, y: 31.746727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9386,14 +9386,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985584809381046215}
     m_Modifications:
-    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
-      propertyPath: nextRow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
-      propertyPath: rooms.Array.data[0]
-      value: 
-      objectReference: {fileID: 7715218614179913691, guid: 0e4330e0d5ac34242a19ef35ddac4439, type: 3}
     - target: {fileID: 912994531124313200, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
       propertyPath: m_RootOrder
       value: 1

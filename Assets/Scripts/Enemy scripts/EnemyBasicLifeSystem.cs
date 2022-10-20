@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    private float timeToDamage = 0;
+    private float invulneravility = 0.25f;
     protected SpriteRenderer sp;
     public GameObject corn;
     public GameObject corncub;
@@ -38,13 +40,17 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 
             Destroy(gameObject, deathTime);
         }
+        timeToDamage += Time.deltaTime;
     }
 
     public void TakeDamage(float damage)
     {
-        vida -= damage;
-        sp.color = Color.red;
-        Invoke("ChangeBack", 0.1f);
+        if(timeToDamage>invulneravility)
+        {
+            vida -= damage;
+            sp.color = Color.red;
+            Invoke("ChangeBack", 0.1f);
+        }
     }
     private void ChangeBack()
     {

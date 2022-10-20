@@ -10,6 +10,7 @@ public class DoorControler : MonoBehaviour
     public GameObject[] rooms;
     public GameObject rewardRoom;
     public GameObject shopRoom;
+    public bool boss;
     public GameObject bossRoom1;
     public GameObject bossRewardRoom;
 
@@ -54,15 +55,14 @@ public class DoorControler : MonoBehaviour
         if(collision.gameObject==player && !initiated)
         {
             initiated = true;
-            if(player.GetComponent<playerMovement>().sala==15)
-            {
-                Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
-            }
-            else if (player.GetComponent<playerMovement>().sala == 16)
+            if(boss)
             {
                 Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-
+            else if(player.GetComponent<playerMovement>().sala==19)
+            {
+                Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
             else if(player.GetComponent<playerMovement>().sala % 4 == 0)
             {
                 Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));

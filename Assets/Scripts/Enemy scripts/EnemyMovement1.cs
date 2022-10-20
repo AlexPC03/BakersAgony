@@ -8,6 +8,7 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
     private GameObject player;
     private Animator anim;
 
+
     [Header("Atributes")]
     public float range;
     public float speed;
@@ -53,6 +54,8 @@ public class EnemyMovement1 : EnemyBasicLifeSystem
         }
         anim.SetFloat("Yvelocity", rb.velocity.y);
         anim.SetBool("Stopped", rb.velocity == Vector2.zero);
+
+
     }
 
     private void Align()

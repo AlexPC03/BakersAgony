@@ -230,7 +230,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.99
   head: {fileID: 0}
-  maxVida: 125
+  maxVida: 150
   deathTime: 3
   vida: 0
   enemyToSpawn: {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
