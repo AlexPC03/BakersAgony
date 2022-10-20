@@ -100,7 +100,7 @@ public class AplphaBunController : BossController
         {
             timetoShoot = 0;
             Shoot();
-            shootTime = Random.Range(2f, 8f);
+            shootTime = Random.Range(vida/150+0.25f, vida / 50+0.25f);
         }
         if(isHead && vida<=0 && headTransform==null)
         {

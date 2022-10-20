@@ -279,6 +279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7251450132343963937}
     m_Modifications:
+    - target: {fileID: 3772773071080759549, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+      propertyPath: ShapeModule.m_Position.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6191994284903449445, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -401,7 +405,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlphaBunTail
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4458253060987237861, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+    - {fileID: 3772773071080759549, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
 --- !u!1 &7728777382620206569 stripped
 GameObject:
@@ -543,7 +549,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlphaBunTail (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4458253060987237861, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+    - {fileID: 3772773071080759549, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
 --- !u!1 &475341960902676881 stripped
 GameObject:

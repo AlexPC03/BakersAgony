@@ -8,7 +8,6 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
     private Animator anim;
     private GameObject player;
     public bool inverted;
-    public bool separate;
 
 
     [Header("Atributes")]
