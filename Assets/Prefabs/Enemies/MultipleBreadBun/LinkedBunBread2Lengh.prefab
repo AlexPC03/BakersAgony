@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 7954502833770704497}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name

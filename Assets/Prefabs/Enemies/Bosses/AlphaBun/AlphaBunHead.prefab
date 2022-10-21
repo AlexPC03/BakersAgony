@@ -218,6 +218,7 @@ MonoBehaviour:
   maxVida: 450
   deathTime: 2
   vida: 0
+  newScale: 5.75
   isHead: 1
   headTransform: {fileID: 0}
   distanceFromHead: 75
@@ -225,7 +226,7 @@ MonoBehaviour:
   range: 150
   nearRange: 5
   speed: 4
-  nearSpeed: 3.75
+  nearSpeed: 15
   targetChangeTime: 5
   shootTime: 10
   proyectile: {fileID: 6637308442459538384, guid: 7dfbce531f0d82d4a9d3435e071617b9, type: 3}

@@ -32,7 +32,11 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<Rigidbody2D>().angularVelocity = 0f;
-            GetComponent<Collider2D>().enabled = false;
+            if (GetComponent<Collider2D>() != null)
+            {
+                GetComponent<Collider2D>().enabled = false;
+            }
+
             if(GetComponent<ParticleSystem>()!=null)
             {
                 GetComponent<ParticleSystem>().Play();

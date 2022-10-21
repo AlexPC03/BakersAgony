@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class BreadMageProyectileMovement : ProyectileBasicSystem
 {
+    private float timePassed;
     public Vector3 targetPos;
     public bool seeker;
     public bool rotate;
     public float rotateVelocity;
     public float dragForce;
     public float livingTime;
+    public float delayTime;
     // Start is called before the first frame update
     void Start()
     {
         ProyectileStart();
         target = GameObject.FindGameObjectWithTag("Player");
-        if(seeker)
-        {
-
-        }
-        else
+        if (!seeker && delayTime == 0)
         {
             rb.drag = dragForce;
             rb.AddForce((targetPos - transform.position).normalized * velocity, ForceMode2D.Impulse);

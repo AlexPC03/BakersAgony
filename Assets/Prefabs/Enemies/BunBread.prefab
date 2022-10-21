@@ -111,9 +111,9 @@ MonoBehaviour:
   deathTime: 0.5
   vida: 0
   headTransform: {fileID: 0}
-  distanceFromHead: 100
+  distanceFromHead: 1
   range: 100
-  speed: 1
+  speed: 0.75
   fromVertical: 0
   actualDistance: 0
   xDistance: 0

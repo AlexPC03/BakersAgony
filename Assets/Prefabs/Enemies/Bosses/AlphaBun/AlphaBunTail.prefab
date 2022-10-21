@@ -111,7 +111,7 @@ MonoBehaviour:
   vida: 0
   isHead: 0
   headTransform: {fileID: 0}
-  distanceFromHead: 75
+  distanceFromHead: 25
   bodyParts: []
   range: 150
   nearRange: 5

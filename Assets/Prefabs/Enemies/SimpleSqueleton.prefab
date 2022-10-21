@@ -221,10 +221,9 @@ MonoBehaviour:
   deathTime: 0.5
   vida: 10
   inverted: 0
-  separate: 0
   range: 15
-  speed: 0.75
-  nearSpeed: 0.75
+  speed: 0.5
+  nearSpeed: 0.5
   drift: 1
   actualDistance: 0
 --- !u!50 &9068487438309388597

@@ -145,7 +145,7 @@ MonoBehaviour:
   deathTime: 1
   vida: 0
   range: 10
-  speed: 0.75
+  speed: 1
   chargeSpeed: 8
   chargeRecover: 3
   directionFromCharge: 1

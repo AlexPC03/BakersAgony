@@ -13,6 +13,7 @@ public class DoorControler : MonoBehaviour
     public bool boss;
     public GameObject bossRoom1;
     public GameObject bossRoom2;
+    public GameObject bossRoom3;
     public GameObject bossRewardRoom;
 
     public GameObject nextRoom;
@@ -39,7 +40,7 @@ public class DoorControler : MonoBehaviour
     void FixedUpdate()
     {
         enemies = GameObject.FindWithTag("Enemy") != null || GameObject.FindWithTag("Boss") != null;
-        if (GameObject.FindWithTag("Enemy")!=null || GameObject.FindWithTag("Boss") != null || initiated)
+        if (enemies || initiated)
         {
             coll.enabled = true;
         }
@@ -51,20 +52,32 @@ public class DoorControler : MonoBehaviour
 
     }
 
+    const int salaBoss1 = 17;
+    const int salaBoss2 = 33;
+    const int salaBoss3 = 49;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject==player && !initiated)
         {
             initiated = true;
-            if(boss)
+            if(player.GetComponent<playerMovement>().sala==salaBoss3+1)
+            {
+                Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+
+            }
+            else if (boss)
             {
                 Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if (player.GetComponent<playerMovement>().sala == 34)
+            else if(player.GetComponent<playerMovement>().sala == salaBoss3)
+            {
+                Instantiate(bossRoom3, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else if (player.GetComponent<playerMovement>().sala == salaBoss2)
             {
                 Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if(player.GetComponent<playerMovement>().sala==17)
+            else if(player.GetComponent<playerMovement>().sala==salaBoss1)
             {
                 Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }

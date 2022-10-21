@@ -10,6 +10,7 @@ public class ProyectileBasicSystem : MonoBehaviour
     public float destroyTime;
     public bool friendlyFire;
     public bool destroyOnHit;
+    public bool ghost;
 
 
     public float velocity;
@@ -17,6 +18,10 @@ public class ProyectileBasicSystem : MonoBehaviour
     protected void ProyectileStart()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(ghost)
+        {
+            Physics2D.IgnoreLayerCollision(10, 6);
+        }
     }
 
     // Update is called once per frame

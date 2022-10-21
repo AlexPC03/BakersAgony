@@ -111,7 +111,6 @@ MonoBehaviour:
   deathTime: 0.5
   vida: 0
   inverted: 1
-  separate: 1
   range: 30
   speed: 0.5
   nearSpeed: 0.75
