@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,6 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f534fcc32b928e64087cc344cb96ce58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corn: {fileID: 0}
+  corncub: {fileID: 0}
+  cornWeight: 0
+  head: {fileID: 0}
   maxVida: 30
   deathTime: 2
   vida: 0

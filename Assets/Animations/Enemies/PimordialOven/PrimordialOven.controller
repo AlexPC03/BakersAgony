@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: OpenBig
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: TimePassed
+    m_EventTreshold: 7.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3159173790646635169}
   m_Solo: 0
@@ -91,6 +94,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: OpenBig
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: TimePassed
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -224,6 +233,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: OpenSmall
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: TimePassed
+    m_EventTreshold: 7.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2401680957699137349}
   m_Solo: 0

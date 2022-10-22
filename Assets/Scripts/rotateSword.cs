@@ -23,7 +23,8 @@ public class rotateSword : MonoBehaviour
     void Update()
     {
         transform.position =new Vector3(player.transform.position.x, player.transform.position.y-0.3f, player.transform.position.z) ;
-
+        force = GameObject.Find("SwordObject").GetComponentInChildren<SwordParameters>().rotationForce;
+        rb.angularDrag= GameObject.Find("SwordObject").GetComponentInChildren<SwordParameters>().deceleration;
         angVelocity = rb.angularVelocity;
     }
 

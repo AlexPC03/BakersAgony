@@ -15,6 +15,7 @@ public class DoorControler : MonoBehaviour
     public GameObject bossRoom2;
     public GameObject bossRoom3;
     public GameObject bossRewardRoom;
+    public GameObject finalRewardRoom;
 
     public GameObject nextRoom;
     public bool initiated;
@@ -62,8 +63,7 @@ public class DoorControler : MonoBehaviour
             initiated = true;
             if(player.GetComponent<playerMovement>().sala==salaBoss3+1)
             {
-                Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
-
+                Instantiate(finalRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
             else if (boss)
             {

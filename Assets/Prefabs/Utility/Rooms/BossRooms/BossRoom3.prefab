@@ -449,7 +449,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5688,6 +5688,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1975433226714856128}
     m_Modifications:
     - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
+      propertyPath: bossRoom3
+      value: 
+      objectReference: {fileID: 1975433226714856131}
+    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 
       objectReference: {fileID: 1975433226714856131}
@@ -6063,6 +6067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1975433226714856128}
     m_Modifications:
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.size
       value: 1

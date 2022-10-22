@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7789525085258174839}
   - component: {fileID: 7789525085258174838}
   - component: {fileID: 7789525085258174842}
+  - component: {fileID: 6943088958185534369}
   m_Layer: 6
   m_Name: Caja
   m_TagString: Untagged
@@ -146,3 +147,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: -0.75
+--- !u!114 &6943088958185534369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789525085258174833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

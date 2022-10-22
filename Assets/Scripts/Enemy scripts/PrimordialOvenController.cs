@@ -8,6 +8,7 @@ public class PrimordialOvenController : BossController
     private CoalHeartController heartLife;
     private GameObject player;
     private Animator anim;
+    private float time=0;
     private float timepassed;
     public GameObject bigDoor;
     public GameObject[] smallDoors;
@@ -30,7 +31,8 @@ public class PrimordialOvenController : BossController
     // Update is called once per frame
     void Update()
     {
-
+        time += Time.deltaTime;
+        anim.SetFloat("TimePassed", time);
         if(stop)
         {
             timepassed = 0;
@@ -61,14 +63,14 @@ public class PrimordialOvenController : BossController
     {
         if(heartLife!=null)
         {
-            for(int i=0;i<10-(heartLife.vida / 50);i++)
+            for(int i=0;i<13-(heartLife.vida / 50);i++)
             {
                 GameObject proy;
                 proy = Instantiate(proyectile, bigDoor.transform.position, new Quaternion(0, 0, 0, 0));
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
-                    proy.GetComponent<BreadMageProyectileMovement>().velocity = (12 - heartLife.vida / 50)*30;
-                    proy.GetComponent<BreadMageProyectileMovement>().velocity = 12 - heartLife.vida / 50;
+                    proy.GetComponent<BreadMageProyectileMovement>().velocity = (15 - heartLife.vida / 50)*30;
+                    proy.GetComponent<BreadMageProyectileMovement>().velocity = 13 - heartLife.vida / 50;
                     proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-18f, 18f), Random.Range(-18f, 18f), 0);
                 }
             }

@@ -453,6 +453,7 @@ MonoBehaviour:
   bossRoom2: {fileID: 6639240519460265814, guid: 287c7c4453b2a5a469defbb975e233af, type: 3}
   bossRoom3: {fileID: 1975433226714856131, guid: f654fb3abfc46cb4eb1e66ecaa0154ec, type: 3}
   bossRewardRoom: {fileID: 7136571336800638640, guid: e35bcecee36e5434fb470ee0d3aedeb4, type: 3}
+  finalRewardRoom: {fileID: 3537489852159313140, guid: 54e2174c8cf8eab499ac1812efe5b27d, type: 3}
   nextRoom: {fileID: 0}
   initiated: 0
   enemies: 0

@@ -76,7 +76,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         }
         if(corn!=null && corncub!=null)
         {
-            if (cornWeight > 0.9 && Random.Range(0, 100) < cornWeight * 100)
+            if (cornWeight >= 0.9 && Random.Range(0, 100) < cornWeight * 100)
             {
                 Instantiate(corncub, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
                 Instantiate(corncub, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));

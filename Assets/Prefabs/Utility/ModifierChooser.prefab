@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9218497009012034082}
   - component: {fileID: 2990811792562237799}
-  - component: {fileID: 4552319875854017491}
   m_Layer: 0
   m_Name: ModifierChooser
   m_TagString: Untagged
@@ -44,22 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb63b04bae61d54281c946aa60b8b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodMod: []
-  neutralMod: []
+  goodMod:
+  - {fileID: 1550920606695378198, guid: 047f1ac44bcc1e54fad9d5951bb3b435, type: 3}
+  - {fileID: 1550920606695378198, guid: 047f1ac44bcc1e54fad9d5951bb3b435, type: 3}
+  - {fileID: 1550920606695378198, guid: 047f1ac44bcc1e54fad9d5951bb3b435, type: 3}
+  - {fileID: 7612494058164326324, guid: 2a659bec0807c324f9bb788b1c0c74a9, type: 3}
+  - {fileID: 7648200195866315273, guid: 9503eb1b7ce140b43b53705fd93d88d4, type: 3}
+  neutralMod:
+  - {fileID: 3293519856658844424, guid: 0480465bb6670e84bb8e4aa4dfdd499c, type: 3}
+  - {fileID: 6202028284805788253, guid: 70d9ae097622ab247809b680e31bd926, type: 3}
+  - {fileID: 778245651402243740, guid: 5feb1fc9893dc784fb920acbabbc9dbb, type: 3}
+  - {fileID: 4209470809584527939, guid: 046ff4e5b48744146b456543477eed98, type: 3}
   badMod:
-  - {fileID: 4355713910911837837, guid: c37e77e01374a8c44bfab0c0c21b45a6, type: 3}
-  - {fileID: 6237473612955234795, guid: 431ecaa58a1489f4a834a21d3225932e, type: 3}
-  - {fileID: 6237473612955234795, guid: 431ecaa58a1489f4a834a21d3225932e, type: 3}
---- !u!114 &4552319875854017491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5993008438472832579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difference: 0
+  - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
+  - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
+  - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
+  - {fileID: 679038390786817664, guid: fae645a2d2fbee84483daafcdc756bc7, type: 3}
+  - {fileID: 1245889822982382202, guid: e24630d5b4a6783469a392b4d97bf67a, type: 3}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ModifirController : MonoBehaviour
 {
+    private GameObject player;
+
     public GameObject[] goodMod;
     public GameObject[] neutralMod;
     public GameObject[] badMod;
@@ -11,7 +13,9 @@ public class ModifirController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Random.Range(0,3)==0)
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (Random.Range(0f,1f)>=0.5f)
         {
             int a = Random.Range(0, 3);
             if (a==0)
@@ -20,11 +24,18 @@ public class ModifirController : MonoBehaviour
             }
             else if (a == 1)
             {
-                Instantiate(goodMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                Instantiate(goodMod[Random.Range(0, goodMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
             }
             else if (a == 2)
             {
-                Instantiate(badMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                if(player.GetComponent<playerMovement>().sala >= 20)
+                {
+                    Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                }
+                else
+                {
+                    Instantiate(neutralMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                }
             }
         }
     }

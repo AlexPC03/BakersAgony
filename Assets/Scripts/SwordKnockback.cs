@@ -21,8 +21,6 @@ public class SwordKnockback : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         SwordBase = GameObject.Find("Sword");
         SwordObj = GameObject.Find("SwordObject");
-        SwordBase.GetComponent<rotateSword>().force = rotationForce;
-        SwordBase.GetComponent<Rigidbody2D>().angularDrag = deceleration;
     }
 
     // Update is called once per frame
