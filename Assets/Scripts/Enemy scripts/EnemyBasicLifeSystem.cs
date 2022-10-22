@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    public float pitch=1;
+    protected AudioSource aud;
     private float timeToDamage = 0;
     private float invulneravility = 0.25f;
     protected SpriteRenderer sp;
@@ -22,6 +24,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     {
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
+        aud = GetComponent<AudioSource>();
 
     }
 
@@ -30,8 +33,12 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     {
         if(vida<=0)
         {
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            GetComponent<Rigidbody2D>().angularVelocity = 0f;
+            if(GetComponent<Rigidbody2D>()!=null)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Rigidbody2D>().angularVelocity = 0f;
+            }
+
             if (GetComponent<Collider2D>() != null)
             {
                 GetComponent<Collider2D>().enabled = false;
@@ -52,13 +59,25 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         if(timeToDamage>invulneravility)
         {
             vida -= damage;
-            sp.color = Color.red;
+            if(GetComponent<SpriteRenderer>() != null)
+            {
+                sp.color = Color.red;
+            }
+
+            if(GetComponent<AudioSource>() != null)
+            {
+                aud.pitch = Random.Range(pitch*0.75f, pitch * 1.25f);
+                aud.Play();
+            }
             Invoke("ChangeBack", 0.1f);
         }
     }
     private void ChangeBack()
     {
-        sp.color = Color.white;
+        if(sp!=null)
+        {
+            sp.color = Color.white;
+        } 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

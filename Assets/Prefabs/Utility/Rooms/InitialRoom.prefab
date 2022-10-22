@@ -9174,7 +9174,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2251926357373969536, guid: 99990e8f714ae454191056fe5ba79fc7, type: 3}
       propertyPath: destroyOnPick
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2251926357373969536, guid: 99990e8f714ae454191056fe5ba79fc7, type: 3}
       propertyPath: list.Array.size

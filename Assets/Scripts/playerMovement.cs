@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+    public AudioClip takeDamage;
+    public AudioClip die;
     public ParticleSystem par;
+    private AudioSource aud;
     private Rigidbody2D body;
     private SpriteRenderer sp;
     public GameObject healthbar;
@@ -43,6 +46,7 @@ public class playerMovement : MonoBehaviour
         maxMaxLife = 12;
         PassedTime = 0;
         health = maxLife-1;
+        aud = GetComponent<AudioSource>();
         body = GetComponent<Rigidbody2D>();
         sp = playerBody.GetComponent<SpriteRenderer>();
         invulnerable = false;
@@ -137,18 +141,25 @@ public class playerMovement : MonoBehaviour
             invulnerable = true;
         }
 
-
+        if (health == 1)
+        {
+            aud.clip = die;
+        }
+        else
+        {
+            aud.clip = takeDamage;
+        }
     }
 
     public void TakeDamage()
     {
         if(!invulnerable)
         {
+            aud.Play();
             health -= 1;
             PassedTime = 0;
             par.Play();
         }
-
     }
 
     public void RecoverLife()

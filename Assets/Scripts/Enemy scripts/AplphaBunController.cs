@@ -128,14 +128,18 @@ public class AplphaBunController : BossController
         int random = Random.Range(0, bodyParts.Length);
         GameObject part = bodyParts[random];
         proy = Instantiate(proyectile, part.transform.position, new Quaternion(0, 0, 0, 0));
-        if (proy.GetComponent<BreadMageProyectileMovement>() != null)
+        if(proy!=null)
         {
-            proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+            if (proy.GetComponent<BreadMageProyectileMovement>() != null)
+            {
+                proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+            }
+            else if (proy.GetComponent<BumeranProyectileMovement>() != null)
+            {
+                proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+            }
         }
-        else if (proy.GetComponent<BumeranProyectileMovement>() != null)
-        {
-            proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
-        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

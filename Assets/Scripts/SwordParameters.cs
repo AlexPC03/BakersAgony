@@ -22,6 +22,7 @@ public class SwordParameters : SwordKnockback
         {
             if (coll.tag == "Enemy" || coll.tag == "Boss")
             {
+                if(coll.GetComponent<EnemyBasicLifeSystem>()!=null)
                 coll.SendMessage("TakeDamage", damage*Player.GetComponent<playerMovement>().attack);
             }
             if(coll.tag!="UnstoppableProyectile")

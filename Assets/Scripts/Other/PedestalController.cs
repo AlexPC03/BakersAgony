@@ -19,10 +19,6 @@ public class PedestalController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(destroyOnPick)
-        {
-            gameObject.tag = "Enemy";
-        }
         player = GameObject.FindGameObjectWithTag("Player");
         sp = GetComponent<SpriteRenderer>();
         em = GetComponent<ParticleSystem>().emission;

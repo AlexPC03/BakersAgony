@@ -29,5 +29,9 @@ public class SwordKnockback : MonoBehaviour
         Swordspeed = SwordBase.GetComponent<rotateSword>().angVelocity;
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
 
 }

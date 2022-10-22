@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PrimordialOvenController : BossController
 {
+    public AudioClip Open;
+    public AudioClip Close;
+
     private bool stop=false;
     private CoalHeartController heartLife;
     private GameObject player;
@@ -25,6 +28,8 @@ public class PrimordialOvenController : BossController
         player = GameObject.FindGameObjectWithTag("Player");
         heartLife = heart.GetComponent<CoalHeartController>();
         anim = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
+
         timepassed = 0;
     }
 
@@ -97,6 +102,34 @@ public class PrimordialOvenController : BossController
                 }
             }
         }
+    }
+
+    public void openSmallSound()
+    {
+        aud.pitch = 0.75f;
+        aud.clip = Open;
+        aud.Play();
+    }
+
+    public void closeSmallSound()
+    {
+        aud.pitch = 0.75f;
+        aud.clip = Close;
+        aud.Play();
+    }
+
+    public void openBigSound()
+    {
+        aud.pitch = 2f;
+        aud.clip = Open;
+        aud.Play();
+    }
+
+    public void closeBigSound()
+    {
+        aud.pitch = 2f;
+        aud.clip = Close;
+        aud.Play();
     }
 
 }
