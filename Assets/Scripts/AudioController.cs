@@ -33,21 +33,21 @@ public class AudioController : MonoBehaviour
         boss = GameObject.FindWithTag("Boss") != null;
         if (boss)
         {
-            if (player.GetComponent<playerMovement>().sala == 18)
+            if (player.GetComponent<playerMovement>().sala == 10)
             {
                 audio.volume = 0.2f;
                 audio.pitch = 1f;
                 ChangeClip(Boss1);
 
             }
-            else if (player.GetComponent<playerMovement>().sala == 34)
+            else if (player.GetComponent<playerMovement>().sala == 18)
             {
                 audio.volume = 0.2f;
                 audio.pitch = 1.05f;
                 ChangeClip(Boss2);
 
             }
-            else if (player.GetComponent<playerMovement>().sala == 50)
+            else if (player.GetComponent<playerMovement>().sala == 25)
             {
                 audio.volume = 0.2f;
                 audio.pitch = 1f;
@@ -107,7 +107,5 @@ public class AudioController : MonoBehaviour
         yield return new WaitForSeconds(audio.clip.length);
         audio.clip = Boss3Bucle;
         audio.Play();
-
-
     }
 }

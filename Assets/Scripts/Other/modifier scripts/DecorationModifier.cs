@@ -31,6 +31,7 @@ public class DecorationModifier : MonoBehaviour
                 if(forEnemies)
                 {
                     obj.tag = "SpecialEnemy";
+                    obj.AddComponent<DestroyByDistance>();
                 }
             }
             else

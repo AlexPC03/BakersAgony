@@ -56,9 +56,9 @@ public class DoorControler : MonoBehaviour
 
     }
 
-    const int salaBoss1 = 17;
-    const int salaBoss2 = 33;
-    const int salaBoss3 = 49;
+    const int salaBoss1 = 9;
+    const int salaBoss2 = 17;
+    const int salaBoss3 = 25;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject==player && !initiated)
@@ -96,7 +96,6 @@ public class DoorControler : MonoBehaviour
             {
                 Instantiate(rewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-
             else
             {
                 Instantiate(nextRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));

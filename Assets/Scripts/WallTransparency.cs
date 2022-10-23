@@ -10,7 +10,7 @@ public class WallTransparency : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = wallList[Random.Range(0,wallList.Length)];       
+         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = wallList[Random.Range(0,wallList.Length)];
     }
 
     // Update is called once per frame
