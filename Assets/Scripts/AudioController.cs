@@ -47,7 +47,7 @@ public class AudioController : MonoBehaviour
                 ChangeClip(Boss2);
 
             }
-            else if (player.GetComponent<playerMovement>().sala == 25)
+            else if (player.GetComponent<playerMovement>().sala == 26)
             {
                 audio.volume = 0.2f;
                 audio.pitch = 1f;

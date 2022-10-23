@@ -2837,7 +2837,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: distance
-      value: 7.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.size
@@ -2857,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5504517591635146919, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5504517591635146919, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: m_LocalPosition.z

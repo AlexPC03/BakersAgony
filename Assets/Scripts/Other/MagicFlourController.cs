@@ -20,6 +20,6 @@ public class MagicFlourController : MonoBehaviour
 
     public void Pick()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Autro");
     }
 }
