@@ -30,7 +30,7 @@ public class DecorationModifier : MonoBehaviour
                 GameObject obj=Instantiate(objects[Random.Range(0, objects.Length)], pos, new Quaternion(0, 0, 0, 0));
                 if(forEnemies)
                 {
-                    obj.tag = "SpecialEnemy";
+                    obj.GetComponent<EnemySpawner>();
                     obj.AddComponent<DestroyByDistance>();
                 }
             }

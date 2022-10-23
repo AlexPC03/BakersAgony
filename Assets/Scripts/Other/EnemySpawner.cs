@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
 
     private SpriteRenderer sp;
 
+    private bool aditional;
+
 
     public GameObject[] enemyList;
     public GameObject enemyToSpawn;
@@ -30,8 +32,6 @@ public class EnemySpawner : MonoBehaviour
             StartRoom();
         }
 
-
-
     }
 
     // Update is called once per frame
@@ -50,6 +50,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void StartRoom()
     {
-        Instantiate(enemyToSpawn,transform.position,new Quaternion(0,0,0,0));
+        GameObject enem=Instantiate(enemyToSpawn,transform.position,new Quaternion(0,0,0,0));
+        if(aditional)
+        {
+            enem.AddComponent<DestroyByDistance>();
+            enem.tag = "SpecialEnemy";
+        }
     }
 }

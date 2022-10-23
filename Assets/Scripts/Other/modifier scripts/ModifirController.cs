@@ -28,7 +28,7 @@ public class ModifirController : MonoBehaviour
             }
             else if (a == 2)
             {
-                if(player.GetComponent<playerMovement>().sala >= 20)
+                if(player.GetComponent<playerMovement>().sala >= 12)
                 {
                     Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
                 }

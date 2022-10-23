@@ -78,14 +78,14 @@ public class PrimordialOvenController : BossController
     {
         if(heartLife!=null)
         {
-            for(int i=0;i<13-(heartLife.vida / 50);i++)
+            for(int i=0;i<14-(heartLife.vida / 50);i++)
             {
                 GameObject proy;
                 proy = Instantiate(proyectile, bigDoor.transform.position, new Quaternion(0, 0, 0, 0));
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
                     proy.GetComponent<BreadMageProyectileMovement>().rotateVelocity = (15 - heartLife.vida / 50)*30;
-                    proy.GetComponent<BreadMageProyectileMovement>().velocity = 13 - heartLife.vida / 50;
+                    proy.GetComponent<BreadMageProyectileMovement>().velocity = 16 - heartLife.vida / 50;
                     proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-18f, 18f), Random.Range(-18f, 18f), 0);
                 }
             }

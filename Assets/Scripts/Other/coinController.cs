@@ -20,7 +20,7 @@ public class coinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce((player.transform.position - transform.position).normalized * 3, ForceMode2D.Force);
+        rb.AddForce((player.transform.position - transform.position).normalized * 5, ForceMode2D.Force);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
