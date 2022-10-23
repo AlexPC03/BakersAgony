@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SwordParameters : SwordKnockback
 {
+    private AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
         StartSword();
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class SwordParameters : SwordKnockback
     {
         if (Mathf.Abs(Swordspeed) > neededSpeed)
         {
-            if (coll.tag == "Enemy" || coll.tag == "Boss")
+            if (coll.tag == "Enemy" || coll.tag == "Boss" || coll.tag == "SpecialEnemy")
             {
                 if(coll.GetComponent<EnemyBasicLifeSystem>()!=null)
                 coll.SendMessage("TakeDamage", damage*Player.GetComponent<playerMovement>().attack);
@@ -44,6 +46,10 @@ public class SwordParameters : SwordKnockback
 
     public void Pick()
     {
+        if(aud!=null)
+        {
+            aud.Play();
+        }
         Vector3 pos;
         Quaternion rot;
         Transform otherSword;

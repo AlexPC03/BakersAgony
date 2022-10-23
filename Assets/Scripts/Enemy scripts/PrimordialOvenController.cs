@@ -6,6 +6,7 @@ public class PrimordialOvenController : BossController
 {
     public AudioClip Open;
     public AudioClip Close;
+    public AudioClip Die;
 
     private bool stop=false;
     private CoalHeartController heartLife;
@@ -20,6 +21,7 @@ public class PrimordialOvenController : BossController
     public GameObject[] EnemyList;
     public float timeToStart;
     public bool enemies;
+    public bool started;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +64,14 @@ public class PrimordialOvenController : BossController
             anim.SetBool("OpenBig",true);
             stop = false;
         }
+
+        if(heart == null)
+        {
+            aud.pitch = 0.75f;
+            aud.volume = 0.75f;
+            aud.clip = Die;
+            PlayOnce();
+        }
     }
 
     public void Shoot()
@@ -74,7 +84,7 @@ public class PrimordialOvenController : BossController
                 proy = Instantiate(proyectile, bigDoor.transform.position, new Quaternion(0, 0, 0, 0));
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
-                    proy.GetComponent<BreadMageProyectileMovement>().velocity = (15 - heartLife.vida / 50)*30;
+                    proy.GetComponent<BreadMageProyectileMovement>().rotateVelocity = (15 - heartLife.vida / 50)*30;
                     proy.GetComponent<BreadMageProyectileMovement>().velocity = 13 - heartLife.vida / 50;
                     proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-18f, 18f), Random.Range(-18f, 18f), 0);
                 }
@@ -106,30 +116,52 @@ public class PrimordialOvenController : BossController
 
     public void openSmallSound()
     {
-        aud.pitch = 0.75f;
-        aud.clip = Open;
-        aud.Play();
+        if (heart != null)
+        {
+            aud.pitch = 0.75f;
+            aud.clip = Open;
+            aud.Play();
+        }
     }
 
     public void closeSmallSound()
     {
-        aud.pitch = 0.75f;
-        aud.clip = Close;
-        aud.Play();
+        if (heart != null)
+        {
+            aud.pitch = 0.75f;
+            aud.clip = Close;
+            aud.Play();
+        }
     }
 
     public void openBigSound()
     {
-        aud.pitch = 2f;
-        aud.clip = Open;
-        aud.Play();
+        if (heart != null)
+        {
+            aud.pitch = 2f;
+            aud.clip = Open;
+            aud.Play();
+        }
     }
 
     public void closeBigSound()
     {
-        aud.pitch = 2f;
-        aud.clip = Close;
-        aud.Play();
+        if (heart != null)
+        {
+            aud.pitch = 2f;
+            aud.clip = Close;
+            aud.Play();
+        }
+
+    }
+
+    private void PlayOnce()
+    {
+        if (!started)
+        {
+            aud.Play();
+            started = true;
+        }
     }
 
 }

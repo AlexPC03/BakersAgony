@@ -11,7 +11,6 @@ public class AplphaBunController : BossController
     private Vector3 targetPos;
     private float timeto=0;
     private float timetoShoot = 0;
-    private GameObject proy;
 
 
 
@@ -125,20 +124,30 @@ public class AplphaBunController : BossController
     }
     public void Shoot()
     {
-        int random = Random.Range(0, bodyParts.Length);
-        GameObject part = bodyParts[random];
-        proy = Instantiate(proyectile, part.transform.position, new Quaternion(0, 0, 0, 0));
-        if(proy!=null)
+        GameObject part = null; 
+        GameObject proy=null;
+        if (vida > 0)
         {
-            if (proy.GetComponent<BreadMageProyectileMovement>() != null)
+            int random = Random.Range(0, bodyParts.Length);
+            part = bodyParts[random];
+
+            if (part != null)
             {
-                proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+                proy = Instantiate(proyectile, part.transform.position, new Quaternion(0, 0, 0, 0));
             }
-            else if (proy.GetComponent<BumeranProyectileMovement>() != null)
+            if (proy != null)
             {
-                proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+                if (proy.GetComponent<BreadMageProyectileMovement>() != null)
+                {
+                    proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+                }
+                else if (proy.GetComponent<BumeranProyectileMovement>() != null)
+                {
+                    proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+                }
             }
         }
+
 
     }
 

@@ -26,10 +26,23 @@ public class CutSceneController : MonoBehaviour
 
         }
     }
-    public void ChangeScene()
+    public void ChangeSceneToMain()
     {
         anim.speed = 1;
 
         SceneManager.LoadScene("SampleScene");
+    }
+    public void ChangeSceneToCredits()
+    {
+        anim.speed = 1;
+
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void ChangeSceneToMenu()
+    {
+        anim.speed = 1;
+
+        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -6843,7 +6843,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6941,8 +6941,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ambient: {fileID: 8300000, guid: b034cafb2801aa34691fe868c166e4c5, type: 3}
   Battle: {fileID: 8300000, guid: f032b9fe57a3ba74e8271152d5d7f6ab, type: 3}
-  Shop: {fileID: 0}
+  Shop: {fileID: 8300000, guid: 0e00b9a30a6e8954587816a958668b15, type: 3}
+  Boss1: {fileID: 8300000, guid: d4e765c469671a848b7201f415f29109, type: 3}
+  Boss2: {fileID: 8300000, guid: 961302ec5994a9f40bc2d3b13116772a, type: 3}
+  Boss3Intro: {fileID: 8300000, guid: e851130b7e907cb419854ec7f0eeadc7, type: 3}
+  Boss3Bucle: {fileID: 8300000, guid: 1da5123cdc468ed47870a817e4c4bb4f, type: 3}
   started: 0
+  actual: {fileID: 0}
 --- !u!1 &1534346599
 GameObject:
   m_ObjectHideFlags: 0

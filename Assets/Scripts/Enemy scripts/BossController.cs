@@ -31,7 +31,11 @@ public class BossController : EnemyBasicLifeSystem
 
     private void OnDestroy()
     {
-        camara.orthographicSize = initialScale;
+        if(camara!=null)
+        {
+            camara.orthographicSize = initialScale;
+        }
+        
     }
 
 

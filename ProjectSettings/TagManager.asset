@@ -11,6 +11,7 @@ TagManager:
   - Spawner
   - BodyBun
   - Boss
+  - SpecialEnemy
   layers:
   - Default
   - TransparentFX

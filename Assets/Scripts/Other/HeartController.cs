@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeartController : MonoBehaviour
 {
+    private AudioSource aud;
     private GameObject player;
     private playerMovement playerHealth;
     public GameObject corn;
@@ -13,6 +14,7 @@ public class HeartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<playerMovement>();
     }
@@ -31,6 +33,10 @@ public class HeartController : MonoBehaviour
 
         if(!used)
         {
+            if(aud!=null)
+            {
+                aud.Play();
+            }
             for(int i=0;i<times;i++)
             {
                 if (playerHealth.health < playerHealth.maxLife)

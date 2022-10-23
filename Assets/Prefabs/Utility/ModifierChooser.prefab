@@ -57,6 +57,5 @@ MonoBehaviour:
   badMod:
   - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
   - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
-  - {fileID: 5194177234525258472, guid: ce29bd0513116094691ee2cffb48fb1c, type: 3}
   - {fileID: 679038390786817664, guid: fae645a2d2fbee84483daafcdc756bc7, type: 3}
   - {fileID: 1245889822982382202, guid: e24630d5b4a6783469a392b4d97bf67a, type: 3}

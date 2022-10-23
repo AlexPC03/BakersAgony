@@ -6,9 +6,11 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class PedestalController : MonoBehaviour
 {
+    private AudioSource aud;
     private GameObject player;
     private SpriteRenderer sp;
 
+    public AudioClip[] sounds;
     private ParticleSystem.EmissionModule em;
     private GameObject thisObject;
     public bool destroyOnPick;
@@ -19,6 +21,7 @@ public class PedestalController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         sp = GetComponent<SpriteRenderer>();
         em = GetComponent<ParticleSystem>().emission;
@@ -52,6 +55,11 @@ public class PedestalController : MonoBehaviour
                 {
                     if(player.GetComponent<playerMovement>().corn>=price)
                     {
+                        if(aud!=null)
+                        {
+                            aud.clip = sounds[Random.Range(0, sounds.Length)];
+                            aud.Play();
+                        }
                         player.SendMessage("loseCorn",price);
                         thisObject.SendMessage("Pick");
                         shop = false;

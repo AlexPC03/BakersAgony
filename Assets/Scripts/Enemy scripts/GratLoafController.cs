@@ -8,6 +8,9 @@ public class GratLoafController : BossController
     private GameObject player;
     private Animator anim;
     private float timeTo=0;
+    private float timeToStart=0;
+    public float startTime;
+
 
     [Header("Atributes")]
     public GameObject enemyToSpawn;
@@ -46,6 +49,7 @@ public class GratLoafController : BossController
         xDistance = player.transform.position.x - transform.position.x;
         yDistance = player.transform.position.y - transform.position.y;
 
+        if(timeToStart>startTime)
         if (actualDistance < range)
         {
             Align();
@@ -58,6 +62,7 @@ public class GratLoafController : BossController
         anim.SetBool("Xmoving", rb.velocity.x != 0);
         anim.SetBool("Ymoving", rb.velocity.y != 0);
         timeTo += Time.deltaTime;
+        timeToStart += Time.deltaTime;
 
     }
 
