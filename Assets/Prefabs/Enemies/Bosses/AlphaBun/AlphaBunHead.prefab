@@ -227,8 +227,8 @@ MonoBehaviour:
   bodyParts: []
   range: 150
   nearRange: 5
-  speed: 4
-  nearSpeed: 8
+  speed: 6
+  nearSpeed: 10
   targetChangeTime: 5
   shootTime: 10
   proyectile: {fileID: 6637308442459538384, guid: 7dfbce531f0d82d4a9d3435e071617b9, type: 3}

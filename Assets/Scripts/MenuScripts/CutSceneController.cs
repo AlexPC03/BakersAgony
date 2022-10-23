@@ -32,12 +32,6 @@ public class CutSceneController : MonoBehaviour
 
         SceneManager.LoadScene("SampleScene");
     }
-    public void ChangeSceneToCredits()
-    {
-        anim.speed = 1;
-
-        SceneManager.LoadScene("Credits");
-    }
 
     public void ChangeSceneToMenu()
     {

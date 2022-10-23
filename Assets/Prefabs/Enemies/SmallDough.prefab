@@ -114,8 +114,8 @@ MonoBehaviour:
   vida: 0
   inverted: 1
   range: 30
-  speed: 0.5
-  nearSpeed: 0.75
+  speed: 0.75
+  nearSpeed: 1
   drift: 1
   actualDistance: 0
 --- !u!50 &9086545270604875513

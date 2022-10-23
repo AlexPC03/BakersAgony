@@ -137,7 +137,8 @@ MonoBehaviour:
   destroyTime: 0.1
   friendlyFire: 0
   destroyOnHit: 0
-  velocity: 2
+  ghost: 0
+  velocity: 2.5
   targetPos: {x: 0, y: 0, z: 0}
   initialPos: {x: 0, y: 0, z: 0}
   rotateVelocity: 225

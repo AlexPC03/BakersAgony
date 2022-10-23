@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 9213843900287701167}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -248,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 4508545840134186551}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 6715696874542734469}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 4055908505143411706}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 247993672221933324}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name

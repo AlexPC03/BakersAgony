@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DoorControler : MonoBehaviour
 {
+    private AudioSource aud;
     private GameObject player;
     private Animator anim;
+    public AudioClip Close;
     public Collider2D coll;
     public GameObject[] rooms;
     public GameObject rewardRoom;
@@ -23,6 +25,7 @@ public class DoorControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         initiated = false;
@@ -60,6 +63,10 @@ public class DoorControler : MonoBehaviour
     {
         if(collision.gameObject==player && !initiated)
         {
+            if (!enemies)
+            {
+                aud.Play();
+            }
             initiated = true;
             if(player.GetComponent<playerMovement>().sala==salaBoss3+1)
             {
@@ -102,4 +109,6 @@ public class DoorControler : MonoBehaviour
         GameObject obj=transform.root.gameObject;
         Destroy(obj);
     }
+
+
 }

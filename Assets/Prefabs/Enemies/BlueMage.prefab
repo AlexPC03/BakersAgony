@@ -168,7 +168,7 @@ MonoBehaviour:
   range: 20
   minShootRange: 5
   maxShootRange: 10
-  speed: 0.3
+  speed: 0.5
   wait: 0
   actualDistance: 0
   canShoot: 0

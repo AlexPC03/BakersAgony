@@ -231,13 +231,15 @@ MonoBehaviour:
   destroyTime: 0.1
   friendlyFire: 1
   destroyOnHit: 1
-  velocity: 0.5
+  ghost: 0
+  velocity: 0.75
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 1
   rotate: 1
   rotateVelocity: 30
   dragForce: 0
   livingTime: 12.5
+  delayTime: 0
 --- !u!50 &7345101616436253332
 Rigidbody2D:
   serializedVersion: 4

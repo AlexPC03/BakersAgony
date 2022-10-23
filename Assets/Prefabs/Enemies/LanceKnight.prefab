@@ -148,7 +148,7 @@ MonoBehaviour:
   vida: 0
   range: 10
   speed: 1
-  chargeSpeed: 8
+  chargeSpeed: 9
   chargeRecover: 3
   directionFromCharge: 1
   actualDistance: 0

@@ -232,7 +232,7 @@ MonoBehaviour:
   friendlyFire: 0
   destroyOnHit: 0
   ghost: 1
-  velocity: 3
+  velocity: 3.5
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 0
   rotate: 1

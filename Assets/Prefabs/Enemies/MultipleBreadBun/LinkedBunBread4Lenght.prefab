@@ -171,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 2740530352570265077}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 5020161056193976135}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 2011085615364715726}
     - target: {fileID: 4458737783074177302, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: distanceFromHead
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4458737783074177514, guid: fc2149e2f6e3f724e9b5dcc10c91909b, type: 3}
       propertyPath: m_Name
