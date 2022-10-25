@@ -15,6 +15,7 @@ public class GratLoafController : BossController
     [Header("Atributes")]
     public GameObject enemyToSpawn;
     public float spawnRate;
+    public int spawnQuantity;
     public float range;
     public float speed;
     public float chargeSpeed;
@@ -182,10 +183,12 @@ public class GratLoafController : BossController
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer==6 && timeTo>spawnRate)
+        if(collision.gameObject.layer==6 && timeTo>spawnRate && enemyToSpawn!=null)
         {
-            Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
-            Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
+            for(int i=0;i<spawnQuantity;i++)
+            {
+                Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
+            }
             timeTo = 0;
         }
     }
