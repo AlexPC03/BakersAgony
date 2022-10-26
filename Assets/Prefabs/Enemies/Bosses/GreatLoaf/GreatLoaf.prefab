@@ -236,7 +236,7 @@ MonoBehaviour:
   deathTime: 3
   vida: 0
   newScale: 5.75
-  startTime: 3
+  startTime: 1.5
   enemyToSpawn: {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
   spawnRate: 0.75
   spawnQuantity: 2

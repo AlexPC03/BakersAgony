@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    private Color originalColor;
     public float pitch=1;
     protected AudioSource aud;
     private float timeToDamage = 0;
@@ -25,6 +26,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
         aud = GetComponent<AudioSource>();
+        originalColor = sp.color;
 
     }
 
@@ -76,7 +78,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     {
         if(sp!=null)
         {
-            sp.color = Color.white;
+            sp.color =originalColor;
         } 
     }
 

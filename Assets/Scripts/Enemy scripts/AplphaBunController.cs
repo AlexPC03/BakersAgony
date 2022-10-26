@@ -126,7 +126,7 @@ public class AplphaBunController : BossController
     {
         GameObject part = null; 
         GameObject proy=null;
-        if (vida > 0)
+        if (vida > 0 && proyectile!=null && bodyParts.Length>=1)
         {
             int random = Random.Range(0, bodyParts.Length);
             part = bodyParts[random];

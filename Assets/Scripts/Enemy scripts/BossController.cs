@@ -13,20 +13,20 @@ public class BossController : EnemyBasicLifeSystem
     {
         StartVida();
         camara = Camera.main;
-        if(camara!=null)
-        {
-            initialScale = camara.orthographicSize;          
-            if(newScale!=0)
-            {
-                camara.orthographicSize = newScale;
-            }
-        }  
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (camara != null)
+        {
+            initialScale = camara.orthographicSize;
+            if (newScale != 0 && vida>0)
+            {
+                camara.orthographicSize = newScale;
+            }
+        }
     }
 
     private void OnDestroy()
@@ -34,9 +34,7 @@ public class BossController : EnemyBasicLifeSystem
         if(camara!=null)
         {
             camara.orthographicSize = initialScale;
-        }
-        
+        } 
     }
-
 
 }
