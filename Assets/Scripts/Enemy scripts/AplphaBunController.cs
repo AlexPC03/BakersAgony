@@ -25,6 +25,7 @@ public class AplphaBunController : BossController
     public float nearRange;
     public float speed;
     public float nearSpeed;
+    public float shootFrequency=0.1f;
     public float targetChangeTime;
     public float shootTime;
     public GameObject proyectile;
@@ -99,7 +100,7 @@ public class AplphaBunController : BossController
         {
             timetoShoot = 0;
             Shoot();
-            shootTime = Random.Range(vida/300+0.5f, vida / 150+0.5f);
+            shootTime = Random.Range(vida/300+0.5f+shootFrequency, vida/150+ 0.5f + shootFrequency);
         }
         if(isHead && vida<=0 && headTransform==null)
         {
@@ -139,7 +140,14 @@ public class AplphaBunController : BossController
             {
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
-                    proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+                    if(!proy.GetComponent<BreadMageProyectileMovement>().seeker)
+                    {
+                        proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+                    }
+                    else
+                    {
+                        proy.GetComponent<BreadMageProyectileMovement>().target = player;
+                    }
                 }
                 else if (proy.GetComponent<BumeranProyectileMovement>() != null)
                 {

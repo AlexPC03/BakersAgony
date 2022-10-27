@@ -9,15 +9,17 @@ public class PrimordialOvenController : BossController
     public AudioClip Die;
 
     private bool stop=false;
+    private int smallTimes=0;
     private CoalHeartController heartLife;
     private GameObject player;
-    private Animator anim;
+    public Animator anim;
     private float time=0;
     private float timepassed;
     public GameObject bigDoor;
     public GameObject[] smallDoors;
     public GameObject heart;
     public GameObject proyectile;
+    public float poyectileVariation;
     public GameObject[] EnemyList;
     public float timeToStart;
     public bool enemies;
@@ -29,7 +31,7 @@ public class PrimordialOvenController : BossController
         StartBoss();
         player = GameObject.FindGameObjectWithTag("Player");
         heartLife = heart.GetComponent<CoalHeartController>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
 
         timepassed = 0;
@@ -54,7 +56,7 @@ public class PrimordialOvenController : BossController
         {
             anim.SetBool("OpenBig",false);
         }
-        if (timepassed>timeToStart )
+        if (timepassed>timeToStart && smallTimes<=4)
         {
             anim.SetTrigger("OpenSmall");
             stop = true;
@@ -81,12 +83,20 @@ public class PrimordialOvenController : BossController
             for(int i=0;i<14-(heartLife.vida / 50);i++)
             {
                 GameObject proy;
-                proy = Instantiate(proyectile, bigDoor.transform.position, new Quaternion(0, 0, 0, 0));
+                proy = Instantiate(proyectile, new Vector3(bigDoor.transform.position.x+Random.Range(-0.1f,0.1f), bigDoor.transform.position.y - 1, 0f), new Quaternion(0, 0, 0, 0));
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
+                    proy.GetComponent<BreadMageProyectileMovement>().ghost = true;
                     proy.GetComponent<BreadMageProyectileMovement>().rotateVelocity = (15 - heartLife.vida / 50)*30;
                     proy.GetComponent<BreadMageProyectileMovement>().velocity = 16 - heartLife.vida / 50;
-                    proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-18f, 18f), Random.Range(-18f, 18f), 0);
+                    proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                }
+                else if (proy.GetComponent<BumeranProyectileMovement>() != null)
+                {
+                    proy.GetComponent<BumeranProyectileMovement>().ghost = true;
+                    proy.GetComponent<BumeranProyectileMovement>().rotateVelocity = (14 - heartLife.vida / 50) * 30;
+                    proy.GetComponent<BumeranProyectileMovement>().velocity = 13 - heartLife.vida / 50;
+                    proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
                 }
             }
         }
@@ -96,19 +106,31 @@ public class PrimordialOvenController : BossController
     {
         foreach(GameObject door in smallDoors)
         {
-            Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
-            if(heartLife.vida<= heartLife.maxVida/2)
+            GameObject obj= Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+            if(obj.GetComponent<BreadMageProyectileMovement>()!=null)
+            {
+                obj.GetComponent<BreadMageProyectileMovement>().targetPos=player.transform.position+ new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+            }
+            if (heartLife.vida<= heartLife.maxVida/2)
             {
                 if(Random.Range(0f,1f)>0.5)
                 {
-                    Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+                    GameObject obj2=Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+                    if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                    {
+                        obj2.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                    }
                 }
             }
             else if (heartLife.vida <= heartLife.maxVida / 4)
             {
                 if (Random.Range(0f, 1f) > 0.66)
                 {
-                    Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+                    GameObject obj2=Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+                    if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                    {
+                        obj2.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                    }
                 }
             }
         }
@@ -162,6 +184,16 @@ public class PrimordialOvenController : BossController
             aud.Play();
             started = true;
         }
+    }
+
+    public void increaseSmallTimes()
+    {
+        smallTimes++;
+    }
+
+    public void resetSmallTimes()
+    {
+        smallTimes=0;
     }
 
 }

@@ -15,6 +15,17 @@ public class cameraFollow : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(GameObject.FindGameObjectsWithTag("Boss").Length>0)
+        {
+            Camera.main.orthographicSize = 6.5f;
+        }
+        else
+        {
+            Camera.main.orthographicSize = 5.5f;
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {

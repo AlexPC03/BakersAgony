@@ -26,8 +26,11 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
         aud = GetComponent<AudioSource>();
-        originalColor = sp.color;
-
+        if(sp!=null)
+        {
+            originalColor = sp.color;
+        }
+        
     }
 
     // Update is called once per frame
