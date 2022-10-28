@@ -83,6 +83,9 @@ MonoBehaviour:
   - {fileID: 8484976727713454627, guid: 1560e248fff50034e99dad5be3fcc576, type: 3}
   - {fileID: 7005607629150338109, guid: 0dc50f4e172d94049a90cb4928e3c6f9, type: 3}
   - {fileID: 2798648570822369341, guid: 1ac965b512d250c42b23e6b13f90bdea, type: 3}
+  - {fileID: 5067225859162065948, guid: ecffcd01f40fb5f46b0f1df7037199b6, type: 3}
+  - {fileID: 3573338528390202854, guid: 60f681ec6f27f4049aaf27d32d8cc232, type: 3}
+  - {fileID: 3419222548116211641, guid: 515a447606991bc4a909780a0f32e547, type: 3}
   inRange: 0
 --- !u!198 &6387068738789505763
 ParticleSystem:

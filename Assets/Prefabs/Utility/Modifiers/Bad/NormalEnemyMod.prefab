@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 6237473612955234795, guid: 431ecaa58a1489f4a834a21d3225932e, type: 3}
-  - {fileID: 6237473612955234795, guid: 431ecaa58a1489f4a834a21d3225932e, type: 3}
-  - {fileID: 8511459019166897243, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
-  derivate: 0
+  - {fileID: 8386812363261751709, guid: f8643b8a701ae9243a6ff92de14f377a, type: 3}
+  derivate: 1
   mediaObj: 2
+  forEnemies: 0

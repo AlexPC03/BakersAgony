@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565b86c2f523a644c90ae6c65155b06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
+  objects:
+  - {fileID: 6238872060601572308, guid: 357f44ac705a2f14fab1629d9988b34b, type: 3}
   derivate: 0
   mediaObj: 1

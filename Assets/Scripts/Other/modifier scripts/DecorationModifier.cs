@@ -8,7 +8,6 @@ public class DecorationModifier : MonoBehaviour
     public bool derivate;
     public int mediaObj;
     private float a;
-    public bool forEnemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +27,7 @@ public class DecorationModifier : MonoBehaviour
             if(Physics2D.OverlapArea(pos - new Vector3(-0.75f, -0.75f, 0), pos - new Vector3(0.75f, 0.75f, 0),7)==null)
             {
                 GameObject obj=Instantiate(objects[Random.Range(0, objects.Length)], pos, new Quaternion(0, 0, 0, 0));
-                if(forEnemies)
-                {
-                    obj.GetComponent<EnemySpawner>();
-                    obj.AddComponent<DestroyByDistance>();
-                }
+
             }
             else
             {

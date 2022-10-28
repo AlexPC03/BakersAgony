@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     private SpriteRenderer sp;
 
-    private bool aditional;
+    public bool aditional;
 
 
     public GameObject[] enemyList;
