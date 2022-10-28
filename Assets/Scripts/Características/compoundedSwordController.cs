@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class compoundedSwordController : MonoBehaviour
 {
-    public Collider2D col;
-    public GameObject obj;
+    public Collider2D[] col;
+    public GameObject[] obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,12 @@ public class compoundedSwordController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(col!=null)
+        for(int i = 0; i < col.Length; i++)
         {
-            col.offset = obj.transform.localPosition;
-        }
+            if (col != null)
+            {
+                col[i].offset = obj[i].transform.localPosition;
+            }
+        }  
     }
 }

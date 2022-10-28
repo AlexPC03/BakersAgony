@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 902291111336908311}
   - component: {fileID: 9117846150344675370}
   - component: {fileID: 7097461875646378745}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,9 +101,9 @@ MonoBehaviour:
   Swordspeed: 0
   neededSpeed: 0
   damage: 5
-  forceHit: 1
-  rotationForce: 5
-  deceleration: 0
+  forceHit: 2.5
+  rotationForce: 7.5
+  deceleration: 5
 --- !u!82 &9117846150344675370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -210,7 +210,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

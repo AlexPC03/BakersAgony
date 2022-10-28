@@ -237,7 +237,7 @@ MonoBehaviour:
   seeker: 0
   rotate: 1
   rotateVelocity: 270
-  dragForce: 0.1
+  dragForce: 0
   livingTime: 6
   delayTime: 0
 --- !u!50 &5014257890438827307

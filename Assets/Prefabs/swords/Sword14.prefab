@@ -103,7 +103,7 @@ MonoBehaviour:
   damage: 12.5
   forceHit: 7.5
   rotationForce: 15
-  deceleration: 5
+  deceleration: 3
 --- !u!82 &7949900609175277330
 AudioSource:
   m_ObjectHideFlags: 0

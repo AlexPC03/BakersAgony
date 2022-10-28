@@ -5,15 +5,13 @@ using UnityEngine;
 public class lineController : MonoBehaviour
 {
     private LineRenderer line;
-    private SpringJoint2D spring;
 
     public GameObject conectedObj;
-    public Vector3 anchorPosition;
+    public GameObject conectedObj2;
     // Start is called before the first frame update
     void Start()
     {
         line=GetComponent<LineRenderer>();
-        spring=GetComponent<SpringJoint2D>();
     }
 
     // Update is called once per frame
@@ -21,13 +19,8 @@ public class lineController : MonoBehaviour
     {
         if(line!=null)
         {
-            line.SetPosition(0, transform.position);
-            line.SetPosition(1, conectedObj.transform.position+anchorPosition);
-        }
-        if(spring!=null)
-        {
-            spring.anchor = Vector2.zero;
-            spring.connectedAnchor = conectedObj.transform.position + anchorPosition;
+            line.SetPosition(0, conectedObj.transform.position);
+            line.SetPosition(1, conectedObj2.transform.position);
         }
     }
 }
