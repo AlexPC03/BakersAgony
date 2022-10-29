@@ -32,22 +32,8 @@ public class AudioController : MonoBehaviour
         enemies = GameObject.FindWithTag("Enemy") != null;
         boss = GameObject.FindWithTag("Boss") != null;
         if (boss)
-        {
-            if (player.GetComponent<playerMovement>().sala == 10)
-            {
-                audio.volume = 0.2f;
-                audio.pitch = 1f;
-                ChangeClip(Boss1);
-
-            }
-            else if (player.GetComponent<playerMovement>().sala == 18)
-            {
-                audio.volume = 0.2f;
-                audio.pitch = 1.05f;
-                ChangeClip(Boss2);
-
-            }
-            else if (player.GetComponent<playerMovement>().sala == 26)
+        {      
+            if ((player.GetComponent<playerMovement>().sala - 1)%25==0)
             {
                 audio.volume = 0.2f;
                 audio.pitch = 1f;
@@ -57,6 +43,25 @@ public class AudioController : MonoBehaviour
                     StartCoroutine(playEngineSound());
                 }
             }
+            else if ((player.GetComponent<playerMovement>().sala-1) %17==0)
+            {
+                audio.volume = 0.2f;
+                audio.pitch = 1.05f;
+                ChangeClip(Boss2);
+                StopCoroutine(playEngineSound());
+                coroutineStarted = false;
+
+            }
+            else if ((player.GetComponent<playerMovement>().sala-1) % 9 == 0)
+            {
+                audio.volume = 0.2f;
+                audio.pitch = 1f;
+                ChangeClip(Boss1);
+                StopCoroutine(playEngineSound());
+                coroutineStarted = false;
+            }
+
+
         }
         else if (player.GetComponent<playerMovement>().sala> 8 && (player.GetComponent<playerMovement>().sala-1) % 8 == 0)
         {

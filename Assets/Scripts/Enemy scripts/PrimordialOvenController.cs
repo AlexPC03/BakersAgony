@@ -94,6 +94,7 @@ public class PrimordialOvenController : BossController
                 else if (proy.GetComponent<BumeranProyectileMovement>() != null)
                 {
                     proy.GetComponent<BumeranProyectileMovement>().ghost = true;
+                    proy.GetComponent<BumeranProyectileMovement>().catchDistance = 4;
                     proy.GetComponent<BumeranProyectileMovement>().rotateVelocity = (14 - heartLife.vida / (heartLife.maxVida / 10)) * 30;
                     proy.GetComponent<BumeranProyectileMovement>().velocity = 13 - heartLife.vida / (heartLife.maxVida / 10);
                     proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);

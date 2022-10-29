@@ -5075,7 +5075,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0
   head: {fileID: 0}
-  maxVida: 200
+  maxVida: 525
   deathTime: 1
   vida: 0
   wall: {fileID: 5528573388151614747}
@@ -5200,11 +5200,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3145889129849261741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.057652473, z: -0.009999998}
+  m_LocalPosition: {x: 0, y: 5.925, z: -0.13}
   m_LocalScale: {x: 25.0003, y: 12.750075, z: 1}
   m_Children: []
-  m_Father: {fileID: 8107844632491283975}
-  m_RootOrder: 0
+  m_Father: {fileID: 5528573388151614746}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2332084462287214799
 SpriteRenderer:
@@ -11289,6 +11289,7 @@ Transform:
   - {fileID: 1804782615178789549}
   - {fileID: 6154586545684661198}
   - {fileID: 3134624645335794049}
+  - {fileID: 7199120152337262401}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35828,12 +35829,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4340812018052119808, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
+    - {fileID: 6671318668931232509, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
---- !u!4 &8107844632491283975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4340812017498579792, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
-  m_PrefabInstance: {fileID: 5528573388060931415}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8107844631904028760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4340812018052119823, guid: eacba55249c3cfc40863ac115a917bca, type: 3}

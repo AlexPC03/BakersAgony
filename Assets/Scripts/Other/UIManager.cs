@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
         cornText.text = playerM.corn.ToString();
         if(playerM.endless)
         {
-            roomText.text = "Sala:" + playerM.sala.ToString();
+            roomText.text = playerM.sala.ToString();
         }
     }
 }

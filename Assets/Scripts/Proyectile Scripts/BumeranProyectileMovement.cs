@@ -6,6 +6,7 @@ public class BumeranProyectileMovement : ProyectileBasicSystem
 {
     public Vector3 targetPos;
     public Vector3 initialPos;
+    public float catchDistance=2;
     public float rotateVelocity;
     public bool randomInitialForce;
     public float angle;
@@ -25,7 +26,7 @@ public class BumeranProyectileMovement : ProyectileBasicSystem
     void Update()
     {
         transform.Rotate(0, 0, rotateVelocity * Time.deltaTime);
-        if((targetPos - transform.position).magnitude<2)
+        if((targetPos - transform.position).magnitude< catchDistance/2)
         {
             returning = true;
         }
@@ -37,7 +38,7 @@ public class BumeranProyectileMovement : ProyectileBasicSystem
         {
             rb.AddForce((initialPos - transform.position).normalized * velocity, ForceMode2D.Force);
         }
-        if(returning&& (initialPos - transform.position).magnitude<2)
+        if(returning&& (initialPos - transform.position).magnitude< catchDistance)
         {
             Dissapear();
         }

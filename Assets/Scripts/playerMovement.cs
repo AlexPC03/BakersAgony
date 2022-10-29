@@ -190,11 +190,18 @@ public class playerMovement : MonoBehaviour
 
     public void increaseMaxHealth()
     {
-        maxLife += 2;
+        if(maxLife<maxMaxLife)
+        {
+            maxLife += 2;
+        }
+        else
+        {
+            corn += Random.Range(35, 41);
+        }
     }
     public void increaseVelocity()
     {
-        runSpeed += 1.5f;
+        runSpeed += 1f;
     }
     public void increaseAttack()
     {

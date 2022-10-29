@@ -25,10 +25,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public void StartVida()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
-        if(playerController!=null)
-        {
-            maxVida *= 1 + maxVida / 25;
-        }
+        maxVida = maxVida + playerController.sala;
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
         aud = GetComponent<AudioSource>();
@@ -42,7 +39,9 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(vida<=0)
+
+
+        if (vida<=0)
         {
             if(GetComponent<Rigidbody2D>()!=null)
             {
@@ -113,10 +112,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                 if (Random.Range(0, 100) < (cornWeight * 100) - 5)
                 {
                     Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                    if (Random.Range(0, 100) < (cornWeight * 100) - 10)
+                    if (Random.Range(0, 100) < (cornWeight * 100) - 10- playerController.sala*2)
                     {
                         Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                        if (Random.Range(0, 100) < (cornWeight * 100) - 15)
+                        if (Random.Range(0, 100) < (cornWeight * 100) - 15- playerController.sala * 2)
                         {
                             Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f,0.2f), Random.Range(-0.2f, 0.2f),0), new Quaternion(0, 0, 0, 0));
                         }
@@ -126,13 +125,13 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             else if (Random.Range(0, 100) < cornWeight * 100)
             {
                 Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                if (Random.Range(0, 100) < cornWeight * 100)
+                if (Random.Range(0, 100) < (cornWeight * 100)-playerController.sala * 2)
                 {
                     Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                    if (Random.Range(0, 100) < (cornWeight * 100) - 20)
+                    if (Random.Range(0, 100) < (cornWeight * 100) - 20 - playerController.sala)
                     {
                         Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
-                        if (cornWeight > 0.5 && Random.Range(0, 100) < (cornWeight * 100) - 10)
+                        if (cornWeight > 0.5 && Random.Range(0, 100) < (cornWeight * 100) - 10 - playerController.sala * 2)
                         {
                             Instantiate(corn, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), new Quaternion(0, 0, 0, 0));
                         }
