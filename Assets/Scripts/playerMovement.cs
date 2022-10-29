@@ -18,6 +18,7 @@ public class playerMovement : MonoBehaviour
     public GameObject lightSpot;
     public GameObject lightWorld;
     public int sala;
+    public bool endless=false;
 
     public float attack = 1f;
 

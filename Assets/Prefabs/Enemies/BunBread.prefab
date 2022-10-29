@@ -109,7 +109,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.35
   head: {fileID: 0}
-  maxVida: 35
+  maxVida: 30
   deathTime: 0.5
   vida: 0
   headTransform: {fileID: 0}

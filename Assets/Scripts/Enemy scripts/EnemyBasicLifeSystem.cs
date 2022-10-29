@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    private playerMovement playerController;
     private Color originalColor;
     public float pitch=1;
     protected AudioSource aud;
@@ -23,6 +24,11 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     // Start is called before the first frame update
     public void StartVida()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
+        if(playerController!=null)
+        {
+            maxVida *= 1 + maxVida / 25;
+        }
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
         aud = GetComponent<AudioSource>();

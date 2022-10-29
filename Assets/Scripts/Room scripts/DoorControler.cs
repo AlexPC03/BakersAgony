@@ -68,7 +68,7 @@ public class DoorControler : MonoBehaviour
                 aud.Play();
             }
             initiated = true;
-            if(player.GetComponent<playerMovement>().sala==salaBoss3+1)
+            if(player.GetComponent<playerMovement>().sala==salaBoss3+1 && !player.GetComponent<playerMovement>().endless)
             {
                 Instantiate(finalRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
@@ -76,15 +76,15 @@ public class DoorControler : MonoBehaviour
             {
                 Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if(player.GetComponent<playerMovement>().sala == salaBoss3)
+            else if(player.GetComponent<playerMovement>().sala % salaBoss3==0 )
             {
                 Instantiate(bossRoom3, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if (player.GetComponent<playerMovement>().sala == salaBoss2)
+            else if (player.GetComponent<playerMovement>().sala % salaBoss2 == 0)
             {
                 Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }
-            else if(player.GetComponent<playerMovement>().sala==salaBoss1)
+            else if(player.GetComponent<playerMovement>().sala % salaBoss1 == 0)
             {
                 Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }

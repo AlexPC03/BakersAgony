@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     private GameObject player;
     private playerMovement playerM;
     public Text cornText;
+    public Text roomText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,9 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         cornText.text = playerM.corn.ToString();
+        if(playerM.endless)
+        {
+            roomText.text = "Sala:" + playerM.sala.ToString();
+        }
     }
 }
