@@ -56,16 +56,12 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftControl))
+
+        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.K) && !endless)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                if (Input.GetKey(KeyCode.I))
-                {
-                    RecoverLife();
-                }
-            }
+            RecoverLife();
         }
+
         sp.color = lerpedColor;
         if (PassedTime <= invulneravilityTime)
         {
