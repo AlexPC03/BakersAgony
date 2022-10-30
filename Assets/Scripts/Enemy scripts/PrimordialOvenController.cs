@@ -86,14 +86,14 @@ public class PrimordialOvenController : BossController
                 proy = Instantiate(proyectile, new Vector3(bigDoor.transform.position.x+Random.Range(-0.1f,0.1f), bigDoor.transform.position.y - 1, 0f), new Quaternion(0, 0, 0, 0));
                 if (proy.GetComponent<BreadMageProyectileMovement>() != null)
                 {
-                    proy.GetComponent<BreadMageProyectileMovement>().ghost = true;
+                    //proy.GetComponent<BreadMageProyectileMovement>().ghost = true;
                     proy.GetComponent<BreadMageProyectileMovement>().rotateVelocity = (15 - heartLife.vida / (heartLife.maxVida/10)) *30;
                     proy.GetComponent<BreadMageProyectileMovement>().velocity = 16 - heartLife.vida / (heartLife.maxVida / 10);
                     proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
                 }
                 else if (proy.GetComponent<BumeranProyectileMovement>() != null)
                 {
-                    proy.GetComponent<BumeranProyectileMovement>().ghost = true;
+                    //proy.GetComponent<BumeranProyectileMovement>().ghost = true;
                     proy.GetComponent<BumeranProyectileMovement>().catchDistance = 4;
                     proy.GetComponent<BumeranProyectileMovement>().rotateVelocity = (14 - heartLife.vida / (heartLife.maxVida / 10)) * 30;
                     proy.GetComponent<BumeranProyectileMovement>().velocity = 13 - heartLife.vida / (heartLife.maxVida / 10);

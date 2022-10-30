@@ -9,6 +9,7 @@ public class PedestalController : MonoBehaviour
     private AudioSource aud;
     private GameObject player;
     private SpriteRenderer sp;
+    private bool dontDestroy = false;
 
     public AudioClip[] sounds;
     private ParticleSystem.EmissionModule em;
@@ -16,11 +17,14 @@ public class PedestalController : MonoBehaviour
     public bool destroyOnPick;
     public bool shop;
     public int price;
+    public bool canDissapear;
+    public int oddsToNotDestroy;
     public GameObject[] list;
     public bool inRange=false;
     // Start is called before the first frame update
     void Start()
     {
+
         aud = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         sp = GetComponent<SpriteRenderer>();
@@ -37,6 +41,17 @@ public class PedestalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canDissapear && player.GetComponent<playerMovement>().sala > 27)
+        {
+            if (Random.Range(0, oddsToNotDestroy+1) == 0 && dontDestroy==false)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                dontDestroy = true;
+            }
+        }
         if (!shop && sp != null)
         {
             sp.enabled = false;

@@ -64,8 +64,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e65ffee21a36824ab81ce2855ceeb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
+  destroyOnPick: 0
   shop: 0
   price: 0
+  canDissapear: 1
+  oddsToNotDestroy: 6
   list:
   - {fileID: 7279858790484603436, guid: d4db88108ac2ea34f8ac39a1f1ecb717, type: 3}
   - {fileID: 1424815586000138259, guid: d6ce9517b4604ab4f897a3003d9b05c0, type: 3}

@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72e85a037577054db108482699060de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySword: {fileID: 6676826150954009040, guid: 1325ea3a0a880d246b87120c07eded0e, type: 3}
   Swordspeed: 0
   neededSpeed: 150
   damage: 9
@@ -140,7 +139,7 @@ AudioSource:
   m_GameObject: {fileID: 3006091384833347801}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 7e44bc290cec25b41b935c85eb57189e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8633e7a82d980504ba2d0c6a42b35b09, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75

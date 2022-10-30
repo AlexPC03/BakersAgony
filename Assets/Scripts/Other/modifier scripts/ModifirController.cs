@@ -5,7 +5,7 @@ using UnityEngine;
 public class ModifirController : MonoBehaviour
 {
     private GameObject player;
-
+    public bool boss=false;
     public GameObject[] goodMod;
     public GameObject[] neutralMod;
     public GameObject[] badMod;
@@ -14,30 +14,45 @@ public class ModifirController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-        if (Random.Range(0f,1f)>=0.5f)
+        if (boss && player.GetComponent<playerMovement>().sala<55)
         {
-            int a = Random.Range(0, 3);
-            if (a==0)
+            Destroy(gameObject);
+        }
+        else if(!boss)
+        {
+
+            if (Random.Range(0f,1f)>=0.5f && !boss)
             {
-                Instantiate(neutralMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
-            }
-            else if (a == 1)
-            {
-                Instantiate(goodMod[Random.Range(0, goodMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
-            }
-            else if (a == 2)
-            {
-                if(player.GetComponent<playerMovement>().sala >= 12)
-                {
-                    Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
-                }
-                else
+                int a = Random.Range(0, 3);
+                if (a==0)
                 {
                     Instantiate(neutralMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
                 }
+                else if (a == 1)
+                {
+                    Instantiate(goodMod[Random.Range(0, goodMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                }
+                else if (a == 2)
+                {
+                    if(player.GetComponent<playerMovement>().sala >= 12)
+                    {
+                        Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                    }
+                    else
+                    {
+                        Instantiate(neutralMod[Random.Range(0, neutralMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+                    }
+                }
             }
         }
+        else if(boss && player.GetComponent<playerMovement>().sala > 55)
+        {
+            if (Random.Range(0, 3) == 0)
+            {
+                Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+            }
+        }
+
     }
 
     // Update is called once per frame

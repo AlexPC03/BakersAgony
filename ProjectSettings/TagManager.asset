@@ -12,6 +12,7 @@ TagManager:
   - BodyBun
   - Boss
   - SpecialEnemy
+  - Duck
   layers:
   - Default
   - TransparentFX

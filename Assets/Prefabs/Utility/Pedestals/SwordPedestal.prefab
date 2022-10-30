@@ -68,6 +68,8 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 0
   price: 0
+  canDissapear: 1
+  oddsToNotDestroy: 10
   list:
   - {fileID: 1652923218217536371, guid: 354e204490a4b4447b265b7e48048209, type: 3}
   - {fileID: 7238661566863224746, guid: 59076ad8eaac93544868c685de316124, type: 3}

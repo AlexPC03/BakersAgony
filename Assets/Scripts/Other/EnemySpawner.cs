@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private SpriteRenderer sp;
 
     public bool aditional;
+    public bool boss;
 
 
     public GameObject[] enemyList;
@@ -26,7 +27,15 @@ public class EnemySpawner : MonoBehaviour
 
         sp = GetComponent<SpriteRenderer>();
         sp.enabled = false;
-        enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
+        if(boss && player.GetComponent<playerMovement>().endless==false)
+        {
+            enemyToSpawn = enemyList[0];
+        }
+        else
+        {
+            enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
+        }
+        
         if (!byDistance)
         {
             StartRoom();
@@ -42,10 +51,6 @@ public class EnemySpawner : MonoBehaviour
             StartRoom();
             Destroy(gameObject);
         }
-    }
-    private void FixedUpdate()
-    {
-
     }
 
     public void StartRoom()

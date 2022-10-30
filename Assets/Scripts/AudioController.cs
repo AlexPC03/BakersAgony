@@ -9,6 +9,7 @@ public class AudioController : MonoBehaviour
     private bool coroutineStarted=false;
     private bool enemies;
     private bool boss;
+    private bool shopDuck;
     private new AudioSource audio;
     public AudioClip Ambient;
     public AudioClip Battle;
@@ -31,6 +32,7 @@ public class AudioController : MonoBehaviour
         actual = audio.clip;
         enemies = GameObject.FindWithTag("Enemy") != null;
         boss = GameObject.FindWithTag("Boss") != null;
+        shopDuck = GameObject.FindWithTag("Duck") != null;
         if (boss)
         {      
             if ((player.GetComponent<playerMovement>().sala - 1)%25==0)
@@ -63,7 +65,7 @@ public class AudioController : MonoBehaviour
 
 
         }
-        else if (player.GetComponent<playerMovement>().sala> 8 && (player.GetComponent<playerMovement>().sala-1) % 8 == 0)
+        else if (player.GetComponent<playerMovement>().sala> 8 && (player.GetComponent<playerMovement>().sala-1) % 8 == 0 && shopDuck)
         {
             audio.volume = 0.5f;
 
