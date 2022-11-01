@@ -36,6 +36,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         
     }
 
+    void Start()
+    {
+        StartVida();
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -43,15 +47,17 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 
         if (vida<=0)
         {
-            if(GetComponent<Rigidbody2D>()!=null)
+            if (gameObject.tag != "SpecialEnemy")
             {
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                GetComponent<Rigidbody2D>().angularVelocity = 0f;
-            }
-
-            if (GetComponent<Collider2D>() != null)
-            {
-                GetComponent<Collider2D>().enabled = false;
+                if (GetComponent<Rigidbody2D>() != null)
+                {
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                }
+                if (GetComponent<Collider2D>() != null)
+                {
+                    GetComponent<Collider2D>().enabled = false;
+                }
             }
 
             if(GetComponent<ParticleSystem>()!=null)
@@ -66,20 +72,19 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(timeToDamage>invulneravility)
+        if(timeToDamage>invulneravility && gameObject.layer!=6)
         {
             vida -= damage;
-            if(GetComponent<SpriteRenderer>() != null)
+            if(sp != null)
             {
                 sp.color = Color.red;
             }
-
-            if(GetComponent<AudioSource>() != null)
-            {
-                aud.pitch = Random.Range(pitch*0.75f, pitch * 1.25f);
-                aud.Play();
-            }
             Invoke("ChangeBack", 0.1f);
+        }
+        if(aud != null)
+        {
+            aud.pitch = Random.Range(pitch*0.75f, pitch * 1.25f);
+            aud.Play();
         }
     }
     private void ChangeBack()
@@ -92,7 +97,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
+        if(collision.tag=="Player" && gameObject.layer != 6)
         {
             collision.SendMessage("TakeDamage");
         }

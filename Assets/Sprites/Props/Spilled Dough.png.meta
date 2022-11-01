@@ -1,0 +1,732 @@
+fileFormatVersion: 2
+guid: 8496fb18bb9672441ba86b74984a59c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3333171234576192088
+    second: Spilled Dough_0
+  - first:
+      213: 225020323126139243
+    second: Spilled Dough_1
+  - first:
+      213: 7283399872410535348
+    second: Spilled Dough_2
+  - first:
+      213: 6015012891748458509
+    second: Spilled Dough_3
+  - first:
+      213: 7785476465687751722
+    second: Spilled Dough_4
+  - first:
+      213: -2660744828306255687
+    second: Spilled Dough_5
+  - first:
+      213: -613849915938075189
+    second: Spilled Dough_6
+  - first:
+      213: 6911856945403910533
+    second: Spilled Dough_7
+  - first:
+      213: -9007216377138740033
+    second: Spilled Dough_8
+  - first:
+      213: -5150839460288598269
+    second: Spilled Dough_9
+  - first:
+      213: -1009963805791495588
+    second: Spilled Dough_10
+  - first:
+      213: -3810969053039478326
+    second: Spilled Dough_11
+  - first:
+      213: 6086910803080481461
+    second: Spilled Dough_12
+  - first:
+      213: -8334270802004846006
+    second: Spilled Dough_13
+  - first:
+      213: -5483136563506456236
+    second: Spilled Dough_14
+  - first:
+      213: 5609571100026521757
+    second: Spilled Dough_15
+  - first:
+      213: -9063654286024095063
+    second: Spilled Dough_16
+  - first:
+      213: -791799052355168621
+    second: Spilled Dough_17
+  - first:
+      213: 3180264271231485483
+    second: Spilled Dough_18
+  - first:
+      213: -5336309612587685312
+    second: Spilled Dough_19
+  - first:
+      213: 511862307060520647
+    second: Spilled Dough_20
+  - first:
+      213: -5998616203840844104
+    second: Spilled Dough_21
+  - first:
+      213: 5738850468749503005
+    second: Spilled Dough_22
+  - first:
+      213: -1132369831738858379
+    second: Spilled Dough_23
+  - first:
+      213: 3681758319435105829
+    second: Spilled Dough_24
+  - first:
+      213: -349723309684173138
+    second: Spilled Dough_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spilled Dough_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 148
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad298b0c623eb1d0800000000000000
+      internalID: -3333171234576192088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 148
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b695d2baace6f1300800000000000000
+      internalID: 225020323126139243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 148
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5c7284895d31560800000000000000
+      internalID: 7283399872410535348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 148
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00ef0c2b5e997350800000000000000
+      internalID: 6015012891748458509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 147
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c6b78a8919b0c60800000000000000
+      internalID: 7785476465687751722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b019d60da2231bd0800000000000000
+      internalID: -2660744828306255687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd8b17f0ca2b77f0800000000000000
+      internalID: -613849915938075189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589dd117549dbef50800000000000000
+      internalID: 6911856945403910533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb480916d60fff280800000000000000
+      internalID: -9007216377138740033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fee6a1dca8488b0800000000000000
+      internalID: -5150839460288598269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5adbc70543ebf1f0800000000000000
+      internalID: -1009963805791495588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9339f66d7bc1bc0800000000000000
+      internalID: -3810969053039478326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba8915202d097450800000000000000
+      internalID: 6086910803080481461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a5798ccd8b65c80800000000000000
+      internalID: -8334270802004846006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_14
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459dd3da85cf7e3b0800000000000000
+      internalID: -5483136563506456236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98c067d13339dd40800000000000000
+      internalID: 5609571100026521757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_16
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa469ab27e673280800000000000000
+      internalID: -9063654286024095063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_17
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39611eef4f6f205f0800000000000000
+      internalID: -791799052355168621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 103
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b268e924181922c20800000000000000
+      internalID: 3180264271231485483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a653a2eae91f5b0800000000000000
+      internalID: -5336309612587685312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_20
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6114a6e008a1700800000000000000
+      internalID: 511862307060520647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be0a2a3852a0cca0800000000000000
+      internalID: -5998616203840844104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ae5e8781e74af40800000000000000
+      internalID: 5738850468749503005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_23
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57426d833a30940f0800000000000000
+      internalID: -1132369831738858379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_24
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526c4ca4fab381330800000000000000
+      internalID: 3681758319435105829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spilled Dough_25
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6d994b088852bf0800000000000000
+      internalID: -349723309684173138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -34,6 +34,7 @@ public class DecorationModifier : MonoBehaviour
                 i++;
             }
         }
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

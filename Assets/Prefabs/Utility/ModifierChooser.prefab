@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb63b04bae61d54281c946aa60b8b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   goodMod:
   - {fileID: 1550920606695378198, guid: 047f1ac44bcc1e54fad9d5951bb3b435, type: 3}
   - {fileID: 1550920606695378198, guid: 047f1ac44bcc1e54fad9d5951bb3b435, type: 3}
@@ -60,3 +61,5 @@ MonoBehaviour:
   - {fileID: 679038390786817664, guid: fae645a2d2fbee84483daafcdc756bc7, type: 3}
   - {fileID: 1245889822982382202, guid: e24630d5b4a6783469a392b4d97bf67a, type: 3}
   - {fileID: 1910604982729291608, guid: 26c39801b343d1f41b3acd382235adac, type: 3}
+  - {fileID: 4538538642864583142, guid: 309522e07e3e9ed4f8405572c7012cc1, type: 3}
+  - {fileID: 1294480466924173699, guid: e10e98f62b21deb469aa10375eeabb36, type: 3}

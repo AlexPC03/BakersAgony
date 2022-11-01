@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6202028284805788253
+--- !u!1 &4538538642864583142
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6202028284805788255}
-  - component: {fileID: 6202028284805788252}
+  - component: {fileID: 4538538642864583140}
+  - component: {fileID: 4538538642864583143}
   m_Layer: 0
-  m_Name: StorageMod
+  m_Name: SplatedMod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6202028284805788255
+--- !u!4 &4538538642864583140
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202028284805788253}
+  m_GameObject: {fileID: 4538538642864583142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,23 +31,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6202028284805788252
+--- !u!114 &4538538642864583143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202028284805788253}
+  m_GameObject: {fileID: 4538538642864583142}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 565b86c2f523a644c90ae6c65155b06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2595827168300611111, guid: e502489c1b0d4a94cbad9f9b7f0d69a0, type: 3}
-  - {fileID: 2595827168300611111, guid: e502489c1b0d4a94cbad9f9b7f0d69a0, type: 3}
-  - {fileID: 7789525085258174833, guid: 57bedbeb2cd8da54488a1715c1dc4121, type: 3}
-  - {fileID: 7789525085258174833, guid: 57bedbeb2cd8da54488a1715c1dc4121, type: 3}
-  - {fileID: 7903225975174352448, guid: a05fd7e46e938a04db8c321e263f25db, type: 3}
+  - {fileID: 1669667653427172450, guid: 7da320a03ca492241a19c04e92701637, type: 3}
+  - {fileID: 3239888915025068028, guid: cfa889b5ca99c794a82d8289d24ed792, type: 3}
+  - {fileID: 8864003621824190275, guid: 2e19e60487e85cc4e817f66859acb180, type: 3}
+  - {fileID: 3521758639239862695, guid: 846cccb3c2e16224c84d16fe0dcf8c24, type: 3}
   derivate: 1
-  mediaObj: 10
+  mediaObj: 7
