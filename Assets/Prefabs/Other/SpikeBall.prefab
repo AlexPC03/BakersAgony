@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d93c91ea4d0a684db1c274c73616d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitch: 2
+  pitch: 0.5
   corn: {fileID: 0}
   corncub: {fileID: 0}
   cornWeight: 0

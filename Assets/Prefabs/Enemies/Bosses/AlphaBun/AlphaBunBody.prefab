@@ -138,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6351119173103386693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.3, y: 6.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 21487308622386725}
@@ -209,13 +209,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a064103474473a94997e23ae29801328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitch: 1
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.5
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 200
   deathTime: 1.5
   vida: 0
+  newScale: 0
   isHead: 0
   headTransform: {fileID: 0}
   distanceFromHead: 25
@@ -224,6 +227,7 @@ MonoBehaviour:
   nearRange: 5
   speed: 4
   nearSpeed: 3
+  shootFrequency: 0.1
   targetChangeTime: 15
   shootTime: 0
   proyectile: {fileID: 0}

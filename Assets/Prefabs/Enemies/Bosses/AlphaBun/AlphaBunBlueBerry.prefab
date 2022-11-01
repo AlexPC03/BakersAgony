@@ -4783,6 +4783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8403549077375412095}
+  - component: {fileID: 9174466017785762812}
   m_Layer: 0
   m_Name: AlphaBunBlueBerry
   m_TagString: Untagged
@@ -4810,6 +4811,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9174466017785762812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141371803528051866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8107215709148824336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4946,7 +4959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: maxVida
-      value: 530
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: nearRange

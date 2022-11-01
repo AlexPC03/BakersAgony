@@ -35,9 +35,8 @@ public class ProyectileBasicSystem : MonoBehaviour
             {
                 Dissapear();
             }
-
         }
-        if ((collision.tag == "Enemy" || collision.tag == "Boss") && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null)
+        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy") && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null)
         {
             collision.SendMessage("TakeDamage", 20);
         }

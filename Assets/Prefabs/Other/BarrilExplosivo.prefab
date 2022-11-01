@@ -183,6 +183,7 @@ MonoBehaviour:
   corncub: {fileID: 0}
   cornWeight: 0
   head: {fileID: 0}
+  dontScaleLife: 1
   maxVida: 1
   deathTime: 1
   vida: 1

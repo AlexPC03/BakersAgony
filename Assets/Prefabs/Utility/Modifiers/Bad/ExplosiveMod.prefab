@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1294480466924173699
+--- !u!1 &8605326336983276860
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1294480466924173697}
-  - component: {fileID: 1294480466924173698}
+  - component: {fileID: 8605326336983276862}
+  - component: {fileID: 8605326336983276861}
   m_Layer: 0
-  m_Name: TrapedMod
+  m_Name: ExplosiveMod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1294480466924173697
+--- !u!4 &8605326336983276862
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294480466924173699}
+  m_GameObject: {fileID: 8605326336983276860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1294480466924173698
+--- !u!114 &8605326336983276861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294480466924173699}
+  m_GameObject: {fileID: 8605326336983276860}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 565b86c2f523a644c90ae6c65155b06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 4478758716353591283, guid: ad38bebe6b3293b488383ef952cfb35c, type: 3}
-  - {fileID: 4478758716353591283, guid: ad38bebe6b3293b488383ef952cfb35c, type: 3}
-  - {fileID: 4478256381288512048, guid: 370e1c36e3feece4584a18d18e67cb82, type: 3}
   - {fileID: 7903225975174352448, guid: a05fd7e46e938a04db8c321e263f25db, type: 3}
-  - {fileID: 3513350148426047316, guid: d6c5e6a4689e1bb4b8bb7f5b3971e644, type: 3}
   derivate: 1
-  mediaObj: 12
+  mediaObj: 9

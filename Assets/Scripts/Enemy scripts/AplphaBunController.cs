@@ -161,7 +161,7 @@ public class AplphaBunController : BossController
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.collider.isTrigger==false &&(collision.gameObject.layer == 6 ||collision.gameObject.tag=="Boss"))
         {
             rb.AddForce((player.transform.position - transform.position).normalized * speed / 2, ForceMode2D.Impulse);
             targetPos = player.transform.position - new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);

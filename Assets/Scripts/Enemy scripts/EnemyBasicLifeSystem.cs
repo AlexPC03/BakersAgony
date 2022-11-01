@@ -17,6 +17,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public float cornWeight;
     public GameObject head;
     [Header("LifeParameters")]
+    public bool dontScaleLife;
     public float maxVida;
     public float deathTime;
     public float vida;
@@ -25,7 +26,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public void StartVida()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
-        maxVida = maxVida + playerController.sala;
+        if(!dontScaleLife)
+        {
+            maxVida = maxVida + playerController.sala;
+        }
         vida = maxVida;
         sp = GetComponent<SpriteRenderer>();
         aud = GetComponent<AudioSource>();

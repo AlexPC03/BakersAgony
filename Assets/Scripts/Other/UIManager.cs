@@ -24,5 +24,9 @@ public class UIManager : MonoBehaviour
         {
             roomText.text = playerM.sala.ToString();
         }
+        else
+        {
+            roomText.text = "";
+        }
     }
 }

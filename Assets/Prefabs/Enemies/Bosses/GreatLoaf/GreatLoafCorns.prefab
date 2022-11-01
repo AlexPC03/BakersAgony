@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3342554920666880612}
+  - component: {fileID: 3972675392894877030}
   m_Layer: 0
   m_Name: GreatLoafCorns
   m_TagString: Untagged
@@ -33,6 +34,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3972675392894877030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823865967183140318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3897889015023613441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +59,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e5d9b55db25b3ee4d94125399675e588, type: 2}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: maxVida
-      value: 65
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: deathTime
@@ -156,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e5d9b55db25b3ee4d94125399675e588, type: 2}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: maxVida
-      value: 65
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: deathTime
@@ -266,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e5d9b55db25b3ee4d94125399675e588, type: 2}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: maxVida
-      value: 65
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 940383390612334384, guid: eaa46d7360944f14998a5f58708e4aaf, type: 3}
       propertyPath: deathTime

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106631699781697578}
+  - component: {fileID: 243759811472846340}
   m_Layer: 0
   m_Name: AlphaBunCarrot
   m_TagString: Untagged
@@ -50,6 +51,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243759811472846340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368676482583010255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &660135385436689820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,14 +314,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
---- !u!1 &5224262841495485428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
-  m_PrefabInstance: {fileID: 1199077203143064497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5224262841495485437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6351119173103386700, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+  m_PrefabInstance: {fileID: 1199077203143064497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5224262841495485428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
   m_PrefabInstance: {fileID: 1199077203143064497}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2420340220701243774
@@ -1508,7 +1521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: maxVida
-      value: 600
+      value: 625
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: nearSpeed
@@ -1687,14 +1700,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
---- !u!1 &3532562824497547074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
-  m_PrefabInstance: {fileID: 7576631345186424583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3532562824497547083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6351119173103386700, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+  m_PrefabInstance: {fileID: 7576631345186424583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3532562824497547074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
   m_PrefabInstance: {fileID: 7576631345186424583}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8377568179515601485
