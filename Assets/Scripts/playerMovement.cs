@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+    private Gamepad gamepad;
+
     public AudioClip takeDamage;
     public AudioClip die;
     public ParticleSystem par;
@@ -56,11 +59,23 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-
-        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.K) && !endless)
+        gamepad = Gamepad.current;
+        //Cheat
+        if(gamepad==null)
         {
-            RecoverLife();
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.K) && !endless)
+            {
+                RecoverLife();
+            }
         }
+        else
+        {
+            if (((gamepad.aButton.isPressed && gamepad.yButton.isPressed && gamepad.xButton.isPressed) || (gamepad.crossButton.isPressed && gamepad.squareButton.isPressed && gamepad.triangleButton.isPressed)) && !endless)
+            {
+                RecoverLife();
+            }
+        }
+
 
         sp.color = lerpedColor;
         if (PassedTime <= invulneravilityTime)
@@ -96,7 +111,7 @@ public class playerMovement : MonoBehaviour
 
         // valor entre -1 y 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 es izquierda
-        vertical = Input.GetAxisRaw("Vertical"); // -1 es derecha
+        vertical = Input.GetAxisRaw("Vertical"); // -1 es abajo
 
         if(horizontal>0)
         {
@@ -130,12 +145,16 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) // movimiento diagonal
+        if(gamepad==null)
         {
-            // limitar velocidad diagonal
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
+            if (horizontal != 0 && vertical != 0) // movimiento diagonal
+            {
+                // limitar velocidad diagonal
+                horizontal *= moveLimiter;
+                vertical *= moveLimiter;
+            }
         }
+
 
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
 

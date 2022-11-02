@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.InputSystem;
+
 
 
 public class PedestalController : MonoBehaviour
@@ -10,6 +12,9 @@ public class PedestalController : MonoBehaviour
     private GameObject player;
     private SpriteRenderer sp;
     private bool dontDestroy = false;
+    private Gamepad gamepad;
+
+
 
     public AudioClip[] sounds;
     private ParticleSystem.EmissionModule em;
@@ -41,6 +46,7 @@ public class PedestalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gamepad = Gamepad.current;
         if (canDissapear && player.GetComponent<playerMovement>().sala > 27)
         {
             if (Random.Range(0, oddsToNotDestroy+1) == 0 && dontDestroy==false)
@@ -59,32 +65,65 @@ public class PedestalController : MonoBehaviour
         if (transform.GetChild(0) != null)
         {
             thisObject = transform.GetChild(0).gameObject;
-
-            if (Input.GetKeyDown(KeyCode.E) && inRange)
+            if (gamepad == null)
             {
-                if(!shop)
+                if (Input.GetKeyDown(KeyCode.E) && inRange)
                 {
-                    thisObject.SendMessage("Pick");
-                }
-                else
-                {
-                    if(player.GetComponent<playerMovement>().corn>=price)
+                    if (!shop)
                     {
-                        if(aud!=null)
-                        {
-                            aud.clip = sounds[Random.Range(0, sounds.Length)];
-                            aud.Play();
-                        }
-                        player.SendMessage("loseCorn",price);
                         thisObject.SendMessage("Pick");
-                        shop = false;
+                    }
+                    else
+                    {
+                        if (player.GetComponent<playerMovement>().corn >= price)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("loseCorn", price);
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                        }
+                    }
+                    if (destroyOnPick)
+                    {
+                        Destroy(gameObject, 0.1f);
                     }
                 }
-                if (destroyOnPick)
+            }
+            else
+            {
+
+                if ((gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame) && inRange)
                 {
-                    Destroy(gameObject, 0.1f);
+                    if (!shop)
+                    {
+                        thisObject.SendMessage("Pick");
+                    }
+                    else
+                    {
+                        if (player.GetComponent<playerMovement>().corn >= price)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("loseCorn", price);
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                        }
+                    }
+                    if (destroyOnPick)
+                    {
+                        Destroy(gameObject, 0.1f);
+                    }
                 }
             }
+            
+  
             if(thisObject.GetComponent<SpriteRenderer>().enabled == false)
             {
                 em.enabled = false;
