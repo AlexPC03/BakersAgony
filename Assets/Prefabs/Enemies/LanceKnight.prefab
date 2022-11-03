@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difference: -0.7
+  difference: -0.9
 --- !u!50 &2298039718481450367
 Rigidbody2D:
   serializedVersion: 4
@@ -143,6 +143,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.75
   head: {fileID: 1734591715635799937, guid: 5e0c5c9cc57fdd04b95f3c97e4758dab, type: 3}
+  dontScaleLife: 0
   maxVida: 45
   deathTime: 1
   vida: 0

@@ -48,7 +48,7 @@ public class rotateSword : MonoBehaviour
         else if (gamepad != null)
         {
             Vector2 stickL = gamepad.rightStick.ReadValue();           
-            if (stickL!=Vector2.zero)
+            if (Mathf.Abs(stickL.x)>=0.25 &&Mathf.Abs(stickL.x)>=0.25)
             {
                 lastStickL = stickL;
             }
