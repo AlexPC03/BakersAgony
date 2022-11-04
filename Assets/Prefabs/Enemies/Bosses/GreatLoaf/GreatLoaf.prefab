@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 153625435329741072}
   - component: {fileID: 6965996241870654977}
   - component: {fileID: 5688901665936260566}
+  - component: {fileID: -1000627896683355979}
   m_Layer: 0
   m_Name: GreatLoaf
   m_TagString: Boss
@@ -232,6 +233,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.99
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 180
   deathTime: 3
   vida: 0
@@ -5132,3 +5134,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1000627896683355979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076097501552702176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

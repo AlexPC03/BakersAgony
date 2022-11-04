@@ -8,7 +8,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     private Color originalColor;
     public float pitch=1;
     protected AudioSource aud;
-    private float timeToDamage = 0;
+    private float timeToDamage = 1;
     private float invulneravility = 0.25f;
     protected SpriteRenderer sp;
     public GameObject corn;
@@ -84,6 +84,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                 sp.color = Color.red;
             }
             Invoke("ChangeBack", 0.1f);
+            timeToDamage = 0;
         }
         if(aud != null)
         {

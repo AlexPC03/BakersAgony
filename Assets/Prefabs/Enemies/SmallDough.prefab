@@ -19,6 +19,9 @@ GameObject:
   - component: {fileID: -3705393117819225926}
   - component: {fileID: -630054198723852034}
   - component: {fileID: 1928808995812091278}
+  - component: {fileID: 8127656981603005774}
+  - component: {fileID: -4599793293831575199}
+  - component: {fileID: -1892929516323817319}
   m_Layer: 7
   m_Name: SmallDough
   m_TagString: Enemy
@@ -109,6 +112,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 15
   deathTime: 0.5
   vida: 0
@@ -5073,3 +5077,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8127656981603005774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086545270604875517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4599793293831575199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086545270604875517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1892929516323817319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086545270604875517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

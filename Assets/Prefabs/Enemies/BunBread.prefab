@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 8535343362498903377}
   - component: {fileID: 2460934912504797955}
   - component: {fileID: -3775286146021560696}
+  - component: {fileID: 567137126582790849}
+  - component: {fileID: -7207309635431640523}
   m_Layer: 7
   m_Name: BunBread
   m_TagString: Enemy
@@ -109,6 +111,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.35
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 30
   deathTime: 0.5
   vida: 0
@@ -5075,3 +5078,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &567137126582790849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458737783074177514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7207309635431640523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458737783074177514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

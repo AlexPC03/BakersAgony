@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 8616631451335678228}
   - component: {fileID: 8616631451335678255}
   - component: {fileID: 1415226120581067625}
+  - component: {fileID: -3144703399999005301}
   m_Layer: 0
   m_Name: AlphaBunHead
   m_TagString: Boss
@@ -416,3 +417,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3144703399999005301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616631451335678231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

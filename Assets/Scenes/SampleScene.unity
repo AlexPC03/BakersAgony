@@ -8338,6 +8338,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+  mainMenu: 0
 --- !u!1 &1534346599
 GameObject:
   m_ObjectHideFlags: 0
