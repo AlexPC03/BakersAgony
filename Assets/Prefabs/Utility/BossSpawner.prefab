@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aditional: 0
+  boss: 1
   enemyList: []
   enemyToSpawn: {fileID: 0}
   byDistance: 1

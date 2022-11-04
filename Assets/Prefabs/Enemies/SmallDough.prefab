@@ -113,7 +113,7 @@ MonoBehaviour:
   cornWeight: 0
   head: {fileID: 0}
   dontScaleLife: 0
-  maxVida: 15
+  maxVida: 10
   deathTime: 0.5
   vida: 0
   inverted: 1

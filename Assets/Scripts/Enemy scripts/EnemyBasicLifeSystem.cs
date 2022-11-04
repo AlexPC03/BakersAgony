@@ -9,7 +9,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     public float pitch=1;
     protected AudioSource aud;
     private float timeToDamage = 1;
-    private float invulneravility = 0.25f;
+    private float invulneravility = 0.05f;
     protected SpriteRenderer sp;
     public GameObject corn;
     public GameObject corncub;
@@ -47,8 +47,6 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
         if (vida<=0)
         {
             if (gameObject.tag != "SpecialEnemy")
@@ -63,12 +61,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                     GetComponent<Collider2D>().enabled = false;
                 }
             }
-
             if(GetComponent<ParticleSystem>()!=null)
             {
                 GetComponent<ParticleSystem>().Play();
             }
-
             Destroy(gameObject, deathTime);
         }
         timeToDamage += Time.deltaTime;
