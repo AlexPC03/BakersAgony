@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5194177234525258472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,4 +47,3 @@ MonoBehaviour:
   - {fileID: 8386812363261751709, guid: f8643b8a701ae9243a6ff92de14f377a, type: 3}
   derivate: 1
   mediaObj: 2
-  forEnemies: 0
