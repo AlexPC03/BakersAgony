@@ -18,8 +18,9 @@ public class CursorGamepadController : StandaloneInputModule
         {
             if (gamepad != null && Time.timeScale == 0)
             {
-                actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 2, actualMousePos.y + Input.GetAxis("Vertical") * 2);
-                Mouse.current.WarpCursorPosition(actualMousePos);
+                actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 5, actualMousePos.y + Input.GetAxis("Vertical") * 5);
+                Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height - actualMousePos.y));
+
 
                 if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
                 {
@@ -44,8 +45,8 @@ public class CursorGamepadController : StandaloneInputModule
         {
             if (gamepad != null)
             {
-                actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 2, actualMousePos.y + Input.GetAxis("Vertical") * 2);
-                Mouse.current.WarpCursorPosition(actualMousePos);
+                actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 5, actualMousePos.y + Input.GetAxis("Vertical") * 5);
+                Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height-actualMousePos.y));
 
                 if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
                 {

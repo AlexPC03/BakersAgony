@@ -28,6 +28,15 @@ public class PauseButton : MonoBehaviour
                 MainMenu.SetActive(false);
             }
         }
+        else
+        {
+            if (Time.timeScale == 1f && Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGame();
+                OptionsMenu.SetActive(true);
+                MainMenu.SetActive(false);
+            }
+        }
 
     }
 
