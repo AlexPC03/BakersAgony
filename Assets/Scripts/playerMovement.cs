@@ -23,7 +23,10 @@ public class playerMovement : MonoBehaviour
     public int sala;
     public bool endless=false;
 
+    public float maxAtack = 2f;
     public float attack = 1f;
+    public int maxCorn = 99;
+    public float maxVelocity=10f;
 
     private float horizontal;
     private float vertical;
@@ -141,6 +144,7 @@ public class playerMovement : MonoBehaviour
         {
             lerpedColor = Color.white;
         }
+        CheckStates();
     }
 
     void FixedUpdate()
@@ -154,8 +158,6 @@ public class playerMovement : MonoBehaviour
                 vertical *= moveLimiter;
             }
         }
-
-
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
 
         if (PassedTime >= invulneravilityTime)
@@ -214,13 +216,44 @@ public class playerMovement : MonoBehaviour
             corn += Random.Range(35, 41);
         }
     }
+    public void decreaseMaxHealth()
+    {
+        if (maxLife > 0)
+        {
+            maxLife += 2;
+        }
+    }
+
     public void increaseVelocity()
     {
-        runSpeed += 1f;
+        if (runSpeed < maxVelocity)
+        {
+            runSpeed += 1;
+        }
+        else
+        {
+            corn += Random.Range(35, 41);
+        }
+    }
+    public void decreaseVelocity()
+    {
+        runSpeed -= 1f;
     }
     public void increaseAttack()
     {
-        attack += 0.2f;
+        if (attack < maxAtack)
+        {        
+            attack += 0.2f;
+        }
+        else
+        {
+            corn += Random.Range(35, 41);
+        }
+
+    }
+    public void decreaseAttack()
+    {
+        attack -= 0.2f;
     }
 
     public void nextRoom()
@@ -231,5 +264,29 @@ public class playerMovement : MonoBehaviour
     public void SceneChange()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    private void CheckStates()
+    {
+        if(runSpeed>maxVelocity)
+        {
+            runSpeed= maxVelocity;
+        }
+        if(runSpeed<2f)
+        {
+            runSpeed = 2f;
+        }
+        if(attack>maxAtack)
+        {
+            attack= maxAtack;
+        }
+        if(attack<0.2f)
+        {
+            attack = 0.2f;
+        }
+        if(corn>maxCorn)
+        {
+            corn= maxCorn;
+        }
     }
 }

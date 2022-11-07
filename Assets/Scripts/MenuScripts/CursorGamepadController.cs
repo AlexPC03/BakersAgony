@@ -14,53 +14,49 @@ public class CursorGamepadController : StandaloneInputModule
     void Update()
     {
         Gamepad gamepad = Gamepad.current;
-        if(!mainMenu)
+        if(gamepad!=null)
         {
-            if (gamepad != null && Time.timeScale == 0)
+            if(!mainMenu)
+            {
+                if (Time.timeScale == 0)
+                {
+                    actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 5, actualMousePos.y + Input.GetAxis("Vertical") * 5);
+                    Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height - actualMousePos.y));
+                    if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
+                    {
+                        ClickAt(actualMousePos, true);
+                    }
+
+                    if (gamepad.aButton.wasReleasedThisFrame || gamepad.bButton.wasReleasedThisFrame || gamepad.crossButton.wasReleasedThisFrame)
+                    {
+                        ClickAt(actualMousePos, false);
+                    }
+                    Cursor.visible = true;
+                }
+                else if(Time.timeScale!=0)
+                {
+                    Cursor.visible= false;
+                }
+            }
+            else
             {
                 actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 5, actualMousePos.y + Input.GetAxis("Vertical") * 5);
-                Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height - actualMousePos.y));
-
-
+                Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height-actualMousePos.y));
                 if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
                 {
                     ClickAt(actualMousePos, true);
                 }
-
                 if (gamepad.aButton.wasReleasedThisFrame || gamepad.bButton.wasReleasedThisFrame || gamepad.crossButton.wasReleasedThisFrame)
                 {
                     ClickAt(actualMousePos, false);
                 }
-            }
-            if(gamepad!=null && Time.timeScale!=0)
-            {
-                Cursor.visible= false;
-            }
-            else
-            {
-                Cursor.visible= true;
+                Cursor.visible = true;           
             }
         }
         else
         {
-            if (gamepad != null)
-            {
-                actualMousePos = new Vector2(actualMousePos.x + Input.GetAxis("Horizontal") * 5, actualMousePos.y + Input.GetAxis("Vertical") * 5);
-                Mouse.current.WarpCursorPosition(new Vector2(actualMousePos.x, Screen.height-actualMousePos.y));
-
-                if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
-                {
-                    ClickAt(actualMousePos, true);
-                }
-
-                if (gamepad.aButton.wasReleasedThisFrame || gamepad.bButton.wasReleasedThisFrame || gamepad.crossButton.wasReleasedThisFrame)
-                {
-                    ClickAt(actualMousePos, false);
-                }
-            }
-            Cursor.visible = true;           
+            Cursor.visible = true;
         }
-
     }
 
     public void ClickAt(Vector2 pos, bool pressed)
