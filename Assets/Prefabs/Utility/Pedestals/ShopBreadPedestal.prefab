@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1414464806816834005}
   - component: {fileID: 5917342394011134766}
   - component: {fileID: -105984027134293314}
+  - component: {fileID: -6446434639184377243}
   m_Layer: 0
   m_Name: ShopBreadPedestal
   m_TagString: Untagged
@@ -72,6 +73,11 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 1
   price: 40
+  deal: 0
+  dealPrice: 0
+  dealSprites: []
+  canDissapear: 0
+  oddsToNotDestroy: 0
   list:
   - {fileID: 7279858790484603436, guid: d4db88108ac2ea34f8ac39a1f1ecb717, type: 3}
   - {fileID: 1424815586000138259, guid: d6ce9517b4604ab4f897a3003d9b05c0, type: 3}
@@ -5012,3 +5018,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6446434639184377243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601968313638168276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

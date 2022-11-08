@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4741051655631286288}
   - component: {fileID: 32711491640720107}
   - component: {fileID: 5485602860349909131}
+  - component: {fileID: 6694291134197729928}
   m_Layer: 0
   m_Name: 'FreeHealthPedestal '
   m_TagString: Untagged
@@ -70,6 +71,9 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 1
   price: 0
+  deal: 0
+  dealPrice: 0
+  dealSprites: []
   canDissapear: 1
   oddsToNotDestroy: 2
   list:
@@ -5012,3 +5016,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6694291134197729928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293627313818990353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5869,7 +5869,10 @@ MonoBehaviour:
   lightWorld: {fileID: 1838890674}
   sala: 1
   endless: 0
+  maxAtack: 2
   attack: 1
+  maxCorn: 99
+  maxVelocity: 10
   lerpedColor: {r: 1, g: 1, b: 1, a: 1}
   moveLimiter: 0.7
   runSpeed: 5

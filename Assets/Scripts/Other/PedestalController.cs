@@ -22,6 +22,17 @@ public class PedestalController : MonoBehaviour
     public bool destroyOnPick;
     public bool shop;
     public int price;
+    public bool deal;
+    public dealTypes dealPrice;
+    public enum dealTypes
+    {
+        none,
+        health,
+        speed,
+        damage
+    }
+    public Sprite[] dealSprites;
+
     public bool canDissapear;
     public int oddsToNotDestroy;
     public GameObject[] list;
@@ -36,7 +47,25 @@ public class PedestalController : MonoBehaviour
         em = GetComponent<ParticleSystem>().emission;
         em.enabled = false;
         Instantiate(list[Random.Range(0, list.Length)], transform);
-        if (shop && sp != null)
+        if(deal)
+        {
+            switch (Random.Range(0, 3))
+            {
+                case 0:
+                    dealPrice = dealTypes.health;
+                    sp.sprite = dealSprites[0];
+                    break;
+                case 1:
+                    dealPrice = dealTypes.damage;
+                    sp.sprite = dealSprites[1];
+                    break;
+                case 2:
+                    dealPrice = dealTypes.speed;
+                    sp.sprite = dealSprites[2];
+                    break;
+            }
+        }
+        if ((shop ||deal) && sp != null)
         {
             sp.enabled = true;
         }
@@ -58,7 +87,7 @@ public class PedestalController : MonoBehaviour
                 dontDestroy = true;
             }
         }
-        if (!shop && sp != null)
+        if (!shop && !deal && sp != null)
         {
             sp.enabled = false;
         }
@@ -69,11 +98,11 @@ public class PedestalController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E) && inRange)
                 {
-                    if (!shop)
+                    if (!shop && !deal)
                     {
                         thisObject.SendMessage("Pick");
                     }
-                    else
+                    else if(shop && !deal)
                     {
                         if (player.GetComponent<playerMovement>().corn >= price)
                         {
@@ -85,6 +114,48 @@ public class PedestalController : MonoBehaviour
                             player.SendMessage("loseCorn", price);
                             thisObject.SendMessage("Pick");
                             shop = false;
+                            deal = false;
+                        }
+                    }
+                    else
+                    {
+                        if(dealPrice==dealTypes.health)
+                        {
+                            if (aud != null)
+                            {
+                                aud.pitch = Random.Range(1.2f, 1.8f);
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseMaxHealth");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
+
+                        }
+                        else if (dealPrice == dealTypes.damage)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseAttack");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
+                        }
+                        else if (dealPrice == dealTypes.speed)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseVelocity");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
                         }
                     }
                     if (destroyOnPick)
@@ -95,14 +166,13 @@ public class PedestalController : MonoBehaviour
             }
             else
             {
-
                 if ((gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame) && inRange)
                 {
-                    if (!shop)
+                    if (!shop && !deal)
                     {
                         thisObject.SendMessage("Pick");
                     }
-                    else
+                    else if (shop && !deal)
                     {
                         if (player.GetComponent<playerMovement>().corn >= price)
                         {
@@ -114,6 +184,47 @@ public class PedestalController : MonoBehaviour
                             player.SendMessage("loseCorn", price);
                             thisObject.SendMessage("Pick");
                             shop = false;
+                            deal = false;
+                        }
+                    }
+                    else
+                    {
+                        if (dealPrice == dealTypes.health)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseMaxHealth");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
+
+                        }
+                        else if (dealPrice == dealTypes.damage)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseAttack");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
+                        }
+                        else if (dealPrice == dealTypes.speed)
+                        {
+                            if (aud != null)
+                            {
+                                aud.clip = sounds[Random.Range(0, sounds.Length)];
+                                aud.Play();
+                            }
+                            player.SendMessage("decreaseVelocity");
+                            thisObject.SendMessage("Pick");
+                            shop = false;
+                            deal = false;
                         }
                     }
                     if (destroyOnPick)
@@ -121,9 +232,7 @@ public class PedestalController : MonoBehaviour
                         Destroy(gameObject, 0.1f);
                     }
                 }
-            }
-            
-  
+            } 
             if(thisObject.GetComponent<SpriteRenderer>().enabled == false)
             {
                 em.enabled = false;

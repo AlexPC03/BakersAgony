@@ -220,7 +220,7 @@ public class playerMovement : MonoBehaviour
     {
         if (maxLife > 0)
         {
-            maxLife += 2;
+            maxLife -= 2;
         }
     }
 

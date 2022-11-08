@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2525518321137896440}
   - component: {fileID: 7560874220943487743}
   - component: {fileID: -4354071650284635696}
+  - component: {fileID: 7040430093986838407}
   m_Layer: 0
   m_Name: SwordPedestal
   m_TagString: Untagged
@@ -68,6 +69,9 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 0
   price: 0
+  deal: 0
+  dealPrice: 0
+  dealSprites: []
   canDissapear: 1
   oddsToNotDestroy: 10
   list:
@@ -4927,3 +4931,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0
+--- !u!114 &7040430093986838407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190689111993584701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

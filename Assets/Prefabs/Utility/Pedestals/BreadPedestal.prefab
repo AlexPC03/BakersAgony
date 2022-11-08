@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2620895994660884038}
   - component: {fileID: 5128155292716240514}
   - component: {fileID: 474410270913676409}
+  - component: {fileID: 4483967424059516607}
   m_Layer: 0
   m_Name: BreadPedestal
   m_TagString: Untagged
@@ -68,6 +69,9 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 0
   price: 0
+  deal: 0
+  dealPrice: 0
+  dealSprites: []
   canDissapear: 1
   oddsToNotDestroy: 6
   list:
@@ -4914,3 +4918,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0
+--- !u!114 &4483967424059516607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816602867303860611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

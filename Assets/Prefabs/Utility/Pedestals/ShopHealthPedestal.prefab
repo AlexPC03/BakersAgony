@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7970956794757189982}
   - component: {fileID: 3396040984226847653}
   - component: {fileID: -487391172378083120}
+  - component: {fileID: -812772067428968695}
   m_Layer: 0
   m_Name: ShopHealthPedestal
   m_TagString: Untagged
@@ -72,6 +73,11 @@ MonoBehaviour:
   destroyOnPick: 0
   shop: 1
   price: 10
+  deal: 0
+  dealPrice: 0
+  dealSprites: []
+  canDissapear: 0
+  oddsToNotDestroy: 0
   list:
   - {fileID: 7376179314244293946, guid: 20887c7c362d9d44e964403cfc913412, type: 3}
   - {fileID: 8550773082604634293, guid: 9c3ca9256af624449a4b640b11f9e600, type: 3}
@@ -5012,3 +5018,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-812772067428968695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495222422557382239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
