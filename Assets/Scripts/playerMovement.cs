@@ -18,6 +18,7 @@ public class playerMovement : MonoBehaviour
     public GameObject healthbar;
     public GameObject maxHealthbar;
     public GameObject playerBody;
+    public GameObject maskObject;
     public GameObject lightSpot;
     public GameObject lightWorld;
     public int sala;
@@ -32,6 +33,7 @@ public class playerMovement : MonoBehaviour
     private float vertical;
 
     public Color lerpedColor = Color.white;
+    public Color lerpedColorM = new Color (0.7264151f, 0.7264151f, 0.7264151f,1);
 
 
     public float moveLimiter = 0.7f;
@@ -81,6 +83,7 @@ public class playerMovement : MonoBehaviour
 
 
         sp.color = lerpedColor;
+        maskObject.GetComponentInChildren<SpriteRenderer>().color = lerpedColorM;
         if (PassedTime <= invulneravilityTime)
         {
             PassedTime += Time.deltaTime;
@@ -118,12 +121,15 @@ public class playerMovement : MonoBehaviour
 
         if(horizontal>0)
         {
-            playerBody.GetComponent<SpriteRenderer>().flipX = true;
+            sp.flipX = true;
+            maskObject.transform.localScale = new Vector3(-1, 1, 1);
         }
         else if(horizontal<0)
         {
-            playerBody.GetComponent<SpriteRenderer>().flipX = false;
+            sp.flipX = false;
+            maskObject.transform.localScale = new Vector3(1, 1, 1);
         }
+
 
         GetComponent<Animator>().SetFloat("vertical", vertical);
 
@@ -139,10 +145,12 @@ public class playerMovement : MonoBehaviour
         if (invulnerable)
         {
             lerpedColor = Color.Lerp(Color.white, Color.clear, Mathf.PingPong(Time.time * 10, 1));
+            lerpedColorM = Color.Lerp(new Color(0.7264151f, 0.7264151f, 0.7264151f, 1), Color.clear, Mathf.PingPong(Time.time * 10, 1));
         }
         else
         {
             lerpedColor = Color.white;
+            lerpedColorM = new Color(0.7264151f, 0.7264151f, 0.7264151f, 1);
         }
         CheckStates();
     }
@@ -177,6 +185,7 @@ public class playerMovement : MonoBehaviour
         {
             aud.clip = takeDamage;
         }
+        MaskInteractions();
     }
 
     public void TakeDamage()
@@ -249,7 +258,6 @@ public class playerMovement : MonoBehaviour
         {
             corn += Random.Range(35, 41);
         }
-
     }
     public void decreaseAttack()
     {
@@ -287,6 +295,63 @@ public class playerMovement : MonoBehaviour
         if(corn>maxCorn)
         {
             corn= maxCorn;
+        }
+    }
+
+    private void MaskInteractions()
+    {
+        GameObject mask = maskObject.transform.GetChild(0).gameObject;
+        if (mask.tag=="Mask" && mask.GetComponent<MaskController>()!=null)
+        {
+            int ID = mask.GetComponent<MaskController>().maskID;
+            if(ID==1)
+            {
+                invulneravilityTime = 7.5f;
+            }
+            else
+            {
+                invulneravilityTime = 5;
+            }
+            if(ID==2)
+            {
+                maxCorn = 999;
+            }
+            else
+            {
+                maxCorn = 99;
+            }
+            if(ID==3)
+            {
+
+            }
+            else
+            {
+
+            }
+            if(ID==4)
+            {
+
+            }
+            else
+            {
+
+            }
+            if(ID==5)
+            {
+
+            }
+            else
+            {
+
+            }
+            if (ID == 6)
+            {
+
+            }
+            else
+            {
+
+            }
         }
     }
 }

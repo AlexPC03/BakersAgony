@@ -20,7 +20,14 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cornText.text = playerM.corn.ToString();
+        if(playerM.corn<=9)
+        {
+            cornText.text = "0"+playerM.corn.ToString();
+        }
+        else
+        {
+            cornText.text =playerM.corn.ToString();
+        }
         if(playerM.endless)
         {
             roomText.text = playerM.sala.ToString();

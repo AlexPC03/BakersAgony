@@ -13,6 +13,7 @@ TagManager:
   - Boss
   - SpecialEnemy
   - Duck
+  - Mask
   layers:
   - Default
   - TransparentFX
