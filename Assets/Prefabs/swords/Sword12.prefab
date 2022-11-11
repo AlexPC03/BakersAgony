@@ -130,6 +130,8 @@ MonoBehaviour:
   forceHit: 1
   rotationForce: 5
   deceleration: 1
+  clip:
+  - {fileID: 8300000, guid: 8633e7a82d980504ba2d0c6a42b35b09, type: 3}
 --- !u!82 &3773712118583970351
 AudioSource:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwordParameters : SwordKnockback
 {
     private AudioSource aud;
+    public AudioClip[] clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class SwordParameters : SwordKnockback
             if (coll.tag == "Enemy" || coll.tag == "Boss" || coll.tag == "SpecialEnemy")
             {
                 if(coll.GetComponent<EnemyBasicLifeSystem>()!=null)
-                coll.SendMessage("TakeDamage", damage*Player.GetComponent<playerMovement>().attack);
+                coll.SendMessage("TakeDamage", damage*(Player.GetComponent<playerMovement>().attack*Player.GetComponent<playerMovement>().attackMultiplier));
             }
             if (coll.tag!="UnstoppableProyectile")
             {
@@ -48,6 +49,8 @@ public class SwordParameters : SwordKnockback
     {
         if(aud!=null)
         {
+            aud.pitch = Random.Range(0.9f, 1.1f);
+            aud.clip = clip[Random.Range(0, clip.Length)];
             aud.Play();
         }
         Vector3 pos;

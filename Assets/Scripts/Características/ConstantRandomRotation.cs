@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class ConstantRandomRotation : MonoBehaviour
 {
-    private float speed;
+    public float speed;
+    public bool random=true;
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.Range(15f, 90f);
+        if(random)
+        {
+            speed = Random.Range(15f, 90f);
+        }
     }
 
     // Update is called once per frame

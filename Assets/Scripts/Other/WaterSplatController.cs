@@ -15,13 +15,13 @@ public class WaterSplatController : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.GetComponent<BreadEnemy>()!=null)
         {
             if (collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy")
             {
-                collision.gameObject.SendMessage("TakeDamage", 5f);
+                collision.gameObject.SendMessage("TakeDamage", 25f);
             }
         }
     }

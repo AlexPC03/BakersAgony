@@ -7,6 +7,8 @@ public class SplatDoughController : MonoBehaviour
     private Color color;
     public GameObject doughHand;
     public Vector2 spawnArea;
+    public bool Toxic = false;
+    public float friendlyDamage = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,10 @@ public class SplatDoughController : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.SendMessage("TakeDamage");
+        }
+        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy")&&Toxic)
+        {
+            collision.gameObject.SendMessage("TakeDamage", friendlyDamage);
         }
     }
 }

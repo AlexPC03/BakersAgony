@@ -6,7 +6,9 @@ public class MaskController : MonoBehaviour
 {
     public int maskID;
     private AudioSource aud;
+    public AudioClip[] clip;
     private GameObject MaskObj;
+
 
 
     // Start is called before the first frame update
@@ -26,6 +28,8 @@ public class MaskController : MonoBehaviour
     {
         if (aud != null)
         {
+            aud.pitch = Random.Range(1.25f, 1.5f);
+            aud.clip = clip[Random.Range(0, clip.Length)];
             aud.Play();
         }
         Vector3 pos;

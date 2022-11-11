@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
 {
     private Gamepad gamepad;
 
+    private GameObject shield;
+
     public AudioClip takeDamage;
     public AudioClip die;
     public ParticleSystem par;
@@ -21,14 +23,17 @@ public class playerMovement : MonoBehaviour
     public GameObject maskObject;
     public GameObject lightSpot;
     public GameObject lightWorld;
+    private bool doctorMask=false;
+    public GameObject[] spludges;
     public int sala;
     public bool endless=false;
 
     public float maxAtack = 2f;
     public float attack = 1f;
+    public float attackMultiplier = 1;
+
     public int maxCorn = 99;
     public float maxVelocity=10f;
-
     private float horizontal;
     private float vertical;
 
@@ -38,6 +43,7 @@ public class playerMovement : MonoBehaviour
 
     public float moveLimiter = 0.7f;
     public float runSpeed;
+    public float speedMultiplier=1;
 
     public int corn = 0;
 
@@ -52,6 +58,10 @@ public class playerMovement : MonoBehaviour
 
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(6, 6);
+
+        shield = GameObject.Find("RotationPointShield");
+
         maxMaxLife = 12;
         PassedTime = 0;
         health = maxLife-1;
@@ -166,7 +176,7 @@ public class playerMovement : MonoBehaviour
                 vertical *= moveLimiter;
             }
         }
-            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+            body.velocity = new Vector2(horizontal * runSpeed * speedMultiplier, vertical * runSpeed * speedMultiplier);
 
         if (PassedTime >= invulneravilityTime)
         {
@@ -196,6 +206,10 @@ public class playerMovement : MonoBehaviour
             health -= 1;
             PassedTime = 0;
             par.Play();
+            if(doctorMask)
+            {
+                Instantiate(spludges[Random.Range(0, spludges.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+            }
         }
     }
 
@@ -307,12 +321,14 @@ public class playerMovement : MonoBehaviour
             if(ID==1)
             {
                 invulneravilityTime = 7.5f;
+                attackMultiplier = 0.9f;
             }
             else
             {
                 invulneravilityTime = 5;
+                attackMultiplier = 0.9f;
             }
-            if(ID==2)
+            if (ID==2)
             {
                 maxCorn = 999;
             }
@@ -322,21 +338,31 @@ public class playerMovement : MonoBehaviour
             }
             if(ID==3)
             {
-
+                if(shield.activeSelf==false)
+                {
+                    shield.SetActive(true);
+                }
+                speedMultiplier = 0.75f;
             }
             else
             {
-
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                speedMultiplier = 1f;
             }
-            if(ID==4)
+            if (ID==4)
             {
-
+                doctorMask = true;
+                speedMultiplier = 1.25f;
             }
             else
             {
-
+                doctorMask = false;
+                speedMultiplier = 1f;
             }
-            if(ID==5)
+            if (ID==5)
             {
 
             }

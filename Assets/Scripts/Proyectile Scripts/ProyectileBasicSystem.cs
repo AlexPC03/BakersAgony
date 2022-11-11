@@ -10,6 +10,7 @@ public class ProyectileBasicSystem : MonoBehaviour
 
     public float destroyTime;
     public bool friendlyFire;
+    public float friendlyDamage=20;
     public bool destroyOnHit;
     public bool ghost;
 
@@ -38,7 +39,8 @@ public class ProyectileBasicSystem : MonoBehaviour
         }
         if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy") && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null)
         {
-            collision.SendMessage("TakeDamage", 20);
+            collision.SendMessage("TakeDamage", friendlyDamage);
+            collision.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * (friendlyDamage/5),ForceMode2D.Impulse);
         }
     }
 
