@@ -14,16 +14,17 @@ TagManager:
   - SpecialEnemy
   - Duck
   - Mask
+  - Helper
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Obstacles
   - Enemys
-  - 
+  - Helpers
   - 
   - 
   - 

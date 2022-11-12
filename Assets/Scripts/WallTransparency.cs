@@ -25,7 +25,7 @@ public class WallTransparency : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D coll)
     {
         
-        if((coll.tag=="Player" || coll.tag=="Enemy")&& transparent)
+        if(coll.CompareTag("Player") || coll.CompareTag("Enemy") || coll.CompareTag("SpecialEnemy") || coll.CompareTag("Boss") || coll.CompareTag("Helper") && transparent)
         {
             foreach(SpriteRenderer spr in transform.GetComponentsInChildren<SpriteRenderer>())
             {
@@ -37,7 +37,7 @@ public class WallTransparency : MonoBehaviour
     private void OnTriggerExit2D(Collider2D coll)
     {
 
-        if (coll.CompareTag("Player") || coll.CompareTag("Enemy"))
+        if (coll.CompareTag("Player") || coll.CompareTag("Enemy") || coll.CompareTag("SpecialEnemy") || coll.CompareTag("Boss") || coll.CompareTag("Helper"))
         {
             foreach (SpriteRenderer spr in transform.GetComponentsInChildren<SpriteRenderer>())
             {

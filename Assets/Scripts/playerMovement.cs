@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
     private Gamepad gamepad;
+    private GameObject ratTarget;
+
 
     private GameObject shield;
 
@@ -24,7 +27,12 @@ public class playerMovement : MonoBehaviour
     public GameObject lightSpot;
     public GameObject lightWorld;
     private bool doctorMask=false;
+    private bool mouseMask = false;
     public GameObject[] spludges;
+    public GameObject[] Hearts;
+    public Sprite halfHeart;
+    public Sprite normalHeart;
+    public Sprite cheeseHeart;
     public int sala;
     public bool endless=false;
 
@@ -74,6 +82,8 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        ratTarget = GameObject.Find("RatTarget");
+
         gamepad = Gamepad.current;
         //Cheat
         if(gamepad==null)
@@ -162,6 +172,94 @@ public class playerMovement : MonoBehaviour
             lerpedColor = Color.white;
             lerpedColorM = new Color(0.7264151f, 0.7264151f, 0.7264151f, 1);
         }
+        if (mouseMask)
+        {
+            ratTarget.GetComponent<Light2D>().enabled = true;
+            ratTarget.GetComponent<SpriteRenderer>().enabled = true;
+            if (health == maxLife)
+            {
+                switch (maxLife)
+                {
+                    case 2:
+                        Hearts[0].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[1].GetComponent<Image>().sprite = cheeseHeart;
+                        break;
+                    case 4:
+                        Hearts[2].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[3].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[0].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[1].GetComponent<Image>().sprite = normalHeart;
+                        break;
+                    case 6:
+                        Hearts[4].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[5].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[1].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[0].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[2].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[3].GetComponent<Image>().sprite = normalHeart;
+                        break;
+                    case 8:
+                        Hearts[6].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[7].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[1].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[0].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[2].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[3].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[4].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[5].GetComponent<Image>().sprite = normalHeart;
+                        break;
+                    case 10:
+                        Hearts[8].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[9].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[1].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[0].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[2].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[3].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[4].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[5].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[6].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[7].GetComponent<Image>().sprite = normalHeart;
+                        break;
+                    case 12:
+                        Hearts[10].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[11].GetComponent<Image>().sprite = cheeseHeart;
+                        Hearts[1].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[0].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[2].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[3].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[4].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[5].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[6].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[7].GetComponent<Image>().sprite = normalHeart;
+                        Hearts[8].GetComponent<Image>().sprite = halfHeart;
+                        Hearts[9].GetComponent<Image>().sprite = normalHeart;
+                        break;
+                }
+            }
+        }
+        else
+        {
+
+            ratTarget.GetComponent<Light2D>().enabled=false;
+            ratTarget.GetComponent<SpriteRenderer>().enabled=false;
+
+            int i = 0;
+            foreach (GameObject obj in Hearts)
+            {
+                if (obj.GetComponentInParent<Image>().sprite == cheeseHeart)
+                {
+                    if(i==0 || i%2==0)
+                    {
+                        obj.GetComponentInParent<Image>().sprite = halfHeart;
+                    }
+                    else
+                    {
+                        obj.GetComponentInParent<Image>().sprite = normalHeart;
+                    }
+                }
+                i++;
+            }
+        }
         CheckStates();
     }
 
@@ -195,6 +293,7 @@ public class playerMovement : MonoBehaviour
         {
             aud.clip = takeDamage;
         }
+
         MaskInteractions();
     }
 
@@ -203,7 +302,14 @@ public class playerMovement : MonoBehaviour
         if(!invulnerable)
         {
             aud.Play();
-            health -= 1;
+            if(mouseMask && health==maxLife)
+            {
+                health -= 2;
+            }
+            else
+            {
+                health -= 1;
+            }
             PassedTime = 0;
             par.Play();
             if(doctorMask)
@@ -364,7 +470,6 @@ public class playerMovement : MonoBehaviour
             }
             if (ID==5)
             {
-
             }
             else
             {
@@ -372,11 +477,11 @@ public class playerMovement : MonoBehaviour
             }
             if (ID == 6)
             {
-
+                mouseMask = true;
             }
             else
             {
-
+                mouseMask = false;
             }
         }
     }
