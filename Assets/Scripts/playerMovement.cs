@@ -432,7 +432,7 @@ public class playerMovement : MonoBehaviour
             else
             {
                 invulneravilityTime = 5;
-                attackMultiplier = 0.9f;
+                attackMultiplier = 1;
             }
             if (ID==2)
             {
