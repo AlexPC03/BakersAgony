@@ -29,7 +29,7 @@ public class TargetMouseController : MonoBehaviour
             else
             {
                 Vector2 stickL = gamepad.rightStick.ReadValue();
-                transform.position += new Vector3(stickL.x * 0.05f, stickL.y * 0.05f, 0);
+                transform.position += new Vector3(stickL.x * 0.075f, stickL.y * 0.075f, 0);
                 if ((gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame) && GetComponent<SpriteRenderer>().enabled == true)
                 {
                     transform.position = player.transform.position + new Vector3(0, 0, 0);

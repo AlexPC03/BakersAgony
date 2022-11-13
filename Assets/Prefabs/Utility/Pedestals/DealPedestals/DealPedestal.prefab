@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: -2118300669684221160, guid: 8d38bcd84261c9045a2ccdceb70f97a1, type: 3}
   - {fileID: -8494364403010082875, guid: 8d38bcd84261c9045a2ccdceb70f97a1, type: 3}
   - {fileID: -3241938041540761877, guid: 8d38bcd84261c9045a2ccdceb70f97a1, type: 3}
-  canDissapear: 1
+  canDissapear: 0
   oddsToNotDestroy: 8
   list:
   - {fileID: 7279858790484603436, guid: d4db88108ac2ea34f8ac39a1f1ecb717, type: 3}
