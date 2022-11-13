@@ -34,11 +34,11 @@ public class SwordParameters : SwordKnockback
                 {
                     if(coll.tag == "Boss")
                     {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * Player.GetComponent<playerMovement>().attack/3, ForceMode2D.Impulse);
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack/5), ForceMode2D.Impulse);
                     }
                     else
                     {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * Player.GetComponent<playerMovement>().attack, ForceMode2D.Impulse);
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack*0.75f), ForceMode2D.Impulse);
                     }
                 }
             }

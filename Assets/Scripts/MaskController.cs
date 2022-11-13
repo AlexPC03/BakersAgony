@@ -8,9 +8,6 @@ public class MaskController : MonoBehaviour
     private AudioSource aud;
     public AudioClip[] clip;
     private GameObject MaskObj;
-
-
-
     // Start is called before the first frame update
     void Start()
     {

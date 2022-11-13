@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
 {
     private Gamepad gamepad;
     private GameObject ratTarget;
+    private GameObject loafy;
 
 
     private GameObject shield;
@@ -69,6 +70,8 @@ public class playerMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 6);
 
         shield = GameObject.Find("RotationPointShield");
+        ratTarget = GameObject.Find("RatTarget");
+        loafy = GameObject.Find("Loafy");
 
         maxMaxLife = 12;
         PassedTime = 0;
@@ -82,7 +85,6 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        ratTarget = GameObject.Find("RatTarget");
 
         gamepad = Gamepad.current;
         //Cheat
@@ -424,65 +426,105 @@ public class playerMovement : MonoBehaviour
         if (mask.tag=="Mask" && mask.GetComponent<MaskController>()!=null)
         {
             int ID = mask.GetComponent<MaskController>().maskID;
-            if(ID==1)
-            {
-                invulneravilityTime = 7.5f;
-                attackMultiplier = 0.9f;
-            }
-            else
+            if (ID==0)
             {
                 invulneravilityTime = 5;
                 attackMultiplier = 1;
-            }
-            if (ID==2)
-            {
-                maxCorn = 999;
-            }
-            else
-            {
+                speedMultiplier = 1;
                 maxCorn = 99;
-            }
-            if(ID==3)
-            {
-                if(shield.activeSelf==false)
-                {
-                    shield.SetActive(true);
-                }
-                speedMultiplier = 0.75f;
-            }
-            else
-            {
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
                 if (shield.activeSelf == true)
                 {
                     shield.SetActive(false);
                 }
-                speedMultiplier = 1f;
+                doctorMask = false;
+                mouseMask = false;
+            }
+            if (ID==1)
+            {
+                invulneravilityTime = 7.5f;
+                attackMultiplier = 0.9f;
+                speedMultiplier = 1;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
+            }
+            if (ID==2)
+            {
+                invulneravilityTime = 5;
+                attackMultiplier = 1;
+                speedMultiplier = 1;
+                maxCorn = 999;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
+            }
+            if(ID==3)
+            {
+                invulneravilityTime = 5;
+                attackMultiplier = 1;
+                speedMultiplier = 0.75f;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf==false)
+                {
+                    shield.SetActive(true);
+                }
+                doctorMask = false;
+                mouseMask = false;
             }
             if (ID==4)
             {
+                invulneravilityTime = 5;
+                attackMultiplier = 1;
+                speedMultiplier = 1.1f;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
                 doctorMask = true;
-                speedMultiplier = 1.25f;
-            }
-            else
-            {
-                doctorMask = false;
-                speedMultiplier = 1f;
+                mouseMask = false;   
             }
             if (ID==5)
             {
-            }
-            else
-            {
-
+                invulneravilityTime = 2.5f;
+                attackMultiplier = 0.8f;
+                speedMultiplier = 0.75f;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = true;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
             }
             if (ID == 6)
             {
+                invulneravilityTime = 5;
+                attackMultiplier = 1;
+                speedMultiplier = 1;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
                 mouseMask = true;
-            }
-            else
-            {
-                mouseMask = false;
             }
         }
     }
 }
+    

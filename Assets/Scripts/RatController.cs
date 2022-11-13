@@ -46,11 +46,12 @@ public class RatController : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponent<Collider2D>().enabled = true;
             GetComponent<AudioSource>().enabled = true;
+            if (target!=null && rb != null  )
+            {
+                rb.velocity = (target.transform.position - transform.position).normalized * playerController.runSpeed * playerController.speedMultiplier * 0.75f;
+            }
         }
-        if (target!=null && rb != null  )
-        {
-            rb.velocity = (target.transform.position - transform.position).normalized * playerController.runSpeed * playerController.speedMultiplier * 0.75f;
-        }
+
 
         if(playerController.sala!=actualroom && target.GetComponent<SpriteRenderer>().enabled==true)
         {
@@ -74,25 +75,28 @@ public class RatController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy")
+        if(target.GetComponent<SpriteRenderer>().enabled == true)
         {
-            if(collision.GetComponent<BreadEnemy>()!=null)
+            if(collision.tag=="Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy")
             {
-                collision.SendMessage("TakeDamage", 10 * playerController.attack * playerController.attackMultiplier);
-
+                if(collision.GetComponent<BreadEnemy>()!=null)
+                {
+                    collision.SendMessage("TakeDamage", 10 * playerController.attack * playerController.attackMultiplier);
+                }
+                else
+                {
+                    collision.SendMessage("TakeDamage", 5 * playerController.attack * playerController.attackMultiplier);
+                }
+                if (!aud.isPlaying)
+                {
+                    aud.clip = clips[Random.Range(0, clips.Length)];
+                    aud.pitch = Random.Range(0.9f, 1.1f);
+                    aud.Play();
+                }
+                collision.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * playerController.attack * playerController.attackMultiplier, ForceMode2D.Impulse);
             }
-            else
-            {
-                collision.SendMessage("TakeDamage", 5 * playerController.attack * playerController.attackMultiplier);
-            }
-            if (!aud.isPlaying)
-            {
-                aud.clip = clips[Random.Range(0, clips.Length)];
-                aud.pitch = Random.Range(0.9f, 1.1f);
-                aud.Play();
-            }
-            collision.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * playerController.attack * playerController.attackMultiplier, ForceMode2D.Impulse);
         }
+
 
     }
 
