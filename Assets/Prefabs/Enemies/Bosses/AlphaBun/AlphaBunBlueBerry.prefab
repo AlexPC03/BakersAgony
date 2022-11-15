@@ -4784,6 +4784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8403549077375412095}
   - component: {fileID: 9174466017785762812}
+  - component: {fileID: 4130308827796786493}
   m_Layer: 0
   m_Name: AlphaBunBlueBerry
   m_TagString: Untagged
@@ -4823,6 +4824,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4130308827796786493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141371803528051866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!114 &8107215709148824336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4853,6 +4867,14 @@ PrefabInstance:
     - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
       propertyPath: m_Name
@@ -4948,6 +4970,14 @@ PrefabInstance:
     - target: {fileID: 5970321834780221065, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970321834780221065, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970321834780221065, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678231, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: m_Name
@@ -5088,6 +5118,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
       propertyPath: m_Name
       value: AlphaBunBody (1)
@@ -5182,6 +5220,14 @@ PrefabInstance:
     - target: {fileID: 2238033951310704501, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238033951310704501, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238033951310704501, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6191994284903449444, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
       propertyPath: m_Color.b
@@ -5280,6 +5326,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2238033951310704501, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238033951310704501, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6191994284903449444, guid: 738c100a456b614428f1b35a07dbb0b7, type: 3}
       propertyPath: m_Color.b
       value: 0.6792453
@@ -5376,6 +5430,14 @@ PrefabInstance:
     - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519955081097833410, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6351119173103386693, guid: 58dd431a9e2ad0c4588dc4795b1327c5, type: 3}
       propertyPath: m_Name

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8127656981603005774}
   - component: {fileID: -4599793293831575199}
   - component: {fileID: -1892929516323817319}
+  - component: {fileID: 8509833947205147248}
   m_Layer: 7
   m_Name: SmallDough
   m_TagString: Enemy
@@ -5113,3 +5114,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8509833947205147248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086545270604875517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e3e92f73
+  m_ShapePath:
+  - {x: -0.20484161, y: -0.14468978, z: 0}
+  - {x: -0.25620356, y: -0.05555035, z: 0}
+  - {x: -0.25894147, y: 0.03089355, z: 0}
+  - {x: -0.08457651, y: 0.17204207, z: 0}
+  - {x: 0.11316774, y: 0.1757731, z: 0}
+  - {x: 0.2661397, y: 0.03212869, z: 0}
+  - {x: 0.26267245, y: -0.07170962, z: 0}
+  - {x: 0.21043813, y: -0.14655529, z: 0}
+  m_ShapePathHash: -325448137
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -784300

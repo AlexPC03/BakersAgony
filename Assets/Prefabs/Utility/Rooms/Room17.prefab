@@ -153,6 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039575555081988397}
+  - component: {fileID: -42445021796787794}
   m_Layer: 0
   m_Name: Room17
   m_TagString: Untagged
@@ -460,6 +461,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-42445021796787794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039575555081988398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &2039575555836450414
 GameObject:
   m_ObjectHideFlags: 0
@@ -16575,6 +16589,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
       propertyPath: rooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 2039575555081988398}
+    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
+      propertyPath: rooms.Array.data[16]
       value: 
       objectReference: {fileID: 2039575555081988398}
     - target: {fileID: 912994531124313200, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}

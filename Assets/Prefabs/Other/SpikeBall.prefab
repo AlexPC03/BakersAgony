@@ -135,6 +135,7 @@ MonoBehaviour:
   corncub: {fileID: 0}
   cornWeight: 0
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: Infinity
   deathTime: 0
   vida: Infinity
@@ -261,6 +262,7 @@ MonoBehaviour:
   target: {fileID: 0}
   destroyTime: 0
   friendlyFire: 1
+  friendlyDamage: 20
   destroyOnHit: 1
   ghost: 1
   velocity: 0

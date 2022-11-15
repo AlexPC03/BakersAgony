@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -3775286146021560696}
   - component: {fileID: 567137126582790849}
   - component: {fileID: -7207309635431640523}
+  - component: {fileID: 897787404646903605}
   m_Layer: 7
   m_Name: BunBread
   m_TagString: Enemy
@@ -5102,3 +5103,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &897787404646903605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458737783074177514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e3e92f73
+  m_ShapePath:
+  - {x: -0.3287235, y: -0.37297696, z: 0}
+  - {x: -0.5392868, y: -0.17549403, z: 0}
+  - {x: -0.53548217, y: 0.09463315, z: 0}
+  - {x: -0.21458521, y: 0.3539539, z: 0}
+  - {x: 0.1988073, y: 0.3571511, z: 0}
+  - {x: 0.45047098, y: 0.11806822, z: 0}
+  - {x: 0.4423023, y: -0.28582767, z: 0}
+  - {x: 0.22599906, y: -0.38058615, z: 0}
+  m_ShapePathHash: 2083880502
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -789722

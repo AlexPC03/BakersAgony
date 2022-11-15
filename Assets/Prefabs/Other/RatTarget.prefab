@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a7e5534e437f449b72ad815b79ea45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rat: {fileID: 1579958297927407833, guid: a45cb3fe3fcd0144dacbd54f88d5e481, type: 3}
 --- !u!114 &4735549697069440364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,8 +139,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:

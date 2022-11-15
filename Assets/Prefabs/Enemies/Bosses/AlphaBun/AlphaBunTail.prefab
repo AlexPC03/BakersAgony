@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6191994284903449448}
   - component: {fileID: 4458253060987237861}
   - component: {fileID: 3772773071080759549}
+  - component: {fileID: 2792143139768746367}
   m_Layer: 0
   m_Name: AlphaBunTail
   m_TagString: BodyBun
@@ -102,13 +103,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a064103474473a94997e23ae29801328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitch: 1
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.25
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 200
   deathTime: 1
   vida: 0
+  newScale: 0
   isHead: 0
   headTransform: {fileID: 0}
   distanceFromHead: 25
@@ -117,6 +121,7 @@ MonoBehaviour:
   nearRange: 5
   speed: 4
   nearSpeed: 3
+  shootFrequency: 0.1
   targetChangeTime: 15
   shootTime: 0
   proyectile: {fileID: 0}
@@ -4945,6 +4950,44 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &2792143139768746367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191994284903449455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e3e92f73
+  m_ShapePath:
+  - {x: -0.6004249, y: -0.4817532, z: 0}
+  - {x: -0.73773974, y: -0.33822235, z: 0}
+  - {x: -0.72812545, y: -0.23330949, z: 0}
+  - {x: -0.5283041, y: 0.12993398, z: 0}
+  - {x: -0.26248515, y: 0.18504286, z: 0}
+  - {x: -0.18067849, y: 0.25180176, z: 0}
+  - {x: -0.00067183876, y: 0.28657582, z: 0}
+  - {x: 0.16092508, y: 0.24361962, z: 0}
+  - {x: 0.2529445, y: 0.18504286, z: 0}
+  - {x: 0.43123776, y: 0.16883436, z: 0}
+  - {x: 0.61601436, y: 0.009990929, z: 0}
+  - {x: 0.7061267, y: -0.19440924, z: 0}
+  - {x: 0.72750616, y: -0.32201385, z: 0}
+  - {x: 0.525866, y: -0.5012034, z: 0}
+  - {x: 0.2931191, y: -0.5910746, z: 0}
+  - {x: -0.31631947, y: -0.58134943, z: 0}
+  m_ShapePathHash: -2023091180
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -807790
 --- !u!1 &8478199578797123761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,8 +5047,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 1
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:

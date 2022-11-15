@@ -59,8 +59,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 1
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 375512360195308797}
   - component: {fileID: 8000474167409299906}
   - component: {fileID: -5407276590585254128}
+  - component: {fileID: 4963198940177153330}
   m_Layer: 7
   m_Name: SimpleMage
   m_TagString: Enemy
@@ -287,6 +288,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.25
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 20
   deathTime: 0.5
   vida: 0
@@ -5172,3 +5174,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4963198940177153330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573661829655379718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e3e92f73
+  m_ShapePath:
+  - {x: -0.4075319, y: -0.60847896, z: 0}
+  - {x: -0.4108029, y: -0.26511472, z: 0}
+  - {x: -0.37977558, y: -0.04482068, z: 0}
+  - {x: -0.31461817, y: 0.07308318, z: 0}
+  - {x: -0.3735701, y: 0.12893239, z: 0}
+  - {x: -0.3840231, y: 0.33302352, z: 0}
+  - {x: -0.33927178, y: 0.48126692, z: 0}
+  - {x: -0.20569097, y: 0.5850146, z: 0}
+  - {x: 0.06374562, y: 0.6644887, z: 0}
+  - {x: 0.2121445, y: 0.6716979, z: 0}
+  - {x: 0.3312438, y: 0.42800477, z: 0}
+  - {x: 0.31961352, y: 0.12173872, z: 0}
+  - {x: 0.26869574, y: 0.048261315, z: 0}
+  - {x: 0.40442914, y: -0.59917074, z: 0}
+  m_ShapePathHash: 1714382836
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -806370

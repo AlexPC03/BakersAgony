@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3227128993625580107}
   - component: {fileID: 7481448658212283084}
   - component: {fileID: -4464543002068217877}
+  - component: {fileID: 1734384110352758907}
   m_Layer: 7
   m_Name: LanceKnight
   m_TagString: Enemy
@@ -5077,3 +5078,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1734384110352758907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298039718481450365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000e3e92f73
+  m_ShapePath:
+  - {x: -0.052523747, y: -0.33144644, z: 0}
+  - {x: -0.1983308, y: -0.20049368, z: 0}
+  - {x: -0.28548947, y: -0.21917053, z: 0}
+  - {x: -0.52517575, y: -0.16313997, z: 0}
+  - {x: -0.5345142, y: -0.06353009, z: 0}
+  - {x: -0.31973037, y: -0.06975571, z: 0}
+  - {x: -0.29171506, y: 0.045418207, z: 0}
+  - {x: -0.1640899, y: 0.13257684, z: 0}
+  - {x: -0.21700767, y: 0.18860741, z: 0}
+  - {x: -0.21078204, y: 0.42206803, z: 0}
+  - {x: -0.12100555, y: 0.5898084, z: 0}
+  - {x: 0.100498855, y: 0.63373905, z: 0}
+  - {x: 0.3215083, y: 0.5839341, z: 0}
+  - {x: 0.43228647, y: 0.42171782, z: 0}
+  - {x: 0.4304566, y: 0.20105863, z: 0}
+  - {x: 0.37131324, y: 0.12635124, z: 0}
+  - {x: 0.4896, y: 0.07343348, z: 0}
+  - {x: 0.48337436, y: -0.3156676, z: 0}
+  - {x: 0.24057525, y: -0.33434445, z: 0}
+  - {x: 0.27975884, y: -0.6209374, z: 0}
+  - {x: -0.07693127, y: -0.6082716, z: 0}
+  m_ShapePathHash: 1755343786
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -794328

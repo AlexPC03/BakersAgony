@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2740530351246354638}
   - component: {fileID: -7616301990405565394}
   - component: {fileID: 7882332414977167480}
+  - component: {fileID: -5212701462181833985}
   m_Layer: 0
   m_Name: LinkedBunBread4Lenght
   m_TagString: Untagged
@@ -60,6 +61,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7410c50f3e4c7440b53209b4114e83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5212701462181833985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740530351246354637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1001 &2011085614675373087
 PrefabInstance:
   m_ObjectHideFlags: 0

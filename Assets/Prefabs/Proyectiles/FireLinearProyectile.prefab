@@ -121,16 +121,17 @@ MonoBehaviour:
   target: {fileID: 0}
   destroyTime: 0.1
   friendlyFire: 0
+  friendlyDamage: 20
   destroyOnHit: 0
   ghost: 0
   velocity: 3
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 0
   rotate: 1
+  lookAt: 0
   rotateVelocity: 90
   dragForce: 0.1
   livingTime: 5
-  delayTime: 0
 --- !u!50 &6364243207959168994
 Rigidbody2D:
   serializedVersion: 4
@@ -4998,7 +4999,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75

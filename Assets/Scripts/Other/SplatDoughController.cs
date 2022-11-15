@@ -46,4 +46,11 @@ public class SplatDoughController : MonoBehaviour
             collision.gameObject.SendMessage("TakeDamage", friendlyDamage);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.SendMessage("TakeDamage");
+        }
+    }
 }
