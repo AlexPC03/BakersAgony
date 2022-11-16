@@ -9824,6 +9824,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 1
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 400
   deathTime: 4
   vida: 0
@@ -30554,6 +30555,7 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0
   head: {fileID: 0}
+  dontScaleLife: 0
   maxVida: 450
   deathTime: 1
   vida: 0
@@ -35717,6 +35719,18 @@ PrefabInstance:
       propertyPath: wallList.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 71fcf307d8d056b4d8576b66ecb5cbd4, type: 3}
+    - target: {fileID: 7894350916921380386, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894350916921380386, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
+      propertyPath: m_InstanceId
+      value: -7350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894350916921380386, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8666975294301394035, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
       propertyPath: m_Size.x
       value: 24.95473
@@ -35739,6 +35753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4340812018052119808, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
+    - {fileID: 6671318668931232509, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eacba55249c3cfc40863ac115a917bca, type: 3}
 --- !u!4 &2165933146565446674 stripped
 Transform:
