@@ -203,7 +203,6 @@ GameObject:
   - component: {fileID: 6530723069467917851}
   - component: {fileID: 8430443042866941388}
   - component: {fileID: -1732999264438452058}
-  - component: {fileID: 7423193832583615751}
   m_Layer: 0
   m_Name: GreatLoafBurned
   m_TagString: Boss
@@ -5275,36 +5274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349f3fda8bc0d414d8763dd9f7e88bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7423193832583615751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3810865875012453114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 
-  m_ShapePath:
-  - {x: -0.9482037, y: -1.5594795, z: 0}
-  - {x: -1.1769142, y: -1.3690519, z: 0}
-  - {x: -1.1771094, y: 1.3305738, z: 0}
-  - {x: -0.894597, y: 1.5914615, z: 0}
-  - {x: 0.8908677, y: 1.5609407, z: 0}
-  - {x: 1.161849, y: 1.3305738, z: 0}
-  - {x: 1.1847397, y: -1.3687243, z: 0}
-  - {x: 0.944279, y: -1.5750674, z: 0}
-  m_ShapePathHash: 1666151341
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 477536
 --- !u!1 &3810865876511521132
 GameObject:
   m_ObjectHideFlags: 0

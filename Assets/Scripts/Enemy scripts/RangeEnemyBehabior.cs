@@ -12,12 +12,16 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     [Header("Atributes")]
     public Vector3 shootPosition;
     public GameObject proyectile;
+    public int shootCuantity=1;
+    public float spread=0;
     public float nextShootTime;
     public float range;
     public float minShootRange;
     public float maxShootRange;
     public float speed;
     public bool wait;
+    public bool recoil;
+    public float recoilForce;
 
     [Header("Information")]
     public float actualDistance;
@@ -93,14 +97,22 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     {
         firstShoot = true;
         shootTimer = 0;
-        proy= Instantiate(proyectile, transform.position+shootPosition,new Quaternion(0,0,0,0));
-        if(proy.GetComponent<BreadMageProyectileMovement>()!=null)
+        for(int i=0;i<shootCuantity; i++)
         {
-            proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+            proy = Instantiate(proyectile, transform.position + shootPosition, new Quaternion(0, 0, 0, 0));
+            if (proy.GetComponent<BreadMageProyectileMovement>()!=null)
+            {
+                proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position+new Vector3(Random.Range(-spread/10, spread/10), Random.Range(-spread / 10, spread / 10),0);
+            }
+            else if(proy.GetComponent<BumeranProyectileMovement>() != null)
+            {
+                proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spread / 10, spread / 10), Random.Range(-spread / 10, spread / 10), 0);
+            }
         }
-        else if(proy.GetComponent<BumeranProyectileMovement>() != null)
+
+        if(recoil)
         {
-            proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+            rb.AddForce((transform.position - player.transform.position).normalized*recoilForce,ForceMode2D.Impulse);
         }
     }
 

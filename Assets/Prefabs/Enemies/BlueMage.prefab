@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 3477961798876090436}
   - component: {fileID: 1046256611679106076}
   - component: {fileID: 3613782540355258464}
-  - component: {fileID: 3826901051219316732}
   m_Layer: 7
   m_Name: BlueMage
   m_TagString: Enemy
@@ -166,12 +165,16 @@ MonoBehaviour:
   vida: 0
   shootPosition: {x: 0, y: 0.25, z: 0}
   proyectile: {fileID: 7345101616436253321, guid: ebe04294675ffdb4c88fb6a04504c533, type: 3}
+  shootCuantity: 1
+  spread: 0
   nextShootTime: 5
   range: 20
   minShootRange: 5
   maxShootRange: 10
   speed: 0.5
   wait: 0
+  recoil: 0
+  recoilForce: 0
   actualDistance: 0
   canShoot: 0
   shootTimer: 0
@@ -5077,39 +5080,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3826901051219316732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2410669349511314004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000e3e92f73
-  m_ShapePath:
-  - {x: -0.4075319, y: -0.60847896, z: 0}
-  - {x: -0.4108029, y: -0.26511472, z: 0}
-  - {x: -0.37977558, y: -0.04482068, z: 0}
-  - {x: -0.31461817, y: 0.07308318, z: 0}
-  - {x: -0.3735701, y: 0.12893239, z: 0}
-  - {x: -0.3840231, y: 0.33302352, z: 0}
-  - {x: -0.33927178, y: 0.48126692, z: 0}
-  - {x: -0.20569097, y: 0.5850146, z: 0}
-  - {x: 0.06374562, y: 0.6644887, z: 0}
-  - {x: 0.2121445, y: 0.6716979, z: 0}
-  - {x: 0.3312438, y: 0.42800477, z: 0}
-  - {x: 0.31961352, y: 0.12173872, z: 0}
-  - {x: 0.26869574, y: 0.048261315, z: 0}
-  - {x: 0.40442914, y: -0.59917074, z: 0}
-  m_ShapePathHash: 1714382836
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -806370

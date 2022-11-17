@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 6351119173103386697}
   - component: {fileID: 6351119173103386695}
   - component: {fileID: 6351119173103386696}
-  - component: {fileID: 6558502450627972696}
   m_Layer: 0
   m_Name: AlphaBunBody
   m_TagString: BodyBun
@@ -283,41 +282,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: -1
---- !u!114 &6558502450627972696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6351119173103386693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000e3e92f73
-  m_ShapePath:
-  - {x: -0.6004249, y: -0.4817532, z: 0}
-  - {x: -0.73773974, y: -0.33822235, z: 0}
-  - {x: -0.7268509, y: 0.10247497, z: 0}
-  - {x: -0.52702963, y: 0.46571785, z: 0}
-  - {x: -0.26121068, y: 0.52082664, z: 0}
-  - {x: -0.17940414, y: 0.58758557, z: 0}
-  - {x: 0.0006024639, y: 0.6223596, z: 0}
-  - {x: 0.1621993, y: 0.57940346, z: 0}
-  - {x: 0.25421876, y: 0.52082664, z: 0}
-  - {x: 0.432512, y: 0.50461817, z: 0}
-  - {x: 0.6172886, y: 0.34577513, z: 0}
-  - {x: 0.7074009, y: 0.1413753, z: 0}
-  - {x: 0.72750616, y: -0.32201385, z: 0}
-  - {x: 0.525866, y: -0.5012034, z: 0}
-  - {x: 0.2931191, y: -0.5910746, z: 0}
-  - {x: -0.31631947, y: -0.58134943, z: 0}
-  m_ShapePathHash: -1063558997
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -807790
