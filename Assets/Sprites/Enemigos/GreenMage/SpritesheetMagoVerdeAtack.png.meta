@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: acc37cb03641c6c45a93d985454e0111
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5857176626942230845
+    second: SpritesheetMagoVerdeAtack_0
+  - first:
+      213: 8684340425441889203
+    second: SpritesheetMagoVerdeAtack_1
+  - first:
+      213: -1868307120870997279
+    second: SpritesheetMagoVerdeAtack_2
+  - first:
+      213: 5120825740360993059
+    second: SpritesheetMagoVerdeAtack_3
+  - first:
+      213: -1711514597598087829
+    second: SpritesheetMagoVerdeAtack_4
+  - first:
+      213: -6704835109717837457
+    second: SpritesheetMagoVerdeAtack_5
+  - first:
+      213: 6682321812397960463
+    second: SpritesheetMagoVerdeAtack_6
+  - first:
+      213: -6046911729011202614
+    second: SpritesheetMagoVerdeAtack_7
+  - first:
+      213: -8918528655129397192
+    second: SpritesheetMagoVerdeAtack_8
+  - first:
+      213: -850929688382474362
+    second: SpritesheetMagoVerdeAtack_9
+  - first:
+      213: 9189361061253328934
+    second: SpritesheetMagoVerdeAtack_10
+  - first:
+      213: 6797151559954734817
+    second: SpritesheetMagoVerdeAtack_11
+  - first:
+      213: -4238541461496205906
+    second: SpritesheetMagoVerdeAtack_12
+  - first:
+      213: -292550818589420035
+    second: SpritesheetMagoVerdeAtack_13
+  - first:
+      213: 1870947370077159552
+    second: SpritesheetMagoVerdeAtack_14
+  - first:
+      213: -1105609834980402847
+    second: SpritesheetMagoVerdeAtack_15
+  - first:
+      213: -2832496039810304522
+    second: SpritesheetMagoVerdeAtack_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +83,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +92,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +119,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +140,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_0
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce3364f3e027bea0800000000000000
+      internalID: -5857176626942230845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_1
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb4707fa99f48870800000000000000
+      internalID: 8684340425441889203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_2
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2c62182907216e0800000000000000
+      internalID: -1868307120870997279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_3
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329c4ea21e3d01740800000000000000
+      internalID: 5120825740360993059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_4
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 5814
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65354e9a8a7f38e0800000000000000
+      internalID: -1711514597598087829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6973bfcdf3a3f2a0800000000000000
+      internalID: -6704835109717837457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_6
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d23dea8406cbc50800000000000000
+      internalID: 6682321812397960463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_7
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5e42402dd051ca0800000000000000
+      internalID: -6046911729011202614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_8
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838bed7c0750b3480800000000000000
+      internalID: -8918528655129397192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_9
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 3896
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687f023f4f3e034f0800000000000000
+      internalID: -850929688382474362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_10
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620bfc8a23b278f70800000000000000
+      internalID: 9189361061253328934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_11
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee1897b455545e50800000000000000
+      internalID: 6797151559954734817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_12
+      rect:
+        serializedVersion: 2
+        x: 4317
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eade0cd5ffcad25c0800000000000000
+      internalID: -4238541461496205906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_13
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df55a3b9496a0fbf0800000000000000
+      internalID: -292550818589420035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_14
+      rect:
+        serializedVersion: 2
+        x: 8156
+        y: 1974
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08086ea68b0f6f910800000000000000
+      internalID: 1870947370077159552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_15
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 56
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16990dd76b518a0f0800000000000000
+      internalID: -1105609834980402847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMagoVerdeAtack_16
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 56
+        width: 910
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5f767ebd3f0b8d0800000000000000
+      internalID: -2832496039810304522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

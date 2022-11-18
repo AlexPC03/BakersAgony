@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: f39ee05aa2a4ecd4788846ef50b98f54
+guid: bf1018d545c2b154c95c35d5bb9cd564
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6845469251394374663
-    second: SpritesheetMagoVerdeFront_0
+      213: 5718349146155716085
+    second: SpriteSheetBurnedSkeletonBack_0
   - first:
-      213: -5430199013059685349
-    second: SpritesheetMagoVerdeFront_1
+      213: 8047963973835833430
+    second: SpriteSheetBurnedSkeletonBack_1
   - first:
-      213: 8920042694201031306
-    second: SpritesheetMagoVerdeFront_2
+      213: 3791869253946703756
+    second: SpriteSheetBurnedSkeletonBack_2
   - first:
-      213: -1998098535118334275
-    second: SpritesheetMagoVerdeFront_3
+      213: -7883119093813589886
+    second: SpriteSheetBurnedSkeletonBack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_0
+      name: SpriteSheetBurnedSkeletonBack_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1974
-        width: 904
-        height: 1474
+        x: 538
+        y: 2158
+        width: 754
+        height: 1234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f377c51cf10001a0800000000000000
-      internalID: -6845469251394374663
+      spriteID: 5fd05465048ab5f40800000000000000
+      internalID: 5718349146155716085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_1
+      name: SpriteSheetBurnedSkeletonBack_1
       rect:
         serializedVersion: 2
-        x: 2428
-        y: 1978
-        width: 904
-        height: 1474
+        x: 2458
+        y: 2158
+        width: 754
+        height: 1234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1496ee94ce04a4b0800000000000000
-      internalID: -5430199013059685349
+      spriteID: 65040a1289c10bf60800000000000000
+      internalID: 8047963973835833430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_2
+      name: SpriteSheetBurnedSkeletonBack_2
       rect:
         serializedVersion: 2
-        x: 478
-        y: 62
-        width: 904
-        height: 1474
+        x: 538
+        y: 238
+        width: 754
+        height: 1234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8abb29e19b5acb70800000000000000
-      internalID: 8920042694201031306
+      spriteID: c8ff73c0ffc6f9430800000000000000
+      internalID: 3791869253946703756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_3
+      name: SpriteSheetBurnedSkeletonBack_3
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 58
-        width: 904
-        height: 1474
+        x: 2458
+        y: 238
+        width: 754
+        height: 1234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db61b0cf7f35544e0800000000000000
-      internalID: -1998098535118334275
+      spriteID: 288442363f8899290800000000000000
+      internalID: -7883119093813589886
       vertices: []
       indices: 
       edges: []

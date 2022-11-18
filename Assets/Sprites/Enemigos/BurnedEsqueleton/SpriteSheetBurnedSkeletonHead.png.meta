@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: f39ee05aa2a4ecd4788846ef50b98f54
+guid: a6d8bcf54a9264b4ca89d730ba3e6092
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6845469251394374663
-    second: SpritesheetMagoVerdeFront_0
-  - first:
-      213: -5430199013059685349
-    second: SpritesheetMagoVerdeFront_1
-  - first:
-      213: 8920042694201031306
-    second: SpritesheetMagoVerdeFront_2
-  - first:
-      213: -1998098535118334275
-    second: SpritesheetMagoVerdeFront_3
+      213: 4085295150138367559
+    second: SpriteSheetBurnedSkeletonHead_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_0
+      name: SpriteSheetBurnedSkeletonHead_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1974
-        width: 904
-        height: 1474
+        x: 160
+        y: 148
+        width: 630
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,71 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f377c51cf10001a0800000000000000
-      internalID: -6845469251394374663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_1
-      rect:
-        serializedVersion: 2
-        x: 2428
-        y: 1978
-        width: 904
-        height: 1474
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1496ee94ce04a4b0800000000000000
-      internalID: -5430199013059685349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_2
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 62
-        width: 904
-        height: 1474
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8abb29e19b5acb70800000000000000
-      internalID: 8920042694201031306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetMagoVerdeFront_3
-      rect:
-        serializedVersion: 2
-        x: 2368
-        y: 58
-        width: 904
-        height: 1474
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db61b0cf7f35544e0800000000000000
-      internalID: -1998098535118334275
+      spriteID: 74e9f925b42e1b830800000000000000
+      internalID: 4085295150138367559
       vertices: []
       indices: 
       edges: []
