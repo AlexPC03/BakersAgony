@@ -73,32 +73,64 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
             rb.velocity = Vector2.zero;
         }
 
+        if(anim!=null)
+        {
+            anim.SetFloat("Yvelocity", rb.velocity.y);
+            anim.SetBool("stopped", rb.velocity == Vector2.zero);
+        }
 
-        anim.SetFloat("Yvelocity", rb.velocity.y);
-        anim.SetBool("stopped", rb.velocity == Vector2.zero);
     }
 
     private void CheckOrientation()
     {
-        if(rb.velocity.x<-0.01)
+        if(sp!=null)
         {
-            sp.flipX = false;
+            if(rb.velocity.x<-0.01)
+            {
+                sp.flipX = false;
+            }
+            else if (rb.velocity.x > 0.01)
+            {
+                sp.flipX = true;
+            }
         }
-        else if (rb.velocity.x > 0.01)
+        else
         {
-            sp.flipX = true;
+            if (rb.velocity.x < -0.01)
+            {
+                transform.localScale = new Vector3(1,1,1);
+            }
+            else if (rb.velocity.x > 0.01)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
+
     }
 
     private void CheckOrientationInverse()
     {
-        if (rb.velocity.x > -0.01)
+        if (sp != null)
         {
-            sp.flipX = false;
+            if (rb.velocity.x > -0.01)
+            {
+                sp.flipX = false;
+            }
+            else if (rb.velocity.x < 0.01)
+            {
+                sp.flipX = true;
+            }
         }
-        else if (rb.velocity.x < 0.01)
+        else
         {
-            sp.flipX = true;
+            if (rb.velocity.x > -0.01)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (rb.velocity.x < 0.01)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
     }
 }

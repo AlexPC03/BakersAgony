@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnOnDestroy : MonoBehaviour
 {
     public GameObject[] spawnList;
+    public bool OnlyOne=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,16 @@ public class SpawnOnDestroy : MonoBehaviour
 
     private void OnDestroy()
     {
-        foreach (var spawn in spawnList)
+        if(!OnlyOne)
         {
-            Instantiate(spawn,transform.position,new Quaternion(0,0,0,0));
+            foreach (var spawn in spawnList)
+            {
+                Instantiate(spawn,transform.position,new Quaternion(0,0,0,0));
+            }
+        }
+        else
+        {
+            Instantiate(spawnList[Random.Range(0, spawnList.Length)], transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
 }

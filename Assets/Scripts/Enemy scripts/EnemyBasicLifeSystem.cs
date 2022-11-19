@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    private float ghostTime;
     private playerMovement playerController;
     private Color originalColor;
     public float pitch=1;
@@ -16,6 +17,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     [Range(0, 1)]
     public float cornWeight;
     public GameObject head;
+    public bool ghost=false;
     [Header("LifeParameters")]
     public bool dontScaleLife;
     public float maxVida;
@@ -31,7 +33,14 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             maxVida = maxVida + playerController.sala;
         }
         vida = maxVida;
-        sp = GetComponent<SpriteRenderer>();
+        if(ghost)
+        {
+            sp=GetComponentInChildren<SpriteRenderer>();
+        }
+        else
+        {
+            sp = GetComponent<SpriteRenderer>();
+        }
         aud = GetComponent<AudioSource>();
         if(sp!=null)
         {
@@ -65,7 +74,19 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             {
                 GetComponent<ParticleSystem>().Play();
             }
-            Destroy(gameObject, deathTime);
+            if(ghost && sp!=null)
+            {
+                ghostTime += Time.deltaTime;
+                sp.color = Color.Lerp(originalColor, Color.clear, ghostTime / deathTime);
+                if(sp.color==Color.clear)
+                {
+                Destroy(gameObject);
+                }
+            }
+            else 
+            { 
+                Destroy(gameObject, deathTime);
+            }
         }
         timeToDamage += Time.deltaTime;
     }
@@ -75,9 +96,13 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         if(timeToDamage>invulneravility && gameObject.layer!=6)
         {
             vida -= damage;
-            if(sp != null)
+            if(sp != null && !ghost)
             {
                 sp.color = Color.red;
+            }
+            else if(sp != null && ghost)
+            {
+                sp.color = new Color (1,0,0,0.75f);
             }
             Invoke("ChangeBack", 0.1f);
             timeToDamage = 0;
@@ -145,6 +170,5 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                 }
             }
         }
-
     }
 }

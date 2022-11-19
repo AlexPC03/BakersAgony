@@ -6,6 +6,7 @@ public class ExplosionController : MonoBehaviour
 {
     private AudioSource aud;
     private playerMovement playerController;
+    public bool friendlyFire=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class ExplosionController : MonoBehaviour
         {
             collision.SendMessage("TakeDamage");
         }
-        if (collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag =="SpecialEnemy")
+        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag =="SpecialEnemy") && friendlyFire)
         {
             collision.SendMessage("TakeDamage", 20+10*playerController.sala/2);
         }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3293519856658844424
+--- !u!1 &6723606445232010785
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3293519856658844426}
-  - component: {fileID: 3293519856658844425}
+  - component: {fileID: 6723606445232010787}
+  - component: {fileID: 6723606445232010784}
   m_Layer: 0
-  m_Name: CoziMod
+  m_Name: HauntedMod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3293519856658844426
+--- !u!4 &6723606445232010787
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293519856658844424}
+  m_GameObject: {fileID: 6723606445232010785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3293519856658844425
+--- !u!114 &6723606445232010784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293519856658844424}
+  m_GameObject: {fileID: 6723606445232010785}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 565b86c2f523a644c90ae6c65155b06a, type: 3}
@@ -45,10 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 5447082361664986658, guid: 2d57f1260f808fd479013a5d14584f86, type: 3}
-  - {fileID: 7971744457783991232, guid: 422606a74bc3fd2408a035ed5445f2a0, type: 3}
   - {fileID: 5186694142298030222, guid: 33129e1874a1d7e4d957344c8e56bdb7, type: 3}
   - {fileID: 4094607392762831398, guid: aecbe736aaece644b8f6ff20eab455ce, type: 3}
   - {fileID: 6324197645826589404, guid: d914969a910e5724cb1c8fb56ecd3090, type: 3}
   - {fileID: 5162918021315782081, guid: 890cf20d5dee7e64db939d999dca2c77, type: 3}
+  - {fileID: 8472769756909321342, guid: dd06e0b7fbb3b074da42a2f32a6dab8e, type: 3}
+  - {fileID: 4443018413790487087, guid: 05f7f8b47531e7b4db9cef99004fa018, type: 3}
+  - {fileID: 2834413930759994804, guid: a5ae12dff19ffe04883adca6735ff280, type: 3}
+  - {fileID: 5789555126184401862, guid: dd389ec827d0531449424e00b0e8393d, type: 3}
+  - {fileID: 7971744457783991232, guid: 422606a74bc3fd2408a035ed5445f2a0, type: 3}
   derivate: 1
-  mediaObj: 8
+  mediaObj: 9
