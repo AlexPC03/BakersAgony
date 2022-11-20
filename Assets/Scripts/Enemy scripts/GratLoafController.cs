@@ -51,20 +51,24 @@ public class GratLoafController : BossController
         yDistance = player.transform.position.y - transform.position.y;
 
         if(timeToStart>startTime)
-        if (actualDistance < range)
         {
-            Align();
+            if (actualDistance < range)
+            {
+                Align();
+            }
+            else if (actualDistance > range * 1.25)
+            {
+                rb.velocity = Vector2.zero;
+            }
+            anim.SetFloat("Yvelocity", rb.velocity.y);
+            anim.SetBool("Xmoving", rb.velocity.x != 0);
+            anim.SetBool("Ymoving", rb.velocity.y != 0);
         }
-        else if (actualDistance > range * 1.25)
+        else
         {
-            rb.velocity = Vector2.zero;
+            timeToStart += Time.deltaTime;
         }
-        anim.SetFloat("Yvelocity", rb.velocity.y);
-        anim.SetBool("Xmoving", rb.velocity.x != 0);
-        anim.SetBool("Ymoving", rb.velocity.y != 0);
         timeTo += Time.deltaTime;
-        timeToStart += Time.deltaTime;
-
     }
 
     private void Align()

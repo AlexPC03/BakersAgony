@@ -6,7 +6,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 {
     private float ghostTime;
     private playerMovement playerController;
-    private Color originalColor;
+    protected Color originalColor;
     public float pitch=1;
     protected AudioSource aud;
     private float timeToDamage = 1;
@@ -17,6 +17,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     [Range(0, 1)]
     public float cornWeight;
     public GameObject head;
+    public GameObject explosion;
     public bool ghost=false;
     [Header("LifeParameters")]
     public bool dontScaleLife;
@@ -33,7 +34,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             maxVida = maxVida + playerController.sala;
         }
         vida = maxVida;
-        if(ghost)
+        if(ghost && gameObject.tag!="Boss")
         {
             sp=GetComponentInChildren<SpriteRenderer>();
         }
@@ -130,6 +131,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     }
     private void OnDestroy()
     {
+        if(GetComponent<SpawnOnDestroy>()==null && playerController.demonMask && explosion!=null && Random.Range(0,2)==1)
+        {
+            Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
+        }
         if(head!=null)
         {
             Instantiate(head, transform.position, new Quaternion(0, 0, 0, 0));

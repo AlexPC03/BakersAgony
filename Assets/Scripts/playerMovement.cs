@@ -29,6 +29,7 @@ public class playerMovement : MonoBehaviour
     public GameObject lightWorld;
     private bool doctorMask=false;
     private bool mouseMask = false;
+    public bool demonMask = false;
     public GameObject[] spludges;
     public GameObject[] Hearts;
     public Sprite halfHeart;
@@ -439,6 +440,7 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = false;
+                demonMask = false;
             }
             if (ID==1)
             {
@@ -453,6 +455,8 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = false;
+                demonMask = false;
+
             }
             if (ID==2)
             {
@@ -467,8 +471,10 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = false;
+                demonMask = false;
+
             }
-            if(ID==3)
+            if (ID==3)
             {
                 invulneravilityTime = 5;
                 attackMultiplier = 1;
@@ -481,6 +487,8 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = false;
+                demonMask = false;
+
             }
             if (ID==4)
             {
@@ -494,7 +502,9 @@ public class playerMovement : MonoBehaviour
                     shield.SetActive(false);
                 }
                 doctorMask = true;
-                mouseMask = false;   
+                mouseMask = false;
+                demonMask = false;
+
             }
             if (ID==5)
             {
@@ -509,6 +519,8 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = false;
+                demonMask = false;
+
             }
             if (ID == 6)
             {
@@ -523,6 +535,24 @@ public class playerMovement : MonoBehaviour
                 }
                 doctorMask = false;
                 mouseMask = true;
+                demonMask = false;
+
+            }
+            if (ID==7)
+            {
+                invulneravilityTime = 4f;
+                attackMultiplier = 1;
+                speedMultiplier = 0.75f;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
+                demonMask = true;
+
             }
         }
     }

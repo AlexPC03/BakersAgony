@@ -46,9 +46,10 @@ MonoBehaviour:
   objects:
   - {fileID: 4993237182915227929, guid: 6cb30f8151c0694418828b20e4aa114d, type: 3}
   - {fileID: 4993237182915227929, guid: 6cb30f8151c0694418828b20e4aa114d, type: 3}
+  - {fileID: 4993237182915227929, guid: 6cb30f8151c0694418828b20e4aa114d, type: 3}
   - {fileID: 8624870597994658356, guid: 611483e53381fed4e8305c8ccf97d513, type: 3}
   - {fileID: 6405123224991566321, guid: 8be773738779d1444a87b662cced29ee, type: 3}
   - {fileID: 1452114037453425122, guid: 63f9b54b52e709d4bb705741dd214a13, type: 3}
   - {fileID: 1975619589347730930, guid: 37edc5b1213d62a44bb65cd3d8d80bd0, type: 3}
   derivate: 1
-  mediaObj: 4
+  mediaObj: 7

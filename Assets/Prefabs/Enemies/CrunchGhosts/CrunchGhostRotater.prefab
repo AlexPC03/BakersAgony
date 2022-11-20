@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 7475071905759887873}
   - component: {fileID: 7475071905759887878}
   - component: {fileID: 7475071905759887875}
+  - component: {fileID: -1333802865431625897}
   m_Layer: 7
   m_Name: CrunchGhostRotater
   m_TagString: SpecialEnemy
@@ -297,6 +298,7 @@ MonoBehaviour:
   corncub: {fileID: 0}
   cornWeight: 0
   head: {fileID: 0}
+  explosion: {fileID: 1332363219654847884, guid: edfce432ed7ce3c43835ec9a0022a8d7, type: 3}
   ghost: 1
   dontScaleLife: 0
   maxVida: Infinity
@@ -309,3 +311,17 @@ MonoBehaviour:
   type: 2
   point: {fileID: 0}
   speed: 1
+--- !u!114 &-1333802865431625897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475071905759887879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f35f70c7223f4e97450946e469b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: 1
+  lightLevel: 0.2

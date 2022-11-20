@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 394682960747898480}
   - component: {fileID: 394682960747898481}
   - component: {fileID: 394682960747898486}
+  - component: {fileID: -7764594629369874060}
   m_Layer: 7
   m_Name: GhostFurniture 2
   m_TagString: SpecialEnemy
@@ -291,8 +292,22 @@ MonoBehaviour:
   corncub: {fileID: 0}
   cornWeight: 0
   head: {fileID: 0}
+  explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 1
   maxVida: 1
   deathTime: 0.15
   vida: 1
+--- !u!114 &-7764594629369874060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443018413790487087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f35f70c7223f4e97450946e469b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightLevel: 0.3
