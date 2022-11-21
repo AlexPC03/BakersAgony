@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3840903616471497028}
   - component: {fileID: 3840903616471497031}
   - component: {fileID: 3840903616471497050}
+  - component: {fileID: 704411955832883772}
   m_Layer: 7
   m_Name: CrackedGhostHappy
   m_TagString: Boss
@@ -229,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e9253efe0228804bb95b3f4dd7c7e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitch: 1
+  pitch: 1.75
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0.99
@@ -237,24 +238,24 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 1
   dontScaleLife: 0
-  maxVida: 250
+  maxVida: 400
   deathTime: 2
   vida: 0
   newScale: 6.5
   startTime: 1.5
   ghostBoom: {fileID: 1452114037453425122, guid: 63f9b54b52e709d4bb705741dd214a13, type: 3}
-  seekGhost: {fileID: 1975619589347730930, guid: 37edc5b1213d62a44bb65cd3d8d80bd0, type: 3}
+  seekGhost: {fileID: 6283416747614050850, guid: 9683aaa990c427d4c82fdd69a6568a9f, type: 3}
   GhostLineR: {fileID: 4957602583113179935, guid: eb2e9bc858d3250468555a6a2c2293a6, type: 3}
   GhostLineL: {fileID: 6851891927583939002, guid: 3d037e4243d3bf44490bb55766878766, type: 3}
   timeDifference: 0.5
-  spaceRange: 7
+  spaceRange: 10
   spaceRangeSimple: 0
-  packQuantity: 1
-  timeDifferenceS: 0.25
-  lineProbabilityMin: 0.25
-  lineProbabilityMax: 0.65
-  timeForNextAction: 10
-  speed: 2
+  packQuantity: 0
+  timeDifferenceS: 1
+  lineProbabilityMin: 0
+  lineProbabilityMax: 0.6
+  timeForNextAction: 8.5
+  speed: 3
   actualDistance: 0
   target: {x: 0, y: 0, z: 0}
 --- !u!50 &3840903616471497031
@@ -291,3 +292,99 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: -1.5
+--- !u!82 &704411955832883772
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840903616471497037}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 7e44bc290cec25b41b935c85eb57189e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 52a0a84206964c94e99fc980e00a89ea, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 100
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

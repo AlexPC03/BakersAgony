@@ -106,7 +106,7 @@ public class AudioController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGhost = GameObject.Find("CrackedGhost(Clone)") || GameObject.Find("CrackedGhostHappy(Clone)") || GameObject.Find("CrackedGhostJelaous(Clone)") || GameObject.Find("CrackedGhostSad(Clone)");
+        isGhost = GameObject.Find("CrackedGhost(Clone)") || GameObject.Find("CrackedGhostHappy(Clone)") || GameObject.Find("CrackedGhostJelaous(Clone)") || GameObject.Find("CrackedGhostSad(Clone)") || GameObject.Find("CrackedGhost") || GameObject.Find("CrackedGhostHappy") || GameObject.Find("CrackedGhostJelaous") || GameObject.Find("CrackedGhostSad");
     }
 
     public void ChangeClip(AudioClip aclip)

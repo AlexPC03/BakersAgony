@@ -10,7 +10,6 @@ public class EnemySpawner : MonoBehaviour
 
     public bool aditional;
 
-
     public GameObject[] enemyList;
     public GameObject enemyToSpawn;
     public bool byDistance;
@@ -26,14 +25,8 @@ public class EnemySpawner : MonoBehaviour
 
         sp = GetComponent<SpriteRenderer>();
         sp.enabled = false;
-        if(player.GetComponent<playerMovement>().endless)
-        {
-            enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
-        }
-        else
-        {
-            enemyToSpawn = enemyList[Random.Range(0, 8)];
-        }
+
+        enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
 
         if (!byDistance)
         {

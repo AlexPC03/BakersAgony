@@ -336,6 +336,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5763148785447503353}
     m_Modifications:
+    - target: {fileID: 1415226120581067625, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_Pitch
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415226120581067625, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: Priority
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415226120581067625, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415226120581067625, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 52a0a84206964c94e99fc980e00a89ea, type: 3}
+    - target: {fileID: 1415226120581067625, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5970321834780221065, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: m_ShadowIntensity
       value: 1
@@ -347,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 8616631451335678231, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: m_Name
       value: AlphaBunHead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: pitch
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: maxVida

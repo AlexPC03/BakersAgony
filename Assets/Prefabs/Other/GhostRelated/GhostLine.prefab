@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 6418965165939262082, guid: fec86800db0ecd54db1a8efe51a8d1cd, type: 3}
-  rate: 6
+  rate: 3.5
   orientation: 0
 --- !u!1 &4993237183927195609
 GameObject:
