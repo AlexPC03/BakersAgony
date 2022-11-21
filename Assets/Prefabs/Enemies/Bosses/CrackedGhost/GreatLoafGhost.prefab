@@ -181,7 +181,7 @@ MonoBehaviour:
   ghost: 0
   dontScaleLife: 1
   maxVida: 1
-  deathTime: 3
+  deathTime: 0.5
   vida: 0
   newScale: 6
   startTime: 1.5

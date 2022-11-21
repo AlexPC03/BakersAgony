@@ -26,8 +26,15 @@ public class EnemySpawner : MonoBehaviour
 
         sp = GetComponent<SpriteRenderer>();
         sp.enabled = false;
-        enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
-        
+        if(player.GetComponent<playerMovement>().endless)
+        {
+            enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
+        }
+        else
+        {
+            enemyToSpawn = enemyList[Random.Range(0, 8)];
+        }
+
         if (!byDistance)
         {
             StartRoom();
