@@ -236,14 +236,14 @@ MonoBehaviour:
   explosion: {fileID: 4179478694267399928, guid: b869b9b937069d740a050773d08fbb95, type: 3}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 150
+  maxVida: 190
   deathTime: 3
   vida: 0
   newScale: 6
   startTime: 1.5
   enemyToSpawn: {fileID: 8100271165082677225, guid: c09fa1d32306d874ba0301482d2ff600, type: 3}
   spawnRate: 0.75
-  spawnQuantity: 2
+  spawnQuantity: 1
   range: 150
   speed: 5
   chargeSpeed: 6

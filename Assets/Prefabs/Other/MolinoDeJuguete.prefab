@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962687199890894197}
-  - component: {fileID: 1668232618472004815}
+  - component: {fileID: 5671851073241427323}
   m_Layer: 6
   m_Name: Aspas
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 6428501559561922047}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668232618472004815
+--- !u!114 &5671851073241427323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 309769711486503953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Script: {fileID: 11500000, guid: bdccc5fb48f91b149b0b4766cf95e0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
+  speed: 0
+  random: 1
 --- !u!1 &2241926928952419955
 GameObject:
   m_ObjectHideFlags: 0

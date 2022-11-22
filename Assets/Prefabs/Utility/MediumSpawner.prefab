@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aditional: 0
-  boss: 0
   enemyList:
   - {fileID: 4573661829655379718, guid: 91a8b4012be16e8439d045a38dbb3f84, type: 3}
   - {fileID: 9068487438309388593, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
@@ -106,6 +105,8 @@ MonoBehaviour:
   - {fileID: 5036387200115771798, guid: 44f0e05682de22a47ad9b4576ac143db, type: 3}
   - {fileID: 9068487438309388593, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
   - {fileID: 4573661829655379718, guid: 91a8b4012be16e8439d045a38dbb3f84, type: 3}
+  - {fileID: 2740530351246354637, guid: d69843692d32ca54a901d35edb99682d, type: 3}
+  - {fileID: 1933411632819067842, guid: cb5d7d341eb17a7429dbc765f88f8022, type: 3}
   enemyToSpawn: {fileID: 0}
   byDistance: 0
   distance: 0

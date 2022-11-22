@@ -38,12 +38,13 @@ public class playerMovement : MonoBehaviour
     public int sala;
     public bool endless=false;
 
-    public float maxAtack = 2f;
+    public float maxAtack = 3f;
     public float attack = 1f;
     public float attackMultiplier = 1;
 
     public int maxCorn = 99;
-    public float maxVelocity=10f;
+    public Vector2 speedModifierVector=Vector2.zero;
+    public float maxVelocity=15f;
     private float horizontal;
     private float vertical;
 
@@ -277,7 +278,7 @@ public class playerMovement : MonoBehaviour
                 vertical *= moveLimiter;
             }
         }
-            body.velocity = new Vector2(horizontal * runSpeed * speedMultiplier, vertical * runSpeed * speedMultiplier);
+            body.velocity = new Vector2(horizontal * runSpeed * speedMultiplier, vertical * runSpeed * speedMultiplier)+ speedModifierVector;
 
         if (PassedTime >= invulneravilityTime)
         {
@@ -509,8 +510,8 @@ public class playerMovement : MonoBehaviour
             if (ID==5)
             {
                 invulneravilityTime = 2.5f;
-                attackMultiplier = 0.8f;
-                speedMultiplier = 0.75f;
+                attackMultiplier = 0.9f;
+                speedMultiplier = 0.8f;
                 maxCorn = 99;
                 loafy.GetComponent<SpriteRenderer>().enabled = true;
                 if (shield.activeSelf == true)
