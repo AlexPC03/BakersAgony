@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 383562803580249172}
   - component: {fileID: 2805178257295555077}
   - component: {fileID: 5575802627191427148}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SpikeBall
   m_TagString: SpecialEnemy
   m_Icon: {fileID: 0}
@@ -135,6 +135,8 @@ MonoBehaviour:
   corncub: {fileID: 0}
   cornWeight: 0
   head: {fileID: 0}
+  explosion: {fileID: 0}
+  ghost: 0
   dontScaleLife: 0
   maxVida: Infinity
   deathTime: 0
@@ -265,6 +267,7 @@ MonoBehaviour:
   friendlyDamage: 20
   destroyOnHit: 1
   ghost: 1
+  donut: 0
   velocity: 0
 --- !u!1 &4308585502200183733
 GameObject:
@@ -276,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7676863764628724801}
   - component: {fileID: 7869908703972348357}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

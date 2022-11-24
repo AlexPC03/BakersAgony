@@ -20,8 +20,11 @@ public class ModifirController : MonoBehaviour
         }
         else if(!boss)
         {
-
-            if (Random.Range(0f,1f)>=0.6f)
+            if(player.GetComponent<playerMovement>().DEV)
+            {
+                Instantiate(badMod[Random.Range(0, badMod.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+            }
+            else if (Random.Range(0f,1f)>=0.6f)
             {
                 int a = Random.Range(0, 3);
                 if (a==0)

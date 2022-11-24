@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     public Text attackText;
     public Text speedText;
     public Text invulneravilityText;
+    public Text DEVText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +64,15 @@ public class UIManager : MonoBehaviour
         else
         {
             roomText.text = "";
+        }
+
+        if(playerM.DEV)
+        {
+            DEVText.enabled = true;
+        }
+        else
+        {
+            DEVText.enabled = false;
         }
     }
 }

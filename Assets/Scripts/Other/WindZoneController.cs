@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WindZoneController : MonoBehaviour
 {
+    public GameObject follow;
     private GameObject player;
     private ParticleSystem part;
     private CircleCollider2D rb;
@@ -18,7 +19,7 @@ public class WindZoneController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         part=GetComponent<ParticleSystem>();
         rb = GetComponent<CircleCollider2D>();
-        distanceToDestroy = (float)(rb.radius+0.5);
+        distanceToDestroy = (float)(rb.radius+0.5);        
     }
 
     // Update is called once per frame
@@ -26,17 +27,26 @@ public class WindZoneController : MonoBehaviour
     {
         var main = part.main;
         var emi = part.emission;
+        var circ = part.shape;
 
         main.startSpeed = 10 * windForce;
         emi.rateOverTime = 15 * Mathf.Abs(windForce);
-
-        if(pointWind && windForce>0)
+        if (pointWind && windForce < 0)
+        {
+            circ.radius = (float)(rb.radius + 0.1);
+        }
+        if (pointWind && windForce>0)
         {
             ParticleSystem.Particle[] ps = new ParticleSystem.Particle[part.particleCount];
             part.GetParticles(ps);
             // keep only particles that are within DistanceToDestroy
             var distanceParticles = ps.Where(p => Vector3.Distance(transform.position, p.position) < distanceToDestroy).ToArray();
             part.SetParticles(distanceParticles, distanceParticles.Length);
+        }
+
+        if(follow!=null)
+        {
+            transform.position=follow.transform.position;
         }
     }
 

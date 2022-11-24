@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+    public bool DEV=false;
     private Gamepad gamepad;
     private GameObject ratTarget;
     private GameObject loafy;
@@ -89,19 +90,50 @@ public class playerMovement : MonoBehaviour
     {
 
         gamepad = Gamepad.current;
-        //Cheat
+        //DEV mode
         if(gamepad==null)
         {
-            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.K) && !endless)
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.V) && !endless)
             {
-                RecoverLife();
+                DEV = true;
             }
-        }
-        else
-        {
-            if (((gamepad.aButton.isPressed && gamepad.yButton.isPressed && gamepad.xButton.isPressed) || (gamepad.crossButton.isPressed && gamepad.squareButton.isPressed && gamepad.triangleButton.isPressed)) && !endless)
+
+            if(DEV && !endless)
             {
-                RecoverLife();
+                if(Input.GetKey(KeyCode.Z))
+                {
+                    sala = 9;
+                }
+                if (Input.GetKey(KeyCode.X))
+                {
+                    sala = 17;
+                }
+                if (Input.GetKey(KeyCode.C))
+                {
+                    RecoverLife();
+                }
+                if (Input.GetKey(KeyCode.V))
+                {
+                    foreach(GameObject obj in FindObjectsOfType<GameObject>())
+                    {
+                        if(obj.tag=="Enemy" || obj.tag == "SpecialEnemy" || obj.tag == "Boss")
+                        {
+                            Destroy(obj);
+                        }
+                    }
+                }
+                if (Input.GetKey(KeyCode.B))
+                {
+                    sala = 8;
+                }
+                if (Input.GetKey(KeyCode.N))
+                {
+                    corn += 99;
+                }
+                if (Input.GetKey(KeyCode.M))
+                {
+                    DEV=false;
+                }
             }
         }
 

@@ -13,6 +13,7 @@ public class ProyectileBasicSystem : MonoBehaviour
     public float friendlyDamage=20;
     public bool destroyOnHit;
     public bool ghost;
+    public bool donut;
 
     public float velocity;
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class ProyectileBasicSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer==6 && !collision.isTrigger && !ghost)
+        if(collision.gameObject.layer==6 && !collision.isTrigger && !ghost && !donut)
         {
             Dissapear();
         }
