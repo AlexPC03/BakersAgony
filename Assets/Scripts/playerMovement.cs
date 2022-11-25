@@ -116,7 +116,7 @@ public class playerMovement : MonoBehaviour
                 {
                     foreach(GameObject obj in FindObjectsOfType<GameObject>())
                     {
-                        if(obj.tag=="Enemy" || obj.tag == "SpecialEnemy" || obj.tag == "Boss")
+                        if(obj.tag=="Enemy" || obj.tag == "SpecialEnemy" || obj.tag == "Boss" || obj.tag == "BodyBun")
                         {
                             Destroy(obj);
                         }

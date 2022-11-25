@@ -7,13 +7,13 @@ public class DoorControler : MonoBehaviour
     private AudioSource aud;
     private GameObject player;
     private Animator anim;
-    public AudioClip Close;
     public Collider2D coll;
     public GameObject[] rooms;
     public GameObject rewardRoom;
     public GameObject shopRoom;
     public bool boss;
     public GameObject bossRoom1;
+    public GameObject bossRoom2_2;
     public GameObject bossRoom2;
     public GameObject bossRoom3;
     public GameObject bossRewardRoom;
@@ -82,7 +82,15 @@ public class DoorControler : MonoBehaviour
             }
             else if (player.GetComponent<playerMovement>().sala % salaBoss2 == 0)
             {
-                Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                switch (Random.Range(0,2))
+                {
+                    case 0:
+                        Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                        break;
+                    case 1:
+                        Instantiate(bossRoom2_2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                        break;
+                }
             }
             else if(player.GetComponent<playerMovement>().sala % salaBoss1 == 0)
             {

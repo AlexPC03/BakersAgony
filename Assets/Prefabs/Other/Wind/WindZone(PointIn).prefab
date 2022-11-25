@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 7519632745388992830}
   - component: {fileID: 7519632745388992818}
   - component: {fileID: 2120809879669212276}
+  - component: {fileID: -6811543137710547524}
   m_Layer: 0
   m_Name: WindZone(PointIn)
   m_TagString: Untagged
@@ -3834,7 +3835,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294966848
+      m_Bits: 4294966784
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4868,7 +4869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b9bcddcf8dc594eb65cb4c296c57e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attached: 0
+  follow: {fileID: 0}
   pointWind: 1
+  startInitiated: 1
   inverted: 1
   windForce: -1
 --- !u!58 &2120809879669212276
@@ -4887,3 +4891,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &-6811543137710547524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519632745388992825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

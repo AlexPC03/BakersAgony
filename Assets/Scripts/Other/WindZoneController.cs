@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class WindZoneController : MonoBehaviour
 {
+    private float initRadius;
+    private bool disappearing=false;
+    private float time = 0;
     public bool attached=false;
     public GameObject follow;
     private GameObject player;
     private ParticleSystem part;
-    private CircleCollider2D rb;
+    private CircleCollider2D circCol;
     private float distanceToDestroy;
     public bool pointWind;
+    public bool startInitiated=true;
     public bool inverted;
     public float windForce;
     // Start is called before the first frame update
@@ -19,13 +23,31 @@ public class WindZoneController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         part=GetComponent<ParticleSystem>();
-        rb = GetComponent<CircleCollider2D>();
-        distanceToDestroy = (float)(rb.radius+0.5);        
+        if(pointWind)
+        {
+            circCol = GetComponent<CircleCollider2D>();
+            initRadius = circCol.radius;
+            if(startInitiated)
+            {
+                Appear();
+            }
+            else
+            {
+                Disappear();
+            }
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(pointWind)
+        {
+            distanceToDestroy = (float)(circCol.radius + 0.5);
+        }
+
+        time += Time.deltaTime;
         var main = part.main;
         var emi = part.emission;
         var circ = part.shape;
@@ -34,7 +56,7 @@ public class WindZoneController : MonoBehaviour
         emi.rateOverTime = 15 * Mathf.Abs(windForce);
         if (pointWind && windForce < 0)
         {
-            circ.radius = (float)(rb.radius + 0.1);
+            circ.radius = (float)(this.circCol.radius + 0.1);
         }
         if (pointWind && windForce>0)
         {
@@ -53,8 +75,18 @@ public class WindZoneController : MonoBehaviour
             }
             else
             {
+                player.GetComponent<playerMovement>().speedModifierVector = Vector2.zero;
                 Destroy(gameObject);
             }
+        }
+
+        if (!disappearing)
+        {
+            circCol.radius = Mathf.Lerp(0, initRadius, time);
+        }
+        else
+        {
+            circCol.radius = Mathf.Lerp(initRadius, 0, time);
         }
 
     }
@@ -105,5 +137,17 @@ public class WindZoneController : MonoBehaviour
         {
             player.GetComponent<playerMovement>().speedModifierVector = Vector2.zero;
         }
+    }
+
+    public void Appear()
+    {
+        disappearing = false;
+        time = 0;
+    }
+
+    public void Disappear()
+    {
+        disappearing=true;
+        time = 0;
     }
 }

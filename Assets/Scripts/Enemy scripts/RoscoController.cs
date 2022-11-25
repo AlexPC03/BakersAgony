@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoscoController : BossController
 {
+    private float hitTime = 0;
     private bool stopped=false;
     private float time=0;
     private GameObject player;
@@ -27,6 +28,7 @@ public class RoscoController : BossController
     // Update is called once per frame
     void Update()
     {
+        hitTime += Time.deltaTime;
         time += Time.deltaTime;
         rb.velocity = rb.velocity.normalized * speed;
         if(time>attackTime)
@@ -43,24 +45,27 @@ public class RoscoController : BossController
 
     public void SpawnOnHit()
     {
-        if(SpawnHit.Length>0)
+        if(time > 1 && hitTime>0.5)
         {
-            foreach (var obj in SpawnHit)
+            if(SpawnHit.Length>0)
             {
-                GameObject Inst=Instantiate(obj,transform.position,new Quaternion(0,0,0,0));
-                if(Inst.GetComponent<BreadMageProyectileMovement>()!=null)
+                foreach (var obj in SpawnHit)
                 {
-                    Inst.GetComponent<BreadMageProyectileMovement>().targetPos=player.transform.position;
-                    Inst.GetComponent<BreadMageProyectileMovement>().target=player;
+                    GameObject Inst=Instantiate(obj,transform.position,new Quaternion(0,0,0,0));
+                    if(Inst.GetComponent<BreadMageProyectileMovement>()!=null)
+                    {
+                        Inst.GetComponent<BreadMageProyectileMovement>().targetPos=player.transform.position+new Vector3(Random.Range(-2f,2f), Random.Range(-2f, 2f),0);
+                        Inst.GetComponent<BreadMageProyectileMovement>().target=player;
+                    }
+                    if (Inst.GetComponent<BumeranProyectileMovement>() != null)
+                    {
+                        Inst.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
+                        Inst.GetComponent<BumeranProyectileMovement>().target = player;
+                    }
                 }
-                if (Inst.GetComponent<BumeranProyectileMovement>() != null)
-                {
-                    Inst.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
-                    Inst.GetComponent<BumeranProyectileMovement>().target = player;
-                }
+                hitTime = 0;
             }
         }
-
     }
 
     public void SpawnOnAttack()
@@ -69,15 +74,15 @@ public class RoscoController : BossController
         {
             foreach (var obj in SpawnAttack)
             {
-                GameObject Inst = Instantiate(obj, transform.position, new Quaternion(0, 0, 0, 0));
+                GameObject Inst = Instantiate(obj, transform.position + new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(-2.5f, 2.5f), 0), new Quaternion(0, 0, 0, 0));
                 if (Inst.GetComponent<BreadMageProyectileMovement>() != null)
                 {
-                    Inst.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position;
+                    Inst.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                     Inst.GetComponent<BreadMageProyectileMovement>().target = player;
                 }
                 if (Inst.GetComponent<BumeranProyectileMovement>() != null)
                 {
-                    Inst.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position;
+                    Inst.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                     Inst.GetComponent<BumeranProyectileMovement>().target = player;
                 }
             }
@@ -103,12 +108,12 @@ public class RoscoController : BossController
 
     public void StartWind()
     {
-        wind.SetActive(true);
+        wind.SendMessage("Appear");
     }
 
     public void StopWind()
     {
-        wind.SetActive(false);
+        wind.SendMessage("Disappear");
     }
 
     public void StopSpeed()
@@ -120,7 +125,6 @@ public class RoscoController : BossController
     public void RestartSpeed()
     {
         stopped = false;
-        rb.drag = 0;
         if (Random.Range(0, 2) == 0)
         {
             rb.velocity = new Vector2(1, -1) * speed;
