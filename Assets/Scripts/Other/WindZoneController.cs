@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WindZoneController : MonoBehaviour
 {
+    public bool attached=false;
     public GameObject follow;
     private GameObject player;
     private ParticleSystem part;
@@ -44,10 +45,18 @@ public class WindZoneController : MonoBehaviour
             part.SetParticles(distanceParticles, distanceParticles.Length);
         }
 
-        if(follow!=null)
+        if(attached)
         {
-            transform.position=follow.transform.position;
+            if(follow!=null)
+            {
+                transform.position=follow.transform.position;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

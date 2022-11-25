@@ -124,6 +124,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1960569414959384538}
     - target: {fileID: 7519632745388992818, guid: 0bac7581e642ff44091fbeb4f092b58a, type: 3}
+      propertyPath: attached
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519632745388992818, guid: 0bac7581e642ff44091fbeb4f092b58a, type: 3}
       propertyPath: windForce
       value: -2.25
       objectReference: {fileID: 0}
