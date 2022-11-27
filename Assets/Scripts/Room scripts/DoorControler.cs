@@ -13,8 +13,9 @@ public class DoorControler : MonoBehaviour
     public GameObject shopRoom;
     public bool boss;
     public GameObject bossRoom1;
-    public GameObject bossRoom2_2;
+    public GameObject bossRoom1_2;
     public GameObject bossRoom2;
+    public GameObject bossRoom2_2;
     public GameObject bossRoom3;
     public GameObject bossRewardRoom;
     public GameObject finalRewardRoom;
@@ -94,7 +95,15 @@ public class DoorControler : MonoBehaviour
             }
             else if(player.GetComponent<playerMovement>().sala % salaBoss1 == 0)
             {
-                Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                switch (Random.Range(0, 2))
+                {
+                    case 0:
+                        Instantiate(bossRoom1, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                        break;
+                    case 1:
+                        Instantiate(bossRoom1_2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                        break;
+                }
             }
             else if (player.GetComponent<playerMovement>().sala % 8 == 0)
             {

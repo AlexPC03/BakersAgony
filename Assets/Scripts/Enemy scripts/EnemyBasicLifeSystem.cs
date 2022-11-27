@@ -92,7 +92,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         timeToDamage += Time.deltaTime;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         if(timeToDamage>invulneravility && gameObject.layer!=6)
         {

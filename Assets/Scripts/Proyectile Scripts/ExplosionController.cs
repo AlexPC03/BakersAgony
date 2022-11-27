@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExplosionController : MonoBehaviour
 {
+    private Camera camara;
+    public bool shake;
     private AudioSource aud;
     private playerMovement playerController;
     public bool friendlyFire=true;
@@ -13,6 +15,11 @@ public class ExplosionController : MonoBehaviour
         aud=GetComponent<AudioSource>();
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
         aud.pitch = Random.Range(0.8f, 1.2f);
+        if(shake)
+        {
+            camara = Camera.main;
+            camara.GetComponent<Animator>().SetTrigger("Shake");
+        }
     }
 
     // Update is called once per frame

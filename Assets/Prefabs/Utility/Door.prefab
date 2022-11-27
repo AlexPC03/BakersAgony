@@ -457,8 +457,9 @@ MonoBehaviour:
   shopRoom: {fileID: 4310603433669806901, guid: 47161bf5f21a95941a567d95f9094a58, type: 3}
   boss: 0
   bossRoom1: {fileID: 4760169799609712976, guid: 8c8a7c69b35c1114191304224c79cde7, type: 3}
-  bossRoom2_2: {fileID: 7780336051729034441, guid: 88dfe8df13703904d893ef8821d47711, type: 3}
+  bossRoom1_2: {fileID: 7196031205830649013, guid: fe617fcca76f523489d712848cc43b4e, type: 3}
   bossRoom2: {fileID: 6639240519460265814, guid: 287c7c4453b2a5a469defbb975e233af, type: 3}
+  bossRoom2_2: {fileID: 7780336051729034441, guid: 88dfe8df13703904d893ef8821d47711, type: 3}
   bossRoom3: {fileID: 1975433226714856131, guid: f654fb3abfc46cb4eb1e66ecaa0154ec, type: 3}
   bossRewardRoom: {fileID: 7136571336800638640, guid: e35bcecee36e5434fb470ee0d3aedeb4, type: 3}
   finalRewardRoom: {fileID: 3537489852159313140, guid: 54e2174c8cf8eab499ac1812efe5b27d, type: 3}

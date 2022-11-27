@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4760169799609712979}
   - component: {fileID: -5295203443208390694}
   m_Layer: 0
-  m_Name: BossRoom1
+  m_Name: BossRoom1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2915,7 +2915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[0]
@@ -2944,15 +2944,15 @@ PrefabInstance:
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[6]
       value: 
-      objectReference: {fileID: 4580841571291252390, guid: e1e1318d4a9d0f74e9213588c881ae81, type: 3}
+      objectReference: {fileID: 5823865967183140318, guid: c14a84c8ed2f0ff4dad559713c79c25b, type: 3}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[7]
       value: 
-      objectReference: {fileID: 5823865967183140318, guid: c14a84c8ed2f0ff4dad559713c79c25b, type: 3}
+      objectReference: {fileID: 3810865875012453114, guid: b1d42ad80c6ec9542a21167bcb85329f, type: 3}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[8]
       value: 
-      objectReference: {fileID: 3810865875012453114, guid: b1d42ad80c6ec9542a21167bcb85329f, type: 3}
+      objectReference: {fileID: 7340899385303421548, guid: 7115ae10dfe0b744c9e97a0377698718, type: 3}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[9]
       value: 

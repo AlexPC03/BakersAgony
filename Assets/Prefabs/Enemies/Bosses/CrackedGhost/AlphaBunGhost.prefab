@@ -369,6 +369,10 @@ PrefabInstance:
       value: AlphaBunHead
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: vida
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: pitch
       value: 1.75
       objectReference: {fileID: 0}
