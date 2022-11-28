@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class WallTransparency : MonoBehaviour
 {
-    public Sprite[] wallList;
+    private GameObject player;
+    public Sprite[] defaultWallList;
+    public Sprite[] sugarWallList;
+    public Sprite[] burnedWallList;
     public bool transparent;
+    public GameObject sprite;
     
     // Start is called before the first frame update
     void Start()
     {
-         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = wallList[Random.Range(0,wallList.Length)];
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if(player.GetComponent<playerMovement>().zona==playerMovement.zone.entrada)
+        {
+            sprite.GetComponent<SpriteRenderer>().sprite = defaultWallList[Random.Range(0, defaultWallList.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+        {
+            sprite.GetComponent<SpriteRenderer>().sprite = sugarWallList[Random.Range(0, defaultWallList.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
+        {
+            sprite.GetComponent<SpriteRenderer>().sprite = burnedWallList[Random.Range(0, defaultWallList.Length)];
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //foreach (SpriteRenderer spr in transform.GetComponentsInChildren<SpriteRenderer>())
-        //{
-        //    spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, 255f);
-        //}
+
     }
 
     private void OnTriggerEnter2D(Collider2D coll)

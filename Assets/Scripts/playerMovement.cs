@@ -37,6 +37,13 @@ public class playerMovement : MonoBehaviour
     public Sprite normalHeart;
     public Sprite cheeseHeart;
     public int sala;
+    public zone zona;
+    public enum zone
+    {
+        entrada,
+        pastelería,
+        horneadores
+    }
     public bool endless=false;
 
     public float maxAtack = 3f;
@@ -71,7 +78,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         Physics2D.IgnoreLayerCollision(6, 6);
-
+        zona = zone.entrada;
         shield = GameObject.Find("RotationPointShield");
         ratTarget = GameObject.Find("RatTarget");
         loafy = GameObject.Find("Loafy");
