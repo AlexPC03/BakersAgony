@@ -89,7 +89,7 @@ public class DoorControler : MonoBehaviour
                 }
 
             }
-            if(player.GetComponent<playerMovement>().sala==salaBoss3+1 && !player.GetComponent<playerMovement>().endless)
+            if(boss && player.GetComponent<playerMovement>().sala==salaBoss3+1 && !player.GetComponent<playerMovement>().endless)
             {
                 Instantiate(finalRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
             }

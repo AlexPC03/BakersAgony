@@ -16,6 +16,10 @@ public class WallTransparency : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
+        if(Random.Range(0,2)==0)
+        {
+            sprite.GetComponent<SpriteRenderer>().flipX = true;
+        }
         if(player.GetComponent<playerMovement>().zona==playerMovement.zone.entrada)
         {
             sprite.GetComponent<SpriteRenderer>().sprite = defaultWallList[Random.Range(0, defaultWallList.Length)];
