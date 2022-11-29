@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de2edc5a565c1c94d8cd080ae446e5d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23eb83c633b025a47b26c017285d1a29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2d04d6f717a95bb46b5f297cf9e9d456, type: 3}
   sugarWallList:
   - {fileID: 21300000, guid: de2edc5a565c1c94d8cd080ae446e5d2, type: 3}
-  - {fileID: 21300000, guid: de2edc5a565c1c94d8cd080ae446e5d2, type: 3}
+  - {fileID: 21300000, guid: 15ae82465c294e647b9244f4f0f3df56, type: 3}
   burnedWallList:
   - {fileID: 21300000, guid: e4c2d7f067a3ff1428db9a1fbddd359d, type: 3}
   - {fileID: 21300000, guid: e4c2d7f067a3ff1428db9a1fbddd359d, type: 3}

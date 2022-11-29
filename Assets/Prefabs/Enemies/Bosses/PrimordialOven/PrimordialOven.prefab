@@ -159,6 +159,8 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 0
   head: {fileID: 0}
+  explosion: {fileID: 0}
+  ghost: 0
   dontScaleLife: 0
   maxVida: 575
   deathTime: 1
@@ -20557,7 +20559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7530356158529415076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.2609997, z: -0.2}
+  m_LocalPosition: {x: 0, y: 4.0109997, z: -0.2}
   m_LocalScale: {x: 25, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 7530356159161805361}
@@ -20640,7 +20642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7530356158760147882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.681, z: -0.3}
+  m_LocalPosition: {x: 0, y: 4.431, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7530356158345841006}
@@ -20936,6 +20938,8 @@ MonoBehaviour:
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
   cornWeight: 1
   head: {fileID: 0}
+  explosion: {fileID: 0}
+  ghost: 0
   dontScaleLife: 0
   maxVida: 400
   deathTime: 4

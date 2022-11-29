@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PrimordialOvenController : BossController
 {
+    private Camera camara;
     public AudioClip Open;
     public AudioClip Close;
     public AudioClip Die;
@@ -29,9 +30,9 @@ public class PrimordialOvenController : BossController
     void Start()
     {
         StartBoss();
+        camara=Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
         heartLife = heart.GetComponent<CoalHeartController>();
-        //anim = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
 
         timepassed = 0;
@@ -73,6 +74,7 @@ public class PrimordialOvenController : BossController
             aud.volume = 0.75f;
             aud.clip = Die;
             PlayOnce();
+            
         }
     }
 
@@ -182,6 +184,7 @@ public class PrimordialOvenController : BossController
     {
         if (!started)
         {
+            camara.GetComponent<Animator>().SetTrigger("BigShake");
             aud.Play();
             started = true;
         }

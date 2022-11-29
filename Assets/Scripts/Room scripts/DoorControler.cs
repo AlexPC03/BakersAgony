@@ -12,6 +12,7 @@ public class DoorControler : MonoBehaviour
     public GameObject rewardRoom;
     public GameObject shopRoom;
     public bool boss;
+    public bool bossReward;
     public GameObject bossRoom1;
     public GameObject bossRoom1_2;
     public GameObject bossRoom2;
@@ -69,6 +70,25 @@ public class DoorControler : MonoBehaviour
                 aud.Play();
             }
             initiated = true;
+            if(bossReward)
+            {
+                if(!player.GetComponent<playerMovement>().endless)
+                {
+                    if(player.GetComponent<playerMovement>().zona==playerMovement.zone.entrada)
+                    {
+                        player.GetComponent<playerMovement>().zona = playerMovement.zone.pastelería;
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+                    {
+                        player.GetComponent<playerMovement>().zona = playerMovement.zone.horneadores;
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
+                    {
+                        player.GetComponent<playerMovement>().zona = playerMovement.zone.entrada;
+                    }
+                }
+
+            }
             if(player.GetComponent<playerMovement>().sala==salaBoss3+1 && !player.GetComponent<playerMovement>().endless)
             {
                 Instantiate(finalRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
@@ -125,6 +145,4 @@ public class DoorControler : MonoBehaviour
         GameObject obj=transform.root.gameObject;
         Destroy(obj);
     }
-
-
 }

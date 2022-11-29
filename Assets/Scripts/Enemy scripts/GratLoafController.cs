@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GratLoafController : BossController
 {
+    private Camera _camera;
+
     private Rigidbody2D rb;
     private GameObject player;
     private Animator anim;
@@ -40,6 +42,8 @@ public class GratLoafController : BossController
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         charging = false;
+        _camera = Camera.main;
+
     }
 
     // Update is called once per frame
@@ -189,7 +193,9 @@ public class GratLoafController : BossController
     {
         if(collision.gameObject.layer==6 && timeTo>spawnRate && enemyToSpawn!=null)
         {
-            for(int i=0;i<spawnQuantity;i++)
+            _camera.GetComponent<Animator>().SetTrigger("Shake");
+
+            for (int i=0;i<spawnQuantity;i++)
             {
                 Instantiate(enemyToSpawn, transform.position, new Quaternion(0, 0, 0, 0));
             }

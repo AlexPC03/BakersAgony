@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DonutCollisionController : MonoBehaviour
 {
+    private Camera _camera;
     private float time=1;
+    public bool rosco=false;
     public GameObject parent;
     public Orientation orientation;
     public enum Orientation
@@ -15,7 +17,7 @@ public class DonutCollisionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -28,6 +30,10 @@ public class DonutCollisionController : MonoBehaviour
     {
         if(parent!=null && !collision.isTrigger && time>1)
         {
+            if(rosco && collision.gameObject.layer==6)
+            {
+                _camera.GetComponent<Animator>().SetTrigger("Shake");
+            }
             switch(orientation)
             {
                 case Orientation.down:

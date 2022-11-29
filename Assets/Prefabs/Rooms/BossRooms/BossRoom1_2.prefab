@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3339526973701148582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.25, y: 3.4972, z: -1}
+  m_LocalPosition: {x: -35, y: 3.4972, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7196031204550426490}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 33.996727}
+  m_Size: {x: 43.03341, y: 33.996727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6160861391847508457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.25, y: 3.1222, z: -1}
+  m_LocalPosition: {x: 35.125, y: 3.1222, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7196031204550426490}
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11.533409, y: 33.246727}
+  m_Size: {x: 43.28341, y: 33.246727}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4693,19 +4693,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 22118677583806007, guid: e7b38faafcb4a8b44bd338867a28258b, type: 3}
       propertyPath: m_Size.x
-      value: 23
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 22118677583806007, guid: e7b38faafcb4a8b44bd338867a28258b, type: 3}
       propertyPath: m_Offset.x
-      value: -25
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: 4531186831101394398, guid: e7b38faafcb4a8b44bd338867a28258b, type: 3}
       propertyPath: m_Size.x
-      value: 23
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4531186831101394398, guid: e7b38faafcb4a8b44bd338867a28258b, type: 3}
       propertyPath: m_Offset.x
-      value: 25
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5697444566044053690, guid: e7b38faafcb4a8b44bd338867a28258b, type: 3}
       propertyPath: m_RootOrder

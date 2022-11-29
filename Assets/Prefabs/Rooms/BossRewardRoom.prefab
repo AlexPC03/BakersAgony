@@ -1204,6 +1204,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7136571336800638643}
     m_Modifications:
     - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
+      propertyPath: bossReward
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169743858246062039, guid: 0cde4e3c5728f1747a2f1966f8ce3dd6, type: 3}
       propertyPath: bossRewardRoom
       value: 
       objectReference: {fileID: 7136571336800638640}
