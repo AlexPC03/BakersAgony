@@ -96,7 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff8ed0b22475bd46b948e373e661a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyList:
+  aditional: 0
+  boss: 0
+  bossList: []
+  enemyListEntry:
+  - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
   - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
   - {fileID: 7954502834524449609, guid: 99d60c2f6c640f645bc927f9c1bd8bf6, type: 3}
+  enemyListSugar:
+  - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
+  - {fileID: 7954502834524449609, guid: 99d60c2f6c640f645bc927f9c1bd8bf6, type: 3}
+  enemyListOven:
+  - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
+  - {fileID: 7954502834524449609, guid: 99d60c2f6c640f645bc927f9c1bd8bf6, type: 3}
+  - {fileID: 1122010268238498604, guid: bb5d25562938d654f80e15fcc8ef972f, type: 3}
   enemyToSpawn: {fileID: 0}
+  byDistance: 0
+  distance: 0

@@ -6132,9 +6132,37 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[0]
+      value: 
+      objectReference: {fileID: 7530356159161805360, guid: f66a264f6f4a435458ccbfa0493cbde3, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[1]
+      value: 
+      objectReference: {fileID: 7530356159161805360, guid: f66a264f6f4a435458ccbfa0493cbde3, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[2]
+      value: 
+      objectReference: {fileID: 7530356159161805360, guid: f66a264f6f4a435458ccbfa0493cbde3, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[3]
+      value: 
+      objectReference: {fileID: 7530356159161805360, guid: f66a264f6f4a435458ccbfa0493cbde3, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[4]
+      value: 
+      objectReference: {fileID: 2464411486370523473, guid: b02bdf5c61d152c45bd7ed53abdc744a, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[5]
+      value: 
+      objectReference: {fileID: 5528573388151614747, guid: d8441de4e0e8ca248959d14c54f717d3, type: 3}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[0]
       value: 

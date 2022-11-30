@@ -4744,9 +4744,49 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.size
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[0]
+      value: 
+      objectReference: {fileID: 246902944569074681, guid: 6f9d2a38a169cc64a95d2668c83c101f, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[1]
+      value: 
+      objectReference: {fileID: 246902944569074681, guid: 6f9d2a38a169cc64a95d2668c83c101f, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[2]
+      value: 
+      objectReference: {fileID: 246902944569074681, guid: 6f9d2a38a169cc64a95d2668c83c101f, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[3]
+      value: 
+      objectReference: {fileID: 246902944569074681, guid: 6f9d2a38a169cc64a95d2668c83c101f, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[4]
+      value: 
+      objectReference: {fileID: 246902944569074681, guid: 6f9d2a38a169cc64a95d2668c83c101f, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[5]
+      value: 
+      objectReference: {fileID: 8648597638051594627, guid: f5fa2b62f745c1f429ae77bc24fe2129, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[6]
+      value: 
+      objectReference: {fileID: 260517003775829292, guid: 89414e920a7fb0d4381a7406baea7a48, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[7]
+      value: 
+      objectReference: {fileID: 623318773846950768, guid: df198683f4ffc9f4cb39f47adc6d6991, type: 3}
+    - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
+      propertyPath: bossList.Array.data[8]
+      value: 
+      objectReference: {fileID: 4134029924026877350, guid: 03ea3cbdb672a9348b8c37340bf50943, type: 3}
     - target: {fileID: 1924681847596560892, guid: 521f2a29bed06a244909ad9e3b24895d, type: 3}
       propertyPath: enemyList.Array.data[0]
       value: 

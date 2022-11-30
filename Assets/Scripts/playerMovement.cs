@@ -96,6 +96,10 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
 
+        if(endless)
+        {
+            DEV = false;
+        }
         gamepad = Gamepad.current;
         //DEV mode
         if(gamepad==null)

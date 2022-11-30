@@ -10,7 +10,12 @@ public class EnemySpawner : MonoBehaviour
 
     public bool aditional;
 
-    public GameObject[] enemyList;
+    public bool boss;
+
+    public GameObject[] bossList;
+    public GameObject[] enemyListEntry;
+    public GameObject[] enemyListSugar;
+    public GameObject[] enemyListOven;
     public GameObject enemyToSpawn;
     public bool byDistance;
     public float distance;
@@ -18,15 +23,29 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(byDistance)
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
+
+         player = GameObject.FindGameObjectWithTag("Player");
+
 
         sp = GetComponent<SpriteRenderer>();
         sp.enabled = false;
 
-        enemyToSpawn = enemyList[Random.Range(0, enemyList.Length)];
+        if(boss)
+        {
+            enemyToSpawn = bossList[Random.Range(0, bossList.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona==playerMovement.zone.entrada)
+        {
+            enemyToSpawn = enemyListEntry[Random.Range(0, enemyListEntry.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+        {
+            enemyToSpawn = enemyListSugar[Random.Range(0, enemyListSugar.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
+        {
+            enemyToSpawn = enemyListOven[Random.Range(0, enemyListOven.Length)];
+        }
 
         if (!byDistance)
         {

@@ -744,9 +744,49 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
       propertyPath: enemyList.Array.size
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[0]
+      value: 
+      objectReference: {fileID: 4311464273850904362, guid: dd595d5837266d249841a10be03f36f1, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[1]
+      value: 
+      objectReference: {fileID: 4311464273850904362, guid: dd595d5837266d249841a10be03f36f1, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[2]
+      value: 
+      objectReference: {fileID: 4311464273850904362, guid: dd595d5837266d249841a10be03f36f1, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[3]
+      value: 
+      objectReference: {fileID: 4311464273850904362, guid: dd595d5837266d249841a10be03f36f1, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[4]
+      value: 
+      objectReference: {fileID: 4311464273850904362, guid: dd595d5837266d249841a10be03f36f1, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[5]
+      value: 
+      objectReference: {fileID: 2808298466854203608, guid: 64cc891966fdf8f4fa47dfaff548bfc7, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[6]
+      value: 
+      objectReference: {fileID: 8518334702066204317, guid: 649c50c48674c964d95b2fa7ab052c6e, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[7]
+      value: 
+      objectReference: {fileID: 6667195485841105874, guid: 8a2da63956fb54b448145efcf79dc92a, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: bossList.Array.data[8]
+      value: 
+      objectReference: {fileID: 7351545830149755582, guid: a75c3738dc2578649b4281d30ce3c684, type: 3}
     - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
       propertyPath: enemyList.Array.data[0]
       value: 
@@ -787,6 +827,30 @@ PrefabInstance:
       propertyPath: enemyList.Array.data[9]
       value: 
       objectReference: {fileID: 6693529656218667965, guid: 633b0c6ef3f58de4c955bee61e2c5c66, type: 3}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: enemyListOven.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: enemyListEntry.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153575915201459364, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: enemyListSugar.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912585244563478674, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912585244563478674, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.054581404
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912585244563478674, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5419281186386411007, guid: 32496ea8ce6c7194c8a7833b50dec33e, type: 3}
       propertyPath: m_RootOrder
       value: 2

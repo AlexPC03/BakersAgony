@@ -38,7 +38,7 @@ public class ProyectileBasicSystem : MonoBehaviour
                 Dissapear();
             }
         }
-        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy") && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null)
+        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag == "SpecialEnemy") && friendlyFire && collision.GetComponent<ProyectileInmunity>()==null && collision.GetComponent<EnemyBasicLifeSystem>() != null)
         {
             collision.SendMessage("TakeDamage", friendlyDamage);
             collision.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * (friendlyDamage/5),ForceMode2D.Impulse);
