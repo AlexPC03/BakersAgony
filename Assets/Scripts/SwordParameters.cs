@@ -21,24 +21,24 @@ public class SwordParameters : SwordKnockback
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (Mathf.Abs(Swordspeed) > neededSpeed)
+        if (Mathf.Abs(Swordspeed) > neededSpeed && coll.tag != "Decoration")
         {
             if (coll.tag == "Enemy" || coll.tag == "Boss" || coll.tag == "SpecialEnemy")
             {
-                if(coll.GetComponent<EnemyBasicLifeSystem>()!=null)
-                coll.SendMessage("TakeDamage", damage*(Player.GetComponent<playerMovement>().attack*Player.GetComponent<playerMovement>().attackMultiplier));
+                if (coll.GetComponent<EnemyBasicLifeSystem>() != null)
+                    coll.SendMessage("TakeDamage", damage * (Player.GetComponent<playerMovement>().attack * Player.GetComponent<playerMovement>().attackMultiplier));
             }
-            if (coll.tag!="UnstoppableProyectile")
+            if (coll.tag != "UnstoppableProyectile" )
             {
                 if (coll.gameObject.GetComponent<Rigidbody2D>() != null)
                 {
-                    if(coll.tag == "Boss")
+                    if (coll.tag == "Boss")
                     {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack/5), ForceMode2D.Impulse);
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack / 5), ForceMode2D.Impulse);
                     }
                     else
                     {
-                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack*0.75f), ForceMode2D.Impulse);
+                        coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * forceHit * (Player.GetComponent<playerMovement>().attack * 0.75f), ForceMode2D.Impulse);
                     }
                 }
             }

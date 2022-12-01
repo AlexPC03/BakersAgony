@@ -15,6 +15,7 @@ TagManager:
   - Duck
   - Mask
   - Helper
+  - Decoration
   layers:
   - Default
   - TransparentFX
