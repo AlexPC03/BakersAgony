@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1389787697522966842}
   - component: {fileID: 1389787697522966843}
   - component: {fileID: 4596655224641843639}
+  - component: {fileID: -1530888211341723840}
   m_Layer: 0
   m_Name: Stone2
   m_TagString: Decoration
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1199005882749806968, guid: c9601842837931942af14c56a3190e09, type: 3}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,3 +137,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0.1
+--- !u!114 &-1530888211341723840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389787697522966840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

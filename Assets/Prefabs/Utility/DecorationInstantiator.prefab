@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7464919693143331624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7464919693143331626}
+  - component: {fileID: 7464919693143331627}
+  m_Layer: 0
+  m_Name: DecorationInstantiator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7464919693143331626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464919693143331624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7464919693143331627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464919693143331624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d6da06a8db3c346ab26a804ebbe863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntryObj:
+  - {fileID: 1169740559296781894, guid: 330572b7a7c502541aa916d8aaa156a7, type: 3}
+  - {fileID: 1389787697522966840, guid: fee80b4560914184abf3e0552110bcf7, type: 3}
+  - {fileID: 3270467663491668185, guid: e52d04ec77b64fc499763a930d95575b, type: 3}
+  - {fileID: 3270467663491668185, guid: e52d04ec77b64fc499763a930d95575b, type: 3}
+  - {fileID: 1169740559296781894, guid: 330572b7a7c502541aa916d8aaa156a7, type: 3}
+  - {fileID: 5371335582365337937, guid: 3b23bd390db29fe4298ee9ac8737faf9, type: 3}
+  - {fileID: 6490180945718211733, guid: f5c857970585bde45b8cc081f61d33f2, type: 3}
+  - {fileID: 319875725948454150, guid: 4b879121a3c0bb844b477a205c64d9ae, type: 3}
+  - {fileID: 1353953532402275569, guid: 80b39a3fec5b1f346a9ce945fe76e760, type: 3}
+  SugarObj:
+  - {fileID: 1169740559296781894, guid: 330572b7a7c502541aa916d8aaa156a7, type: 3}
+  - {fileID: 1389787697522966840, guid: fee80b4560914184abf3e0552110bcf7, type: 3}
+  - {fileID: 1361533497582007096, guid: 73b849220ff7a03499cb7a880175a650, type: 3}
+  - {fileID: 1453204151433277358, guid: 8e4090c3d808e20428cb68a87d884dba, type: 3}
+  - {fileID: 2162113898540401437, guid: 9043f038807fab446a99c0d2ff083cd3, type: 3}
+  - {fileID: 1373897761593221184, guid: 6c8dfbc2c264441428a24f07c241056d, type: 3}
+  - {fileID: 8484139913351083616, guid: ad45f7743f1e4e04ba1da55cd1d06327, type: 3}
+  - {fileID: 3698106839123482805, guid: 19005d0e7b03d46418ccb01d74d32b0e, type: 3}
+  - {fileID: 3698106839123482805, guid: 19005d0e7b03d46418ccb01d74d32b0e, type: 3}
+  OvenObj:
+  - {fileID: 419343941520347067, guid: e19fadf797b51e241b65dc0719ead11b, type: 3}
+  - {fileID: 2268567930682842845, guid: 1d1a2eeedca084c4f87a9f84e30aad82, type: 3}
+  - {fileID: 4915920782964000877, guid: 709bcd8a90c36bb49a294dda1e23657e, type: 3}
+  - {fileID: 1774443932448821645, guid: 02456ca9647d17f47b91b71909f71e1d, type: 3}
+  - {fileID: 1425495453516642726, guid: 9ead5ff77f1e7944ba00b31034f0f446, type: 3}
+  - {fileID: 1425495453516642726, guid: 9ead5ff77f1e7944ba00b31034f0f446, type: 3}
+  - {fileID: 1425495453516642726, guid: 9ead5ff77f1e7944ba00b31034f0f446, type: 3}
+  - {fileID: 6375097283141418844, guid: ba8be6980bec2c44399b58af57e66f45, type: 3}
+  - {fileID: 7117822693179358791, guid: ab57e6f5545bafa4e875b345bfc7edcd, type: 3}

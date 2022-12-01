@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2796110954099958648}
   - component: {fileID: 8932589107348582592}
   - component: {fileID: 2684275998685586910}
+  - component: {fileID: 2448589218189938861}
   m_Layer: 0
   m_Name: Recipient2
   m_TagString: Decoration
@@ -157,3 +158,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0.1
+--- !u!114 &2448589218189938861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6490180945718211733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

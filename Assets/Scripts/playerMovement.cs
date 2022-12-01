@@ -340,8 +340,7 @@ public class playerMovement : MonoBehaviour
         {
             aud.clip = takeDamage;
         }
-
-        MaskInteractions();
+            MaskInteractions();
     }
 
     public void TakeDamage()

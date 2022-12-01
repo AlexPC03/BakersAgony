@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2268567930682842846}
   - component: {fileID: 3744900998030257746}
   - component: {fileID: 5906893928431432973}
+  - component: {fileID: 857862557056163226}
   m_Layer: 0
   m_Name: Brick2
   m_TagString: Decoration
@@ -136,3 +137,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.058921125}
   m_Size: {x: 0.25, y: 0.053717613}
   m_Direction: 1
+--- !u!114 &857862557056163226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268567930682842845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

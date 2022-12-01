@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2833223962463974935}
   - component: {fileID: 446543864798444534}
   - component: {fileID: 6852903806963452110}
+  - component: {fileID: -7662962543921216523}
   m_Layer: 0
   m_Name: SmallDoughSplat
   m_TagString: Decoration
@@ -97,3 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0.5
+--- !u!114 &-7662962543921216523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327431328138742748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

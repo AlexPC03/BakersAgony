@@ -33,7 +33,7 @@ public class ExplosionController : MonoBehaviour
         {
             collision.SendMessage("TakeDamage");
         }
-        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag =="SpecialEnemy") && friendlyFire)
+        if ((collision.tag == "Enemy" || collision.tag == "Boss" || collision.tag =="SpecialEnemy") && collision.GetComponent<EnemyBasicLifeSystem>()!=null && friendlyFire)
         {
             collision.SendMessage("TakeDamage", 20+10*playerController.sala/2);
         }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5732617943198191448}
   - component: {fileID: 1348124177598913760}
   - component: {fileID: 5477476040675543550}
+  - component: {fileID: -7945130854974034235}
   m_Layer: 0
   m_Name: Muffin
   m_TagString: Decoration
@@ -156,3 +157,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difference: 0.1
+--- !u!114 &-7945130854974034235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698106839123482805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af22cd5fee588d24292cbc6a002ad7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
