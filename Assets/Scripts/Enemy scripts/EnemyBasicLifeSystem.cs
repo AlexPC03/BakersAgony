@@ -55,40 +55,9 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         StartVida();
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (vida<=0)
-        {
-            if (gameObject.tag != "SpecialEnemy")
-            {
-                if (GetComponent<Rigidbody2D>() != null)
-                {
-                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    GetComponent<Rigidbody2D>().angularVelocity = 0f;
-                }
-                if (GetComponent<Collider2D>() != null)
-                {
-                    GetComponent<Collider2D>().enabled = false;
-                }
-            }
-            if(GetComponent<ParticleSystem>()!=null)
-            {
-                GetComponent<ParticleSystem>().Play();
-            }
-            if(ghost && sp!=null)
-            {
-                ghostTime += Time.deltaTime;
-                sp.color = Color.Lerp(originalColor, Color.clear, ghostTime / deathTime);
-                if(sp.color==Color.clear)
-                {
-                Destroy(gameObject);
-                }
-            }
-            else 
-            { 
-                Destroy(gameObject, deathTime);
-            }
-        }
+
         timeToDamage += Time.deltaTime;
     }
 
@@ -112,6 +81,39 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         {
             aud.pitch = Random.Range(pitch*0.75f, pitch * 1.25f);
             aud.Play();
+        }
+        if (vida <= 0)
+        {
+            if (gameObject.tag != "SpecialEnemy")
+            {
+                if (GetComponent<Rigidbody2D>() != null)
+                {
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                    GetComponent<Rigidbody2D>().bodyType =RigidbodyType2D.Static;
+                }
+                if (GetComponent<Collider2D>() != null)
+                {
+                    GetComponent<Collider2D>().enabled = false;
+                }
+            }
+            if (GetComponent<ParticleSystem>() != null)
+            {
+                GetComponent<ParticleSystem>().Play();
+            }
+            if (ghost && sp != null)
+            {
+                ghostTime += Time.deltaTime;
+                sp.color = Color.Lerp(originalColor, Color.clear, ghostTime / deathTime);
+                if (sp.color == Color.clear)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                Destroy(gameObject, deathTime);
+            }
         }
     }
     private void ChangeBack()

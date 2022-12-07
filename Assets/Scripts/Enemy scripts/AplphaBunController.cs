@@ -48,7 +48,7 @@ public class AplphaBunController : BossController
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckOrientation();
         timeto += Time.deltaTime;

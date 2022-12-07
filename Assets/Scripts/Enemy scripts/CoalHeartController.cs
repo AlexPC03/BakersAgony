@@ -12,7 +12,7 @@ public class CoalHeartController : EnemyBasicLifeSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if ( vida <= 0 )
         {

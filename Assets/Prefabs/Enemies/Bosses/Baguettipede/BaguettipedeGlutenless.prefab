@@ -129,9 +129,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 50
   deathTime: 1.9
-  vida: 60
+  vida: 50
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -1077,9 +1077,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: -150
   deathTime: 2
-  vida: 60
+  vida: -150
   newScale: 5.5
   audShake: {fileID: 1837155939116040345}
   part: {fileID: 1837155939116040348}
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   side: 0
   parent: {fileID: 0}
   son: {fileID: 1837155938435367209}
-  chargingSpeed: 1.25
-  plusMaxSpeed: 1.5
+  chargingSpeed: 1.15
+  plusMaxSpeed: 1.15
   aimingTime: 0.2
   aiming: 1
   attacking: 0
@@ -11668,9 +11668,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 50
   deathTime: 1.2
-  vida: 60
+  vida: 50
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -16760,9 +16760,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: -150
   deathTime: 2
-  vida: 60
+  vida: -150
   newScale: 5.5
   audShake: {fileID: 9049652818272682999}
   part: {fileID: 3904430128223087063}
@@ -16771,8 +16771,8 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 1055192317826576678}
   chargingSpeed: 1.25
-  plusMaxSpeed: 1.5
-  aimingTime: 0.3
+  plusMaxSpeed: 1.1
+  aimingTime: 0.4
   aiming: 1
   attacking: 0
   spawn: []
@@ -21990,9 +21990,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 50
   deathTime: 1.7
-  vida: 60
+  vida: 50
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -22305,9 +22305,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 50
   deathTime: 1.8
-  vida: 60
+  vida: 50
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}

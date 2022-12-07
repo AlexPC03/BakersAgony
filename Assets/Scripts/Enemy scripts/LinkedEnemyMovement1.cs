@@ -46,7 +46,7 @@ public class LinkedEnemyMovement1 : EnemyBasicLifeSystem
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         anim.SetBool("head", headTransform == null);
         anim.SetFloat("Yvelocity", rb.velocity.y);

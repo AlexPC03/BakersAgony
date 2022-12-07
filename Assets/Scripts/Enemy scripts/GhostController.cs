@@ -36,7 +36,7 @@ public class GhostController : EnemyBasicLifeSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(time<=1)
         {

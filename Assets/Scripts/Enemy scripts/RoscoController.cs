@@ -6,7 +6,7 @@ public class RoscoController : BossController
 {
     private float hitTime = 0;
     private bool stopped=false;
-    private float time=0;
+    private float time=10;
     private GameObject player;
     private Rigidbody2D rb;
     private Animator anim;
@@ -26,7 +26,7 @@ public class RoscoController : BossController
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         hitTime += Time.deltaTime;
         time += Time.deltaTime;

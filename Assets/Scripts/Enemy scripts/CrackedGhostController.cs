@@ -9,7 +9,7 @@ public class CrackedGhostController : BossController
     private GameObject player;
     private Animator anim;
     private float timeToStart = 0;
-    private float timeToAction = 0;
+    private float timeToAction = 5;
     private float actualTimeForNextAction;
     private float changeTime = 0;
     private bool teleporting;
@@ -52,7 +52,7 @@ public class CrackedGhostController : BossController
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckOrientation();
         actualDistance = (player.transform.position - transform.position).magnitude*speed;

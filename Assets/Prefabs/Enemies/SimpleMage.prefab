@@ -291,7 +291,7 @@ MonoBehaviour:
   ghost: 0
   dontScaleLife: 0
   maxVida: 20
-  deathTime: 0.5
+  deathTime: 0.75
   vida: 0
   shootPosition: {x: 0, y: 0.25, z: 0}
   proyectile: {fileID: 6364243207959169023, guid: b55cabfde69b93848a56e3e8c01bace6, type: 3}
@@ -317,16 +317,16 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4573661829655379718}
   serializedVersion: 8
-  lengthInSec: 0.5
+  lengthInSec: 0.75
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -445,7 +445,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 2.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1143,7 +1143,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2

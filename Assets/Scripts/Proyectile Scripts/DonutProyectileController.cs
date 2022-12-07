@@ -20,7 +20,7 @@ public class DonutProyectileController : ProyectileBasicSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.velocity = rb.velocity.normalized * velocity;
     }

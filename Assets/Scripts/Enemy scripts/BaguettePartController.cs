@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaguettePartController : BossController
 {
+    private bool med = true;
     public AudioSource audShake;
     private Camera camara;
     public ParticleSystem part;
@@ -24,6 +25,8 @@ public class BaguettePartController : BossController
     void Start()
     {
         StartBoss();
+        maxVida += 300;
+        vida += 300;
         camara = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
         if(transform.parent!=null && transform.parent.gameObject.GetComponent<BaguettePartController>()!=null)
@@ -45,10 +48,11 @@ public class BaguettePartController : BossController
         {
             side = -1;
         }
+        chargingSpeed *= 3;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (vida > 0)
         {
@@ -67,6 +71,12 @@ public class BaguettePartController : BossController
             {
                 parent.GetComponent<BaguettePartController>().vida = 0;
             }
+        }
+        EqualLife();
+        if(vida<=maxVida/2 && med)
+        {
+            chargingSpeed = chargingSpeed * plusMaxSpeed;
+            med = false;
         }
 
     }
@@ -117,7 +127,7 @@ public class BaguettePartController : BossController
     {
         if (parent == null && vida > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position,new Vector3((player.transform.position.x + distanceToStop+41) * -side,transform.position.y, (transform.position.y-0.75f) / 10),(chargingSpeed * (maxVida/(vida+plusMaxSpeed*10)))/ 20);
+            transform.position = Vector3.MoveTowards(transform.position,new Vector3((player.transform.position.x + distanceToStop+41) * -side,transform.position.y, (transform.position.y-0.75f) / 10),chargingSpeed/ 20);
             if(Mathf.Abs(player.transform.position.x-transform.position.x) >= distanceToStop+30)
             {
                 aiming = true;

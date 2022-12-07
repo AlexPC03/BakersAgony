@@ -47,7 +47,7 @@ public class GratLoafController : BossController
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckOrientation();
         actualDistance = (player.transform.position - transform.position).magnitude;

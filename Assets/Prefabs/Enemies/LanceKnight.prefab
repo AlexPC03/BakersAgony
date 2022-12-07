@@ -146,9 +146,9 @@ MonoBehaviour:
   explosion: {fileID: 4179478694267399928, guid: b869b9b937069d740a050773d08fbb95, type: 3}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 45
+  maxVida: 50
   deathTime: 1
-  vida: 0
+  vida: 50
   range: 10
   speed: 1
   chargeSpeed: 9
@@ -412,7 +412,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2

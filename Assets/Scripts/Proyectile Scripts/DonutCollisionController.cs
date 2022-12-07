@@ -21,7 +21,7 @@ public class DonutCollisionController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         time += Time.deltaTime;
     }

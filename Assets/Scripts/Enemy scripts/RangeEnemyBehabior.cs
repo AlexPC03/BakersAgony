@@ -43,7 +43,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckOrientation();
 

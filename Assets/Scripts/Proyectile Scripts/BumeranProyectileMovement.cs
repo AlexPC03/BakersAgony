@@ -23,7 +23,7 @@ public class BumeranProyectileMovement : ProyectileBasicSystem
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(0, 0, rotateVelocity * Time.deltaTime);
         if((targetPos - transform.position).magnitude< catchDistance/2)

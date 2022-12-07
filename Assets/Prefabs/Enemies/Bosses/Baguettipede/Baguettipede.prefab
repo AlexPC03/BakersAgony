@@ -184,6 +184,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -812,6 +814,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -1129,6 +1132,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 2543629081347106678}
   chargingSpeed: 1
+  plusMaxSpeed: 1.15
   aimingTime: 0.25
   aiming: 1
   attacking: 0
@@ -6314,6 +6318,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -6628,6 +6633,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -6942,6 +6948,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -7256,6 +7263,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0
@@ -7571,6 +7579,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   son: {fileID: 0}
   chargingSpeed: 0
+  plusMaxSpeed: 1
   aimingTime: 0
   aiming: 1
   attacking: 0

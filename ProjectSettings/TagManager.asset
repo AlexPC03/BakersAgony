@@ -16,6 +16,7 @@ TagManager:
   - Mask
   - Helper
   - Decoration
+  - Oven
   layers:
   - Default
   - TransparentFX

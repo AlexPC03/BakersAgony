@@ -29,7 +29,7 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(inverted)
         {

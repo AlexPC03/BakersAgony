@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doughHand: {fileID: 7296373578720584712, guid: 301dccfe9ed7d2448b7cb9750e69a95b, type: 3}
   spawnArea: {x: 0.6, y: 0.4}
+  Toxic: 0
+  friendlyDamage: 20
 --- !u!60 &3003085171704452151
 PolygonCollider2D:
   m_ObjectHideFlags: 0
