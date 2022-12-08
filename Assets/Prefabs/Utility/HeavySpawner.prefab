@@ -105,9 +105,9 @@ MonoBehaviour:
   - {fileID: 2298039718481450365, guid: da4fe11e30daf0b46a04944da94fcae1, type: 3}
   - {fileID: 2298039718481450365, guid: da4fe11e30daf0b46a04944da94fcae1, type: 3}
   enemyListSugar:
-  - {fileID: 4508545839313199887, guid: c3a97faf2b980c94cb972c42c8400932, type: 3}
+  - {fileID: 644198804345232970, guid: a4610fbc21ab7a243830c6b39be5dc2c, type: 3}
   - {fileID: 2410669349511314004, guid: 3061667d41fcaf948bc486231ebe2080, type: 3}
-  - {fileID: 2410669349511314004, guid: 3061667d41fcaf948bc486231ebe2080, type: 3}
+  - {fileID: 644198804345232970, guid: a4610fbc21ab7a243830c6b39be5dc2c, type: 3}
   - {fileID: 2298039718481450365, guid: da4fe11e30daf0b46a04944da94fcae1, type: 3}
   enemyListOven:
   - {fileID: 4508545839313199887, guid: c3a97faf2b980c94cb972c42c8400932, type: 3}

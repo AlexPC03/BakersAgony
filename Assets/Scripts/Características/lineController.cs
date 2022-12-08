@@ -17,7 +17,11 @@ public class lineController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(line!=null)
+        if (conectedObj==null)
+        {
+            Destroy(line);
+        }
+        if (line!=null && conectedObj != null)
         {
             line.SetPosition(0, conectedObj.transform.position);
             line.SetPosition(1, conectedObj2.transform.position);
