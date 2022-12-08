@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] bossList;
     public GameObject[] enemyListEntry;
     public GameObject[] enemyListSugar;
+    public GameObject[] enemyListFungi;
     public GameObject[] enemyListOven;
     public GameObject enemyToSpawn;
     public bool byDistance;
@@ -41,6 +42,10 @@ public class EnemySpawner : MonoBehaviour
         else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
         {
             enemyToSpawn = enemyListSugar[Random.Range(0, enemyListSugar.Length)];
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+        {
+            enemyToSpawn = enemyListFungi[Random.Range(0, enemyListFungi.Length)];
         }
         else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
         {

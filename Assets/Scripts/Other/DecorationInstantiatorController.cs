@@ -9,6 +9,7 @@ public class DecorationInstantiatorController : MonoBehaviour
     private int n;
     public GameObject[] EntryObj;
     public GameObject[] SugarObj;
+    public GameObject[] FungiObj;
     public GameObject[] OvenObj;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,10 @@ public class DecorationInstantiatorController : MonoBehaviour
                 obj = EntryObj[Random.Range(0, EntryObj.Length)];
             }
             else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+            {
+                obj = SugarObj[Random.Range(0, SugarObj.Length)];
+            }
+            else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
             {
                 obj = SugarObj[Random.Range(0, SugarObj.Length)];
             }

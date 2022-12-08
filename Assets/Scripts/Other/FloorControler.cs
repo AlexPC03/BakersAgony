@@ -7,6 +7,7 @@ public class FloorControler : MonoBehaviour
     private GameObject player;
     public Sprite defaultFloor;
     public Sprite sugarFloor;
+    public Sprite fungiFloor;
     public Sprite burnedFloor;
     public GameObject sprite;
 
@@ -14,7 +15,10 @@ public class FloorControler : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
+        if (Random.Range(0, 2) == 0)
+        {
+            sprite.GetComponent<SpriteRenderer>().flipX = true;
+        }
         if (player.GetComponent<playerMovement>().zona == playerMovement.zone.entrada)
         {
             sprite.GetComponent<SpriteRenderer>().sprite = defaultFloor;
@@ -22,6 +26,10 @@ public class FloorControler : MonoBehaviour
         else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
         {
             sprite.GetComponent<SpriteRenderer>().sprite = sugarFloor;
+        }
+        else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+        {
+            sprite.GetComponent<SpriteRenderer>().sprite = fungiFloor;
         }
         else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
         {

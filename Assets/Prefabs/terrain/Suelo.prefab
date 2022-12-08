@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultFloor: {fileID: 21300000, guid: 4ab2177ea46e29049a1e525feecb5769, type: 3}
   sugarFloor: {fileID: 21300000, guid: d4c96a76d4c51774f8d3f264795c96ec, type: 3}
+  fungiFloor: {fileID: 21300000, guid: 402f78244a90b2e488dfdb099832b430, type: 3}
   burnedFloor: {fileID: 21300000, guid: 4f54dac7e38d82246b8bd0f13a8897bd, type: 3}
   sprite: {fileID: 8429892588421938195}
 --- !u!1 &8429892588421938195

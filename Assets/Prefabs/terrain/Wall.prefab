@@ -360,6 +360,9 @@ MonoBehaviour:
   sugarWallList:
   - {fileID: 21300000, guid: de2edc5a565c1c94d8cd080ae446e5d2, type: 3}
   - {fileID: 21300000, guid: 15ae82465c294e647b9244f4f0f3df56, type: 3}
+  fungiWallList:
+  - {fileID: 21300000, guid: 17b2c2e894f3eca4da443f9580cedbaf, type: 3}
+  - {fileID: 21300000, guid: 603fa4a6ed15ee949ac8e0de791b065d, type: 3}
   burnedWallList:
   - {fileID: 21300000, guid: e4c2d7f067a3ff1428db9a1fbddd359d, type: 3}
   - {fileID: 21300000, guid: e4c2d7f067a3ff1428db9a1fbddd359d, type: 3}

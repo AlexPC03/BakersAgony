@@ -106,6 +106,9 @@ MonoBehaviour:
   enemyListSugar:
   - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
   - {fileID: 7954502834524449609, guid: 99d60c2f6c640f645bc927f9c1bd8bf6, type: 3}
+  enemyListFungi:
+  - {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
+  - {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
   enemyListOven:
   - {fileID: 6716837637997246265, guid: 3a4ff36f6983ebf4899cc1d0fe457a12, type: 3}
   - {fileID: 7954502834524449609, guid: 99d60c2f6c640f645bc927f9c1bd8bf6, type: 3}

@@ -42,6 +42,7 @@ public class playerMovement : MonoBehaviour
     {
         entrada,
         pastelería,
+        hongos,
         horneadores
     }
     public bool endless=false;
