@@ -149,6 +149,11 @@ public class BaguettePartController : BossController
             {
                 parent.GetComponent<BaguettePartController>().vida = vida;
             }
+            if(vida<=0)
+            {
+                parent.GetComponent<BaguettePartController>().vida = 0;
+                parent.SendMessage("TakeDamage", 1);
+            }
         }
         if(son!=null)
         {

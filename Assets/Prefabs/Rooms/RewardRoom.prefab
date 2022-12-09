@@ -7462,6 +7462,10 @@ PrefabInstance:
       propertyPath: objectToInstantiate
       value: 
       objectReference: {fileID: 2251926357373969551, guid: 99990e8f714ae454191056fe5ba79fc7, type: 3}
+    - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
+      propertyPath: objectVariantToInstantiate
+      value: 
+      objectReference: {fileID: 8533964365121614975, guid: 8d310ba1947a0e946af418242eb800e5, type: 3}
     - target: {fileID: 6745918658843891185, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7528,6 +7532,10 @@ PrefabInstance:
       propertyPath: objectToInstantiate
       value: 
       objectReference: {fileID: 2251926357373969551, guid: 99990e8f714ae454191056fe5ba79fc7, type: 3}
+    - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
+      propertyPath: objectVariantToInstantiate
+      value: 
+      objectReference: {fileID: 8533964365121614975, guid: 8d310ba1947a0e946af418242eb800e5, type: 3}
     - target: {fileID: 6745918658843891185, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: m_RootOrder
       value: 5

@@ -242,7 +242,7 @@ public class PedestalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && transform.GetChild(0).tag!="SpecialEnemy")
         {
             inRange = true;
             if (transform.GetChild(0) != null && transform.GetChild(0).GetComponent<SpriteRenderer>().enabled==true)

@@ -20,7 +20,10 @@ public class ProyectileBasicSystem : MonoBehaviour
     protected void ProyectileStart()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        if(GetComponent<AudioSource>()!=null)
+        {
+            GetComponent<AudioSource>().pitch = GetComponent<AudioSource>().pitch * Random.Range(0.75f, 1.25f);
+        }
     }
 
 
