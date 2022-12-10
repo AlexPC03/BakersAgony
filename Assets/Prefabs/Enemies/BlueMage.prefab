@@ -177,6 +177,8 @@ MonoBehaviour:
   wait: 0
   recoil: 0
   recoilForce: 0
+  changeOnAttack: 0
+  changeOnShoot: 0
   actualDistance: 0
   canShoot: 0
   shootTimer: 0

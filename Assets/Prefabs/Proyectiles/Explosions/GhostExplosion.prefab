@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1332363219654847885}
   - component: {fileID: 1332363219654847876}
   - component: {fileID: 7996095547886534820}
+  - component: {fileID: -7990589797695753197}
   m_Layer: 0
   m_Name: GhostExplosion
   m_TagString: Untagged
@@ -137,7 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837979ffbec6a404e8c4d1054156e944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shake: 0
+  spore: 0
   friendlyFire: 0
+  speed: 1
 --- !u!199 &1332363219654847874
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5086,3 +5090,16 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &-7990589797695753197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332363219654847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difference: -10

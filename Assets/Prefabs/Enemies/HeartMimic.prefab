@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 788582209994823681}
   - component: {fileID: 465382589081233315}
   - component: {fileID: 5256700400198071917}
-  - component: {fileID: 2989838250515544948}
   - component: {fileID: 909536343214610486}
   m_Layer: 7
   m_Name: HeartMimic
@@ -4981,21 +4980,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2989838250515544948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533964365121614975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1483942f7ecccd443b77602b015c2ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList:
-  - {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
-  OnlyOne: 0
 --- !u!82 &909536343214610486
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BreadMageProyectileMovement : ProyectileBasicSystem
 {
+
     public Vector3 targetPos;
     public bool seeker;
     public bool rotate;
@@ -31,6 +32,8 @@ public class BreadMageProyectileMovement : ProyectileBasicSystem
     // Update is called once per frame
     void FixedUpdate()
     {
+
+
         if(rotate &&!lookAt)
         {
             transform.Rotate(0, 0, rotateVelocity * Time.deltaTime);

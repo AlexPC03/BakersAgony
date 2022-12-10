@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8731192103799843239}
   - component: {fileID: 8731192103799843246}
   - component: {fileID: 405670545730946190}
+  - component: {fileID: 1979867050142128058}
   m_Layer: 0
   m_Name: SporeExplosion
   m_TagString: Untagged
@@ -4927,7 +4928,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7e44bc290cec25b41b935c85eb57189e, type: 2}
   m_audioClip: {fileID: 8300000, guid: ab9ce69a03613aa49b4a5be0d9ce3e2f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.25
   m_Pitch: 0.25
   Loop: 0
   Mute: 0
@@ -5089,3 +5090,16 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1979867050142128058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731192103799843238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difference: -10

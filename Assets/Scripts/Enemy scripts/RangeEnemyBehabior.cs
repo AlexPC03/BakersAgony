@@ -11,6 +11,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
 
     [Header("Atributes")]
     public Vector3 shootPosition;
+    private Vector3 actualshootPosition;
     public GameObject proyectile;
     public int shootCuantity=1;
     public float spread=0;
@@ -22,6 +23,10 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     public bool wait;
     public bool recoil;
     public float recoilForce;
+    public bool changeOnAttack = false;
+    private float actualVida;
+    public bool changeOnShoot = false;
+    private bool melee = false;
 
     [Header("Information")]
     public float actualDistance;
@@ -40,6 +45,15 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         anim = GetComponent<Animator>();
         canShoot = true;
         firstShoot = false;
+        if(changeOnAttack)
+        {
+            actualVida = vida;
+            if(Random.Range(0,2)==0)
+            {
+                melee = true;
+            }
+        }
+        actualshootPosition = shootPosition;
     }
 
     // Update is called once per frame
@@ -63,19 +77,26 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
 
         if(actualDistance<range)
         {
-            if(actualDistance < maxShootRange && actualDistance > minShootRange && canShoot)
+            if(!melee)
             {
-                canShoot = false;
-                rb.velocity = Vector2.zero;
-                anim.SetTrigger("Shoot");
+                if(actualDistance < maxShootRange && actualDistance > minShootRange && canShoot)
+                {
+                    canShoot = false;
+                    rb.velocity = Vector2.zero;
+                    anim.SetTrigger("Shoot");
+                }
+                else if (actualDistance > maxShootRange)
+                {
+                    rb.AddForce((player.transform.position + new Vector3(0, -0.3f, 0) - transform.position).normalized * speed, ForceMode2D.Force);
+                }
+                else if(actualDistance < minShootRange)
+                {
+                    rb.AddForce((player.transform.position + new Vector3(0, -0.3f, 0) - transform.position).normalized * -speed, ForceMode2D.Force);
+                }
             }
-            else if (actualDistance > maxShootRange)
+            else
             {
-                rb.AddForce((player.transform.position - transform.position).normalized * speed, ForceMode2D.Force);
-            }
-            else if(actualDistance < minShootRange)
-            {
-                rb.AddForce((player.transform.position - transform.position).normalized * -speed, ForceMode2D.Force);
+                rb.AddForce((player.transform.position + new Vector3(0, -0.3f, 0) - transform.position).normalized * speed, ForceMode2D.Force);
             }
         }
         else
@@ -88,7 +109,11 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
             shootTimer += Time.deltaTime;
         }
 
-
+        if(changeOnAttack && vida != actualVida)
+        {
+            melee = !melee;
+            actualVida = vida;
+        }
         anim.SetFloat("Yvelocity", rb.velocity.y);
         anim.SetBool("Stopped", rb.velocity == Vector2.zero);
     }
@@ -99,7 +124,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         shootTimer = 0;
         for(int i=0;i<shootCuantity; i++)
         {
-            proy = Instantiate(proyectile, transform.position + shootPosition, new Quaternion(0, 0, 0, 0));
+            proy = Instantiate(proyectile, transform.position + actualshootPosition, new Quaternion(0, 0, 0, 0));
             if (proy.GetComponent<BreadMageProyectileMovement>()!=null)
             {
                 proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position+new Vector3(Random.Range(-spread/10, spread/10), Random.Range(-spread / 10, spread / 10),0);
@@ -109,10 +134,20 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
                 proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spread / 10, spread / 10), Random.Range(-spread / 10, spread / 10), 0);
             }
         }
-
         if(recoil)
         {
             rb.AddForce((transform.position - player.transform.position).normalized*recoilForce,ForceMode2D.Impulse);
+        }
+        if(changeOnShoot)
+        {
+            melee = true;
+        }
+        if(GetComponent<ParticleSystem>()!=null)
+        {
+            if (!GetComponent<ParticleSystem>().main.loop)
+            {
+                GetComponent<ParticleSystem>().Play();
+            }
         }
     }
 
@@ -121,10 +156,13 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         if (rb.velocity.x < -0.01)
         {
             sp.flipX = false;
+            actualshootPosition = shootPosition;
+
         }
         else if (rb.velocity.x > 0.01)
         {
             sp.flipX = true;
+            actualshootPosition = new Vector3(-shootPosition.x, shootPosition.y, shootPosition.z);
         }
     }
 }

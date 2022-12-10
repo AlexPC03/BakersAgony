@@ -117,10 +117,14 @@ MonoBehaviour:
   deathTime: 0.5
   vida: 0
   inverted: 1
+  exploded: 0
   range: 30
   speed: 0.75
   nearSpeed: 1
+  randomSpeed: 0
   drift: 1
+  explode: 0
+  explodeDistance: 0
   actualDistance: 0
 --- !u!50 &9086545270604875513
 Rigidbody2D:

@@ -29,6 +29,10 @@ public class HeartMimicController : EnemyBasicLifeSystem
             anim.SetTrigger("WakeUp");
         }
         space = new Vector3(rotationRange, 0, 0);
+        if (maxVida <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class HeartMimicController : EnemyBasicLifeSystem
         {
             rb.AddForce((player.transform.position + new Vector3(0, -0.3f, 0) + space - transform.position).normalized * speed, ForceMode2D.Force);
         }
+
     }
 
     public void StartOrbiting()

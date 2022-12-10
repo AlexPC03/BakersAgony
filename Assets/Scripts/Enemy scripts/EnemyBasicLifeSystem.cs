@@ -41,6 +41,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         else
         {
             sp = GetComponent<SpriteRenderer>();
+            if(sp==null)
+            {
+                sp = GetComponentInChildren<SpriteRenderer>();
+            }
         }
         aud = GetComponent<AudioSource>();
         if(sp!=null)
@@ -63,7 +67,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
-        if(timeToDamage>invulneravility && gameObject.layer!=6)
+        if(timeToDamage>invulneravility)
         {
             vida -= damage;
             if(sp != null && !ghost)

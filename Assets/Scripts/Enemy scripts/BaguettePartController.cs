@@ -11,6 +11,7 @@ public class BaguettePartController : BossController
     public float distanceToStop=30;
     public int side;
     private GameObject player;
+    private bool damaged=false;
     public GameObject parent;
     public GameObject son;
     public float chargingSpeed;
@@ -149,10 +150,11 @@ public class BaguettePartController : BossController
             {
                 parent.GetComponent<BaguettePartController>().vida = vida;
             }
-            if(vida<=0)
+            if(vida<=0 && !damaged)
             {
                 parent.GetComponent<BaguettePartController>().vida = 0;
                 parent.SendMessage("TakeDamage", 1);
+                damaged = true;
             }
         }
         if(son!=null)

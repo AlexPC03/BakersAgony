@@ -83,6 +83,7 @@ public class EnemyMovementSimple : EnemyBasicLifeSystem
                 t += Time.deltaTime * 2;
                 vida = 0;
                 transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(1.25f, 1.25f, 1),t);
+                transform.position = Vector3.MoveTowards(transform.position,player.transform.position + new Vector3(0, -0.3f, 0), t/30 * nearSpeed);
                 if (!exploded)
                 {
                     TakeDamage(1);

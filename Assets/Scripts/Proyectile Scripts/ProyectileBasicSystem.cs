@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ProyectileBasicSystem : MonoBehaviour
 {
+    private float t = 0;
     public GameObject target;
     protected Rigidbody2D rb;
 
@@ -26,10 +27,17 @@ public class ProyectileBasicSystem : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (t <= 0.5f)
+        {
+            t += Time.deltaTime;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer==6 && !collision.isTrigger && !ghost && !donut)
+        if(collision.gameObject.layer==6 && t>0.5f && !collision.isTrigger && !ghost && !donut)
         {
             Dissapear();
         }
@@ -50,7 +58,11 @@ public class ProyectileBasicSystem : MonoBehaviour
 
     protected void Dissapear()
     {
-        GetComponent<Collider2D>().enabled = false;
+        if(GetComponent<Collider2D>()!=null)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
+
         Destroy(gameObject, destroyTime);
     }
 }

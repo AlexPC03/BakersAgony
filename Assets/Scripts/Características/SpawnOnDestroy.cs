@@ -24,12 +24,29 @@ public class SpawnOnDestroy : MonoBehaviour
         {
             foreach (var spawn in spawnList)
             {
-                Instantiate(spawn,transform.position,new Quaternion(0,0,0,0));
+                GameObject obj= Instantiate(spawn,transform.position,new Quaternion(0,0,0,0));
+                if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                {
+                    obj.GetComponent<BreadMageProyectileMovement>().targetPos = transform.position + new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+                }
+                else if (obj.GetComponent<BumeranProyectileMovement>() != null)
+                {
+                    obj.GetComponent<BumeranProyectileMovement>().targetPos = transform.position + new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+                }
+                if(Random.Range(0,2)==0)
+                {
+                    obj.transform.localScale = new Vector3(-1, 0, 0);
+                }
             }
         }
         else
         {
-            Instantiate(spawnList[Random.Range(0, spawnList.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+            GameObject obj=Instantiate(spawnList[Random.Range(0, spawnList.Length)], transform.position, new Quaternion(0, 0, 0, 0));
+
+            if (Random.Range(0, 2) == 0)
+            {
+                obj.transform.localScale = new Vector3(-1, 0, 0);
+            }
         }
     }
 }
