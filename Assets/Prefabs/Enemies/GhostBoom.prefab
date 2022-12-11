@@ -118,6 +118,7 @@ MonoBehaviour:
   pitch: 2
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 1
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
@@ -125,7 +126,7 @@ MonoBehaviour:
   dontScaleLife: 1
   maxVida: 0
   deathTime: 1.25
-  vida: 1
+  vida: 0
 --- !u!114 &8867797406623492156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList:
   - {fileID: 1332363219654847884, guid: edfce432ed7ce3c43835ec9a0022a8d7, type: 3}
-  OnlyOne: 0
+  - {fileID: 1332363219654847884, guid: edfce432ed7ce3c43835ec9a0022a8d7, type: 3}
+  OnlyOne: 1
 --- !u!95 &8867797406623492159
 Animator:
   serializedVersion: 3

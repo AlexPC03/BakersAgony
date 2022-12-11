@@ -1142,9 +1142,17 @@ PrefabInstance:
       value: Instantiator
       objectReference: {fileID: 0}
     - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
+      propertyPath: variantProb
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: objectToInstantiate
       value: 
       objectReference: {fileID: 2190689111993584701, guid: 40b4596b7dca218478488a7fb3168346, type: 3}
+    - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
+      propertyPath: objectVariantToInstantiate
+      value: 
+      objectReference: {fileID: 5329731808672994517, guid: 3d7426041d3d44942a75deef6017c02b, type: 3}
     - target: {fileID: 6745918658843891185, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: m_RootOrder
       value: 3

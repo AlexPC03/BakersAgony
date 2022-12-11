@@ -101,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
+    oldSize: {x: 4.266667, y: 4.266667}
     newSize: {x: 23.53341, y: 5.246727}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
@@ -211,7 +211,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
+    oldSize: {x: 4.266667, y: 4.266667}
     newSize: {x: 23.53341, y: 5.246727}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
@@ -456,14 +456,19 @@ MonoBehaviour:
   rewardRoom: {fileID: 995548440640868721, guid: eb4256330c53db346bdb40314941e810, type: 3}
   shopRoom: {fileID: 4310603433669806901, guid: 47161bf5f21a95941a567d95f9094a58, type: 3}
   boss: 0
+  bossReward: 0
   bossRoom1: {fileID: 4760169799609712976, guid: 8c8a7c69b35c1114191304224c79cde7, type: 3}
   bossRoom1_2: {fileID: 7196031205830649013, guid: fe617fcca76f523489d712848cc43b4e, type: 3}
   bossRoom2: {fileID: 6639240519460265814, guid: 287c7c4453b2a5a469defbb975e233af, type: 3}
   bossRoom2_2: {fileID: 7780336051729034441, guid: 88dfe8df13703904d893ef8821d47711, type: 3}
+  bossRoom2B: {fileID: 1540676011129344827, guid: cbc0bc6209f7c3d42ace3f265a685732, type: 3}
   bossRoom3: {fileID: 1975433226714856131, guid: f654fb3abfc46cb4eb1e66ecaa0154ec, type: 3}
   bossRewardRoom: {fileID: 7136571336800638640, guid: e35bcecee36e5434fb470ee0d3aedeb4, type: 3}
+  bossRewardBig: {fileID: 5009639159932308728, guid: a92c10e2133542d409b9d925bfca08bf, type: 3}
+  bossRewardCross: {fileID: 390127440593310482, guid: 41c9e43c6f861ef42b4db555d552ce01, type: 3}
   finalRewardRoom: {fileID: 3537489852159313140, guid: 54e2174c8cf8eab499ac1812efe5b27d, type: 3}
   nextRoom: {fileID: 0}
+  specialzone: 0
   initiated: 0
   enemies: 0
 --- !u!114 &6227633578817591521

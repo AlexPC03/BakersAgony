@@ -115,7 +115,16 @@ public class SporaController : BossController
 
     public void SlamSpawn()
     {
-        for(int i =0;i<slamSpawnNumber;i++)
+        float n;
+        if(vida<=maxVida/2)
+        {
+            n = slamSpawnNumber * 2;
+        }
+        else
+        {
+            n = slamSpawnNumber;
+        }
+        for(int i =0;i<n;i++)
         {
             GameObject obj;
             obj = Instantiate(slamSpawn, player.transform.position + new Vector3(Random.Range(-slamSpawnRange, slamSpawnRange), Random.Range(-slamSpawnRange, slamSpawnRange), 0), new Quaternion(0, 0, 0, 0));
@@ -133,7 +142,16 @@ public class SporaController : BossController
 
     public void SmileSpawn()
     {
-        for (int i = 0; i < smileSpawnNumber; i++)
+        float n;
+        if (vida <= maxVida / 2)
+        {
+            n = smileSpawnNumber * 1.5f;
+        }
+        else
+        {
+            n = smileSpawnNumber;
+        }
+        for (int i = 0; i < n; i++)
         {
             Vector3 pos = new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange), 0);
             GameObject obj = Instantiate(smileSpawn, transform.position + pos, new Quaternion(0, 0, 0, 0));
@@ -150,16 +168,25 @@ public class SporaController : BossController
 
     private void Shoot(GameObject proyectile)
     {
+        float n;
+        if (vida <= maxVida / 2)
+        {
+            n = SpitRecoilSpeed * 1.5f;
+        }
+        else
+        {
+            n = SpitRecoilSpeed;
+        }
         GameObject proy = Instantiate(proyectile, transform.position, new Quaternion(0, 0, 0, 0));
         if (proy.GetComponent<BreadMageProyectileMovement>() != null)
         {
             proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spitSpread / 10, spitSpread / 10), Random.Range(-spitSpread / 10, spitSpread / 10), 0);
-            rb.AddForce((transform.position - player.transform.position).normalized * SpitRecoilSpeed, ForceMode2D.Force);
+            rb.AddForce((transform.position - player.transform.position).normalized * n, ForceMode2D.Force);
         }
         else if (proy.GetComponent<BumeranProyectileMovement>() != null)
         {
             proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spitSpread / 10, spitSpread / 10), Random.Range(-spitSpread / 10, spitSpread / 10), 0);
-            rb.AddForce((transform.position - player.transform.position).normalized * SpitRecoilSpeed, ForceMode2D.Force);
+            rb.AddForce((transform.position - player.transform.position).normalized * n, ForceMode2D.Force);
         }
     }
 

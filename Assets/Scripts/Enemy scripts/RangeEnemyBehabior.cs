@@ -8,6 +8,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
     private GameObject player;
     private Animator anim;
     private GameObject proy;
+    public bool useParticles = true;
 
     [Header("Atributes")]
     public Vector3 shootPosition;
@@ -142,7 +143,7 @@ public class RangeEnemyBehabior : EnemyBasicLifeSystem
         {
             melee = true;
         }
-        if(GetComponent<ParticleSystem>()!=null)
+        if(GetComponent<ParticleSystem>()!=null && useParticles)
         {
             if (!GetComponent<ParticleSystem>().main.loop)
             {

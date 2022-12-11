@@ -48,6 +48,9 @@ MonoBehaviour:
   - {fileID: 4478758716353591283, guid: ad38bebe6b3293b488383ef952cfb35c, type: 3}
   - {fileID: 4478256381288512048, guid: 370e1c36e3feece4584a18d18e67cb82, type: 3}
   - {fileID: 7903225975174352448, guid: a05fd7e46e938a04db8c321e263f25db, type: 3}
+  - {fileID: 7903225975174352448, guid: a05fd7e46e938a04db8c321e263f25db, type: 3}
+  - {fileID: 7903225975174352448, guid: a05fd7e46e938a04db8c321e263f25db, type: 3}
+  - {fileID: 3513350148426047316, guid: d6c5e6a4689e1bb4b8bb7f5b3971e644, type: 3}
   - {fileID: 3513350148426047316, guid: d6c5e6a4689e1bb4b8bb7f5b3971e644, type: 3}
   derivate: 1
   mediaObj: 12

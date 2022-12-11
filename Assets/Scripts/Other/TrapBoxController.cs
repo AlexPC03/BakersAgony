@@ -9,17 +9,12 @@ public class TrapBoxController : MonoBehaviour
     public bool allDirections;
     public Vector3[] directions;
     public float timeBetweenShoots;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timePassed+=Time.deltaTime;
-        if(timePassed>timeBetweenShoots)
+        if(timePassed>timeBetweenShoots )
         {
             if(allDirections)
             {

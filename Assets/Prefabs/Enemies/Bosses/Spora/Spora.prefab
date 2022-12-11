@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitch: 1.5
-  corn: {fileID: 0}
-  corncub: {fileID: 0}
-  cornWeight: 0
+  corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
+  corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  cornWeight: 0.99
   head: {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 4179478694267399928, guid: b869b9b937069d740a050773d08fbb95, type: 3}
   ghost: 0
   dontScaleLife: 0
   maxVida: 650
@@ -131,7 +131,7 @@ MonoBehaviour:
   newScale: 6
   face: {fileID: 4100961093077665629}
   idleTime: 3
-  slamProb: 1
+  slamProb: 1.5
   slamSpawn: {fileID: 6609624947749301374, guid: e51c39122cc5b66468b92f03e4704729, type: 3}
   slamSpawnNumber: 15
   slamSpawnRange: 15
@@ -140,7 +140,7 @@ MonoBehaviour:
   smileSpawn: {fileID: 9030880466856896417, guid: ad17fb5425a65384e9f7e7b138005fe3, type: 3}
   smileSpawnNumber: 7
   smileSpawnRange: 1
-  spitProb: 1
+  spitProb: 0.5
   spitRate: 0.25
   spitSpawn: {fileID: 9030880466856896417, guid: ad17fb5425a65384e9f7e7b138005fe3, type: 3}
   spitSpread: 2

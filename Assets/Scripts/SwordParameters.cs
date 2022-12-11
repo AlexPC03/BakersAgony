@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordParameters : SwordKnockback
 {
+    public float pitch = 1;
     private AudioSource aud;
     public AudioClip[] clip;
     // Start is called before the first frame update
@@ -49,7 +50,7 @@ public class SwordParameters : SwordKnockback
     {
         if(aud!=null)
         {
-            aud.pitch = Random.Range(0.9f, 1.1f);
+            aud.pitch = pitch+Random.Range(-0.1f, 0.1f);
             aud.clip = clip[Random.Range(0, clip.Length)];
             aud.Play();
         }

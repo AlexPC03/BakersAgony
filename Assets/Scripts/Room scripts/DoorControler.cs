@@ -17,11 +17,19 @@ public class DoorControler : MonoBehaviour
     public GameObject bossRoom1_2;
     public GameObject bossRoom2;
     public GameObject bossRoom2_2;
+    public GameObject bossRoom2B;
     public GameObject bossRoom3;
     public GameObject bossRewardRoom;
+    public GameObject bossRewardBig;
+    public GameObject bossRewardCross;
     public GameObject finalRewardRoom;
-
     public GameObject nextRoom;
+    public next specialzone;
+    public enum next
+    {
+        pasteleria,
+        hongos
+    }
     public bool initiated;
     public bool enemies;
     // Start is called before the first frame update
@@ -76,9 +84,38 @@ public class DoorControler : MonoBehaviour
                 {
                     if(player.GetComponent<playerMovement>().zona==playerMovement.zone.entrada)
                     {
-                        player.GetComponent<playerMovement>().zona = playerMovement.zone.pastelería;
+                        if (specialzone == next.pasteleria)
+                        {
+                            player.GetComponent<playerMovement>().zona = playerMovement.zone.pastelería;
+                        }
+                        else if (specialzone == next.hongos)
+                        {
+                            player.GetComponent<playerMovement>().zona = playerMovement.zone.hongos;
+                        }
                     }
-                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería || player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+                    {
+                        player.GetComponent<playerMovement>().zona = playerMovement.zone.horneadores;
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
+                    {
+                        player.GetComponent<playerMovement>().zona = playerMovement.zone.entrada;
+                    }
+                }
+                else
+                {
+                    if (player.GetComponent<playerMovement>().zona == playerMovement.zone.entrada)
+                    {
+                        if (Random.Range(0,2)==0)
+                        {
+                            player.GetComponent<playerMovement>().zona = playerMovement.zone.pastelería;
+                        }
+                        else
+                        {
+                            player.GetComponent<playerMovement>().zona = playerMovement.zone.hongos;
+                        }
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería || player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
                     {
                         player.GetComponent<playerMovement>().zona = playerMovement.zone.horneadores;
                     }
@@ -95,7 +132,36 @@ public class DoorControler : MonoBehaviour
             }
             else if (boss)
             {
-                Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                if(!player.GetComponent<playerMovement>().endless)
+                {
+                    if (player.GetComponent<playerMovement>().zona == playerMovement.zone.entrada)
+                    {
+                        Instantiate(bossRewardCross, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.pastelería)
+                    {
+                        Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+                    {
+                        Instantiate(bossRewardBig, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                    else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
+                    {
+                        Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                }
+                else
+                {
+                    if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+                    {
+                        Instantiate(bossRewardBig, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                    else
+                    {
+                        Instantiate(bossRewardRoom, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                }
             }
             else if(player.GetComponent<playerMovement>().sala % salaBoss3==0 )
             {
@@ -103,14 +169,29 @@ public class DoorControler : MonoBehaviour
             }
             else if (player.GetComponent<playerMovement>().sala % salaBoss2 == 0)
             {
-                switch (Random.Range(0,2))
+                if(player.GetComponent<playerMovement>().zona==playerMovement.zone.pastelería)
                 {
-                    case 0:
-                        Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
-                        break;
-                    case 1:
-                        Instantiate(bossRoom2_2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
-                        break;
+                    switch (Random.Range(0,2))
+                    {
+                        case 0:
+                            Instantiate(bossRoom2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                            break;
+                        case 1:
+                            Instantiate(bossRoom2_2, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                            break;
+                    }
+                }
+                else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
+                {
+                    switch (Random.Range(0, 2))
+                    {
+                        case 0:
+                            Instantiate(bossRoom2B, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                            break;
+                        case 1:
+                            Instantiate(bossRoom2B, transform.position + new Vector3(0, 21, 0), new Quaternion(0, 0, 0, 0));
+                            break;
+                    }
                 }
             }
             else if(player.GetComponent<playerMovement>().sala % salaBoss1 == 0)

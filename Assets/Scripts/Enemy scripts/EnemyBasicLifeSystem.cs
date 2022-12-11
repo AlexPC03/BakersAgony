@@ -14,11 +14,13 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     protected SpriteRenderer sp;
     public GameObject corn;
     public GameObject corncub;
+    public bool destroyOnSpawn;
     [Range(0, 1)]
     public float cornWeight;
     public GameObject head;
     public GameObject explosion;
     public bool ghost=false;
+    private bool dissapearing=false;
     [Header("LifeParameters")]
     public bool dontScaleLife;
     public float maxVida;
@@ -51,6 +53,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         {
             originalColor = sp.color;
         }
+        if(destroyOnSpawn)
+        {
+            TakeDamage(1);
+        }
         
     }
 
@@ -63,6 +69,16 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     {
 
         timeToDamage += Time.deltaTime;
+
+        if (dissapearing)
+        {
+            ghostTime += Time.deltaTime;
+            sp.color = Color.Lerp(originalColor, Color.clear, ghostTime / deathTime);
+            if (sp.color == Color.clear)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public virtual void TakeDamage(float damage)
@@ -105,14 +121,9 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             {
                 GetComponent<ParticleSystem>().Play();
             }
-            if (ghost && sp != null)
+            if (ghost)
             {
-                ghostTime += Time.deltaTime;
-                sp.color = Color.Lerp(originalColor, Color.clear, ghostTime / deathTime);
-                if (sp.color == Color.clear)
-                {
-                    Destroy(gameObject);
-                }
+                dissapearing=true;
             }
             else
             {
