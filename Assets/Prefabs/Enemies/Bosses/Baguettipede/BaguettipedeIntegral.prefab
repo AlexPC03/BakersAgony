@@ -168,14 +168,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.1
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -486,14 +487,15 @@ MonoBehaviour:
   pitch: 0.8
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 0
   cornWeight: 0.95
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 2
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 2920475337123759695}
   part: {fileID: 2920475337123759690}
@@ -501,7 +503,7 @@ MonoBehaviour:
   side: 0
   parent: {fileID: 0}
   son: {fileID: 2920475338859300863}
-  chargingSpeed: 0.5
+  chargingSpeed: 0.75
   plusMaxSpeed: 1.25
   aimingTime: 0.4
   aiming: 1
@@ -510,7 +512,7 @@ MonoBehaviour:
   - {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
   - {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
   - {fileID: 9086545270604875517, guid: 18a96d0ada29f224e81ef19ef1654136, type: 3}
-  spawnProbability: 0.33
+  spawnProbability: 1
 --- !u!50 &2920475337123759688
 Rigidbody2D:
   serializedVersion: 4
@@ -5674,14 +5676,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.7
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -5989,14 +5992,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.8
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -6304,14 +6308,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.5
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -6619,14 +6624,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.6
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -6934,14 +6940,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.3
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -7250,14 +7257,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 0.5
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -12339,14 +12347,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.4
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -12654,14 +12663,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.9
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -12969,14 +12979,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 0.6
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -13284,14 +13295,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 0.7
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -13599,14 +13611,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1.2
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -13914,14 +13927,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 0.8
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -14229,14 +14243,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 0.9
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -14544,14 +14559,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 130
+  maxVida: 225
   deathTime: 1
-  vida: 130
+  vida: 225
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}

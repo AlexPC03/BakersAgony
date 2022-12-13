@@ -124,14 +124,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 50
+  maxVida: 90
   deathTime: 1.9
-  vida: 50
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -439,14 +440,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 90
   deathTime: 1.9
-  vida: 60
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -754,14 +756,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 90
   deathTime: 1.8
-  vida: 60
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -1072,14 +1075,15 @@ MonoBehaviour:
   pitch: 0.8
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 0
   cornWeight: 0.95
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: -150
+  maxVida: 90
   deathTime: 2
-  vida: -150
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 1837155939116040345}
   part: {fileID: 1837155939116040348}
@@ -1093,7 +1097,7 @@ MonoBehaviour:
   aiming: 1
   attacking: 0
   spawn: []
-  spawnProbability: 0.2
+  spawnProbability: 0
 --- !u!50 &1837155939116040350
 Rigidbody2D:
   serializedVersion: 4
@@ -6257,14 +6261,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 90
   deathTime: 1.7
-  vida: 60
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -6573,14 +6578,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 60
+  maxVida: 90
   deathTime: 1.2
-  vida: 60
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -11663,14 +11669,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 50
+  maxVida: 90
   deathTime: 1.2
-  vida: 50
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -16755,14 +16762,15 @@ MonoBehaviour:
   pitch: 0.8
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 0
   cornWeight: 0.95
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: -150
+  maxVida: 90
   deathTime: 2
-  vida: -150
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 9049652818272682999}
   part: {fileID: 3904430128223087063}
@@ -16776,7 +16784,7 @@ MonoBehaviour:
   aiming: 1
   attacking: 0
   spawn: []
-  spawnProbability: 0.2
+  spawnProbability: 0
 --- !u!50 &57577949648611548
 Rigidbody2D:
   serializedVersion: 4
@@ -21985,14 +21993,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 50
+  maxVida: 90
   deathTime: 1.7
-  vida: 50
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}
@@ -22300,14 +22309,15 @@ MonoBehaviour:
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 0}
   ghost: 0
   dontScaleLife: 0
-  maxVida: 50
+  maxVida: 90
   deathTime: 1.8
-  vida: 50
+  vida: 90
   newScale: 5.5
   audShake: {fileID: 0}
   part: {fileID: 0}

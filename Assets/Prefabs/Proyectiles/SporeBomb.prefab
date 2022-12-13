@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 147662919222266963}
   - component: {fileID: 4611662605833439968}
   - component: {fileID: -4199514611518527712}
+  - component: {fileID: 5539554195392074024}
   m_Layer: 0
   m_Name: SporeBomb
   m_TagString: Untagged
@@ -219,6 +220,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5539554195392074024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6609624947749301374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difference: -1
 --- !u!1001 &5765219132869701740
 PrefabInstance:
   m_ObjectHideFlags: 0

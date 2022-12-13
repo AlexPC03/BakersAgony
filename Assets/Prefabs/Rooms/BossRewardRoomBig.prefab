@@ -721,7 +721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: variantProb
-      value: 75
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6361436762238426903, guid: 8361e7bf886c8fd438f7e09e00c31d96, type: 3}
       propertyPath: objectToInstantiate

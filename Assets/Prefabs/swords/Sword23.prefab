@@ -940,7 +940,7 @@ MonoBehaviour:
   Swordspeed: 0
   neededSpeed: 0
   damage: 5
-  forceHit: 2.5
+  forceHit: 1
   rotationForce: 10
   deceleration: 7.5
   pitch: 0.75

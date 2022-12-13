@@ -235,7 +235,7 @@ MonoBehaviour:
   destroyOnHit: 1
   ghost: 0
   donut: 0
-  velocity: 3.5
+  velocity: 4
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 0
   rotate: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difference: -0.75
+  difference: -1
 --- !u!198 &1885952526002640872
 ParticleSystem:
   m_ObjectHideFlags: 0

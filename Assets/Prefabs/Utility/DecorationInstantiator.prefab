@@ -63,6 +63,11 @@ MonoBehaviour:
   - {fileID: 8484139913351083616, guid: ad45f7743f1e4e04ba1da55cd1d06327, type: 3}
   - {fileID: 3698106839123482805, guid: 19005d0e7b03d46418ccb01d74d32b0e, type: 3}
   - {fileID: 3698106839123482805, guid: 19005d0e7b03d46418ccb01d74d32b0e, type: 3}
+  FungiObj:
+  - {fileID: 5371335582365337937, guid: 3b23bd390db29fe4298ee9ac8737faf9, type: 3}
+  - {fileID: 1318428062683107453, guid: 8a7e70ce55f5f33498aaece2ed584ed6, type: 3}
+  - {fileID: 3270467663491668185, guid: e52d04ec77b64fc499763a930d95575b, type: 3}
+  - {fileID: 1169740559296781894, guid: 330572b7a7c502541aa916d8aaa156a7, type: 3}
   OvenObj:
   - {fileID: 419343941520347067, guid: e19fadf797b51e241b65dc0719ead11b, type: 3}
   - {fileID: 2268567930682842845, guid: 1d1a2eeedca084c4f87a9f84e30aad82, type: 3}

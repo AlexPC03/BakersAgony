@@ -15,7 +15,6 @@ public class SporaController : BossController
     public float idleTime=0;
 
 
-    private float trueSlamProb;
     [Header("Slam")]
     public float slamProb;
     public GameObject slamSpawn;
@@ -24,7 +23,6 @@ public class SporaController : BossController
     public float slamSpread = 0.5f;
 
 
-    private float trueSmileProb;
     [Header("Smile")]
     public float smileProb;
     public GameObject smileSpawn;
@@ -38,6 +36,7 @@ public class SporaController : BossController
     public GameObject spitSpawn;
     public float spitSpread = 0.5f;
     public float SpitRecoilSpeed;
+    public float wallBounceReduction = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +44,6 @@ public class SporaController : BossController
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
-        trueSlamProb = slamProb / (slamProb + smileProb + spitProb);
-        trueSmileProb = smileProb / (slamProb + smileProb + spitProb);
     }
 
     // Update is called once per frame
@@ -65,17 +62,17 @@ public class SporaController : BossController
         {
             if (timeIdle>=idleTime)
             {
-                float i = Random.Range(0f, 1f);
-                if(i< trueSlamProb)
+                float i = Random.Range(0f, slamProb + smileProb + spitProb);
+                if(i< slamProb)
                 {
                     Slam();
-                    trueSlamProb -= 0.25f;
+                    slamProb -= 0.25f;
                 }
-                else if (i >= trueSlamProb && i <= trueSlamProb+trueSmileProb)
+                else if (i >= slamProb && i <= slamProb+smileProb)
                 {
                     Smile();
                 }
-                else if(i > trueSlamProb+trueSmileProb)
+                else if(i > slamProb+smileProb)
                 {
                     Spit();
                 }
@@ -128,7 +125,11 @@ public class SporaController : BossController
         {
             GameObject obj;
             obj = Instantiate(slamSpawn, player.transform.position + new Vector3(Random.Range(-slamSpawnRange, slamSpawnRange), Random.Range(-slamSpawnRange, slamSpawnRange), 0), new Quaternion(0, 0, 0, 0));
-
+            if (obj.GetComponent<EnemyBasicLifeSystem>() != null)
+            {
+                obj.tag = "SpecialEnemy";
+                obj.GetComponent<EnemyBasicLifeSystem>().dontScaleLife = true;
+            }
             if (obj.GetComponent<BreadMageProyectileMovement>() != null)
             {
                 obj.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-slamSpread / 10, slamSpread / 10), Random.Range(-slamSpread / 10, slamSpread / 10), 0);
@@ -153,16 +154,33 @@ public class SporaController : BossController
         }
         for (int i = 0; i < n; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange), 0);
-            GameObject obj = Instantiate(smileSpawn, transform.position + pos, new Quaternion(0, 0, 0, 0));
-            if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+            if(Random.Range(0,3)<=1)
             {
-                obj.GetComponent<BreadMageProyectileMovement>().targetPos = pos+transform.position+ new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange));
+                Vector3 pos = new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange), 0);
+                GameObject obj = Instantiate(smileSpawn, transform.position + pos, new Quaternion(0, 0, 0, 0));
+                if(obj.GetComponent<EnemyBasicLifeSystem>() != null)
+                {
+                    obj.tag = "SpecialEnemy";
+                    obj.GetComponent<EnemyBasicLifeSystem>().dontScaleLife = true;
+                }
+                if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                {
+                    obj.GetComponent<BreadMageProyectileMovement>().targetPos = pos+transform.position+ new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange));
+                    if (obj.GetComponent<zPosition>() != null)
+                    {
+                        obj.GetComponent<zPosition>().difference = -3.1f;
+                    }
+                }
+                else if (obj.GetComponent<BumeranProyectileMovement>() != null)
+                {
+                    obj.GetComponent<BumeranProyectileMovement>().targetPos = (pos + transform.position+new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange))) * Random.Range(smileSpawnRange, smileSpawnRange*10);
+                    if (obj.GetComponent<zPosition>() != null)
+                    {
+                        obj.GetComponent<zPosition>().difference = -3.1f;
+                    }
+                }
             }
-            else if (obj.GetComponent<BumeranProyectileMovement>() != null)
-            {
-                obj.GetComponent<BumeranProyectileMovement>().targetPos = (pos + transform.position+new Vector3(Random.Range(-smileSpawnRange, smileSpawnRange), Random.Range(-smileSpawnRange, smileSpawnRange))) * Random.Range(smileSpawnRange, smileSpawnRange*10);
-            }
+
         }
     }
 
@@ -182,11 +200,19 @@ public class SporaController : BossController
         {
             proy.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spitSpread / 10, spitSpread / 10), Random.Range(-spitSpread / 10, spitSpread / 10), 0);
             rb.AddForce((transform.position - player.transform.position).normalized * n, ForceMode2D.Force);
+            if (proy.GetComponent<zPosition>() != null)
+            {
+                proy.GetComponent<zPosition>().difference = -3.1f;
+            }
         }
         else if (proy.GetComponent<BumeranProyectileMovement>() != null)
         {
             proy.GetComponent<BumeranProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-spitSpread / 10, spitSpread / 10), Random.Range(-spitSpread / 10, spitSpread / 10), 0);
             rb.AddForce((transform.position - player.transform.position).normalized * n, ForceMode2D.Force);
+            if (proy.GetComponent<zPosition>() != null)
+            {
+                proy.GetComponent<zPosition>().difference = -3.1f;
+            }
         }
     }
 
@@ -199,7 +225,7 @@ public class SporaController : BossController
     {
         if (collision.collider.isTrigger == false && (collision.gameObject.layer == 6 || collision.gameObject.tag == "Boss"))
         {
-            rb.AddForce((player.transform.position - transform.position).normalized * SpitRecoilSpeed / 10, ForceMode2D.Impulse);
+            rb.AddForce((player.transform.position - transform.position).normalized * SpitRecoilSpeed / wallBounceReduction, ForceMode2D.Impulse);
         }
     }
 

@@ -29,7 +29,7 @@ public class DecorationInstantiatorController : MonoBehaviour
             }
             else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.hongos)
             {
-                obj = SugarObj[Random.Range(0, SugarObj.Length)];
+                obj = FungiObj[Random.Range(0, FungiObj.Length)];
             }
             else if (player.GetComponent<playerMovement>().zona == playerMovement.zone.horneadores)
             {

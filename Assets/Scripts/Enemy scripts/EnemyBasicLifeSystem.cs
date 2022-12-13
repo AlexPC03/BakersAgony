@@ -148,7 +148,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if(GetComponent<SpawnOnDestroy>()==null && playerController.demonMask && explosion!=null && Random.Range(0,2)==1)
+        if(GetComponent<SpawnOnDestroy>()==null && playerController!=null&&playerController.demonMask && explosion!=null && Random.Range(0,2)==1)
         {
             Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
         }

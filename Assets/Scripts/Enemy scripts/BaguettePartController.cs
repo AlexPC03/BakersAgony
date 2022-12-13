@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaguettePartController : BossController
 {
     private bool med = true;
+    private bool mult = false;
     public AudioSource audShake;
     private Camera camara;
     public ParticleSystem part;
@@ -49,7 +50,12 @@ public class BaguettePartController : BossController
         {
             side = -1;
         }
-        chargingSpeed *= 3;
+        if(!mult)
+        {
+            chargingSpeed *= 3;
+            mult = true;
+        }
+
     }
 
     // Update is called once per frame
