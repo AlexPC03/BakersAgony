@@ -128,10 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Swordspeed: 0
   neededSpeed: 100
-  damage: 7.5
+  damage: 10
   forceHit: 2
-  rotationForce: 100
-  deceleration: 10
+  rotationForce: 500
+  deceleration: 50
   pitch: 0.75
   clip:
   - {fileID: 8300000, guid: 8633e7a82d980504ba2d0c6a42b35b09, type: 3}

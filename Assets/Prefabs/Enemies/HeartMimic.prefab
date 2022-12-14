@@ -142,14 +142,15 @@ MonoBehaviour:
   pitch: 2.5
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 0
   cornWeight: 0.9
   head: {fileID: 2251926357373969551, guid: 99990e8f714ae454191056fe5ba79fc7, type: 3}
   explosion: {fileID: 4179478694267399928, guid: b869b9b937069d740a050773d08fbb95, type: 3}
   ghost: 0
   dontScaleLife: 0
-  maxVida: -10
+  maxVida: 10
   deathTime: 1
-  vida: -10
+  vida: 10
   startAwake: 0
   range: 2.5
   rotationRange: 4

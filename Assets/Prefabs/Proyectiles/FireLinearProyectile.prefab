@@ -126,7 +126,7 @@ MonoBehaviour:
   destroyOnHit: 0
   ghost: 0
   donut: 0
-  velocity: 3
+  velocity: 3.25
   targetPos: {x: 0, y: 0, z: 0}
   seeker: 0
   rotate: 1

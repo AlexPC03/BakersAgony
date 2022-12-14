@@ -113,15 +113,17 @@ public class PrimordialOvenController : BossController
             if(obj.GetComponent<BreadMageProyectileMovement>()!=null)
             {
                 obj.GetComponent<BreadMageProyectileMovement>().targetPos=player.transform.position+ new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                obj.GetComponent<BreadMageProyectileMovement>().target = player;
             }
             if (heartLife.vida<= heartLife.maxVida/2)
             {
                 if(Random.Range(0f,1f)>0.5)
                 {
                     GameObject obj2=Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
-                    if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                    if (obj2.GetComponent<BreadMageProyectileMovement>() != null)
                     {
                         obj2.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                        obj2.GetComponent<BreadMageProyectileMovement>().target = player;
                     }
                 }
             }
@@ -129,10 +131,11 @@ public class PrimordialOvenController : BossController
             {
                 if (Random.Range(0f, 1f) > 0.66)
                 {
-                    GameObject obj2=Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
-                    if (obj.GetComponent<BreadMageProyectileMovement>() != null)
+                    GameObject obj3=Instantiate(EnemyList[Random.Range(0, EnemyList.Length)], new Vector3(door.transform.position.x, door.transform.position.y - 2, -0.5f), new Quaternion(0, 0, 0, 0));
+                    if (obj3.GetComponent<BreadMageProyectileMovement>() != null)
                     {
-                        obj2.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                        obj3.GetComponent<BreadMageProyectileMovement>().targetPos = player.transform.position + new Vector3(Random.Range(-poyectileVariation, poyectileVariation), Random.Range(-poyectileVariation, poyectileVariation), 0);
+                        obj3.GetComponent<BreadMageProyectileMovement>().target = player;
                     }
                 }
             }
