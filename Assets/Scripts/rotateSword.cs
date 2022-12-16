@@ -62,6 +62,6 @@ public class rotateSword : MonoBehaviour
             angle = angle1;
         if (Mathf.Abs(angle) > Mathf.Abs(angle1) && angle > 0)
             angle = angle1 * -1; // from my testing i found out that by writing these ifs rigid body stops doing awkward 360 turnadounds and spins trough closest path to mouse
-        rb.AddTorque(-angle / 180 * (force*10));
+        rb.AddTorque(-angle / 180 * (force*10)*Mathf.Pow(player.GetComponent<playerMovement>().ninjaSpeedMultiplier,2));
     }
 }

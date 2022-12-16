@@ -53,7 +53,7 @@ public class LoafyController : MonoBehaviour
             }
             if(gamepad==null)
             {
-                if(Input.GetMouseButtonDown(0))
+                if(Input.GetKeyDown(KeyCode.E)||Input.GetMouseButtonDown(0))
                 {
                     aud.pitch = Random.Range(1, 1.5f);
                     aud.Play();
@@ -64,7 +64,7 @@ public class LoafyController : MonoBehaviour
             }
             else
             {
-                if(gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame)
+                if(gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame || gamepad.rightTrigger.wasPressedThisFrame)
                 {
                     aud.pitch = Random.Range(1, 1.5f);
                     aud.Play();

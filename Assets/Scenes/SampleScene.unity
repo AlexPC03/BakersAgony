@@ -19337,6 +19337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEV: 0
+  audioMixer: {fileID: 24100000, guid: 7e44bc290cec25b41b935c85eb57189e, type: 2}
   takeDamage: {fileID: 8300000, guid: f9aeb5519dd316e42aaddfd67c600b34, type: 3}
   die: {fileID: 8300000, guid: f16d67a1c7355bc4aafab0a025fa1d45, type: 3}
   par: {fileID: 447308449}
@@ -19347,6 +19348,10 @@ MonoBehaviour:
   lightSpot: {fileID: 768237027}
   lightWorld: {fileID: 1838890674}
   demonMask: 0
+  skeletonMask: 0
+  ninjaMask: 0
+  ninjaSpeedMultiplier: 1
+  slowMotionSound: {fileID: 8300000, guid: f35073c32154fb747a95c7edd222ae57, type: 3}
   spludges:
   - {fileID: 1104357254723178004, guid: f156ecada377bc848a155bcac18c5466, type: 3}
   - {fileID: 8036996626719925251, guid: ec260c813bf050b42a190ce80a5f0bd6, type: 3}

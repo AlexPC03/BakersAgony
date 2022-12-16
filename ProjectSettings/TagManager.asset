@@ -17,6 +17,7 @@ TagManager:
   - Helper
   - Decoration
   - Oven
+  - Sword
   layers:
   - Default
   - TransparentFX

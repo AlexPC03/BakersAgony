@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8197708526866981357}
   m_Layer: 0
   m_Name: SampleSword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,10 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72e85a037577054db108482699060de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySword: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   Swordspeed: 0
   neededSpeed: 100
   damage: 10
   forceHit: 7.5
   rotationForce: 15
   deceleration: 3
+  pitch: 1
+  clip: []

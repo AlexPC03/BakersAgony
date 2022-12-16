@@ -90,6 +90,8 @@ MonoBehaviour:
   - {fileID: 3491196022795910000, guid: 0b540b0a2cb11524abad53be0e77657f, type: 3}
   - {fileID: 5155887027541721706, guid: 0efccb86cb2a8c54193cfadacc48b50a, type: 3}
   - {fileID: 1190886235532906004, guid: 6cf4b06ad0cd18542892bcdb7fb316df, type: 3}
+  - {fileID: 1566115669380392005, guid: 15e08e4286fce89499bbff48ad7ac58f, type: 3}
+  - {fileID: 3575394956401036184, guid: 38df007531276e04aa1ee4d11743dff0, type: 3}
   inRange: 0
 --- !u!198 &5187160624602904271
 ParticleSystem:

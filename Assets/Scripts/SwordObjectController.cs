@@ -21,33 +21,4 @@ public class SwordObjectController : MonoBehaviour
             parameters = sword.GetComponent<SwordParameters>();
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        //if(sword.GetComponent<SwordParameters>() != null)
-        //{
-        //    if (Mathf.Abs(parameters.Swordspeed) > parameters.neededSpeed)
-        //    {
-        //        if (coll.tag == "Enemy" || coll.tag == "Boss" || coll.tag == "SpecialEnemy")
-        //        {
-        //            if (coll.GetComponent<EnemyBasicLifeSystem>() != null)
-        //                coll.SendMessage("TakeDamage", parameters.damage * Player.GetComponent<playerMovement>().attack);
-        //        }
-        //        if (coll.tag != "UnstoppableProyectile" || coll.tag != "Decoration")
-        //        {
-        //            if (coll.gameObject.GetComponent<Rigidbody2D>() != null)
-        //            {
-        //                if (coll.tag == "Boss")
-        //                {
-        //                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * parameters.forceHit * Player.GetComponent<playerMovement>().attack / 3, ForceMode2D.Impulse);
-        //                }
-        //                else
-        //                {
-        //                    coll.gameObject.GetComponent<Rigidbody2D>().AddForce((coll.transform.position - Player.transform.position).normalized * parameters.forceHit * Player.GetComponent<playerMovement>().attack, ForceMode2D.Impulse);
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-    }
 }

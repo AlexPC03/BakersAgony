@@ -59,7 +59,6 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         }
         
     }
-
     void Start()
     {
         StartVida();
@@ -80,7 +79,6 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             }
         }
     }
-
     public virtual void TakeDamage(float damage)
     {
         if(timeToDamage>invulneravility)
@@ -112,9 +110,9 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                     GetComponent<Rigidbody2D>().angularVelocity = 0f;
                     GetComponent<Rigidbody2D>().bodyType =RigidbodyType2D.Static;
                 }
-                if (GetComponent<Collider2D>() != null)
+                foreach(Collider2D col in GetComponents<Collider2D>())
                 {
-                    GetComponent<Collider2D>().enabled = false;
+                    col.enabled = false;
                 }
             }
             if (GetComponent<ParticleSystem>() != null)
@@ -138,10 +136,9 @@ public class EnemyBasicLifeSystem : MonoBehaviour
             sp.color =originalColor;
         } 
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player" && gameObject.layer != 6)
+        if(collision.tag=="Player" && gameObject.layer != 6 && !collision.isTrigger)
         {
             collision.SendMessage("TakeDamage");
         }

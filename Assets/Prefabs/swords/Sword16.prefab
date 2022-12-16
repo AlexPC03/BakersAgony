@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5356597599876698277}
   m_Layer: 0
   m_Name: Sword16
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   forceHit: 5
   rotationForce: 10
   deceleration: 5
+  pitch: 1
   clip:
   - {fileID: 8300000, guid: 8633e7a82d980504ba2d0c6a42b35b09, type: 3}
 --- !u!82 &6737113417820569994

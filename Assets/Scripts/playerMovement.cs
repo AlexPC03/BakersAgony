@@ -5,6 +5,8 @@ using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
+
 
 public class playerMovement : MonoBehaviour
 {
@@ -13,8 +15,10 @@ public class playerMovement : MonoBehaviour
     private GameObject ratTarget;
     private GameObject loafy;
 
-
+    private float slowTimer = 0;
     private GameObject shield;
+
+    public AudioMixer audioMixer;
 
     public AudioClip takeDamage;
     public AudioClip die;
@@ -31,6 +35,10 @@ public class playerMovement : MonoBehaviour
     private bool doctorMask=false;
     private bool mouseMask = false;
     public bool demonMask = false;
+    public bool skeletonMask = false;
+    public bool ninjaMask = false;
+    public float ninjaSpeedMultiplier=1;
+    public AudioClip slowMotionSound;
     public GameObject[] spludges;
     public GameObject[] Hearts;
     public Sprite halfHeart;
@@ -308,6 +316,36 @@ public class playerMovement : MonoBehaviour
                 i++;
             }
         }
+        if (ninjaMask)
+        {
+            if(ninjaSpeedMultiplier == 1)
+            {
+                if (gamepad == null)
+                {
+                    if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+                    {
+                        Time.timeScale = 0.25f;
+                    }
+                }
+                else
+                {
+                    if (gamepad.aButton.wasPressedThisFrame || gamepad.bButton.wasPressedThisFrame || gamepad.crossButton.wasPressedThisFrame || gamepad.rightTrigger.wasPressedThisFrame)
+                    {
+                        Time.timeScale = 0.25f;
+                    }
+                }
+            }
+
+            if (Time.timeScale < 1)
+            {
+                ninjaSpeedMultiplier = Mathf.Lerp(3,1, Time.timeScale);
+            }
+            else
+            {
+                ninjaSpeedMultiplier = 1;
+            }
+        }
+
         CheckStates();
     }
 
@@ -322,7 +360,7 @@ public class playerMovement : MonoBehaviour
                 vertical *= moveLimiter;
             }
         }
-            body.velocity = new Vector2(horizontal * runSpeed * speedMultiplier, vertical * runSpeed * speedMultiplier)+ speedModifierVector;
+            body.velocity = new Vector2(horizontal * runSpeed * speedMultiplier * ninjaSpeedMultiplier, vertical * runSpeed * speedMultiplier*ninjaSpeedMultiplier)+ speedModifierVector;
 
         if (PassedTime >= invulneravilityTime)
         {
@@ -333,21 +371,51 @@ public class playerMovement : MonoBehaviour
             invulnerable = true;
         }
 
-        if (health == 1)
+
+        if (Time.timeScale < 1 && Time.timeScale > 0)
         {
-            aud.clip = die;
+            slowTimer += Time.deltaTime * 8;
+            Time.timeScale += Time.deltaTime / 4;
+            if(Time.timeScale<0.5)
+            {
+                audioMixer.SetFloat("pitch", Time.timeScale*2);
+            }
+            else
+            {
+                audioMixer.SetFloat("pitch", 1);
+            }
+            if (Time.timeScale > 0.3)
+            {
+                lightSpot.GetComponent<Light2D>().pointLightInnerRadius = Mathf.Lerp( 0, 3, Time.timeScale);
+                lightSpot.GetComponent<Light2D>().pointLightOuterRadius = Mathf.Lerp( 0, 5, Time.timeScale);
+            }
+            else
+            {
+                lightSpot.GetComponent<Light2D>().pointLightInnerRadius = Mathf.Lerp(3, 0.9f, slowTimer);
+                lightSpot.GetComponent<Light2D>().pointLightOuterRadius = Mathf.Lerp(5, 1.5f, slowTimer);
+            }
         }
         else
         {
-            aud.clip = takeDamage;
+            slowTimer = 0;
+            audioMixer.SetFloat("pitch", 1);
         }
-            MaskInteractions();
+        MaskInteractions();
     }
 
     public void TakeDamage()
     {
         if(!invulnerable)
         {
+            if (health == 1)
+            {
+                aud.clip = die;
+            }
+            else
+            {
+                aud.clip = takeDamage;
+            }
+            aud.pitch = 1f+Random.Range(-0.1f, 0.1f);
             aud.Play();
             if(mouseMask && health==maxLife)
             {
@@ -485,6 +553,8 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
             }
             if (ID==1)
             {
@@ -500,6 +570,8 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
 
             }
             if (ID==2)
@@ -516,6 +588,7 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = false;
+                ninjaMask = false;
 
             }
             if (ID==3)
@@ -532,6 +605,8 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
 
             }
             if (ID==4)
@@ -548,6 +623,8 @@ public class playerMovement : MonoBehaviour
                 doctorMask = true;
                 mouseMask = false;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
 
             }
             if (ID==5)
@@ -564,6 +641,8 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
 
             }
             if (ID == 6)
@@ -580,13 +659,15 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = true;
                 demonMask = false;
+                skeletonMask = false;
+                ninjaMask = false;
 
             }
             if (ID==7)
             {
-                invulneravilityTime = 4f;
+                invulneravilityTime = 4;
                 attackMultiplier = 1;
-                speedMultiplier = 0.75f;
+                speedMultiplier = 0.85f;
                 maxCorn = 99;
                 loafy.GetComponent<SpriteRenderer>().enabled = false;
                 if (shield.activeSelf == true)
@@ -596,6 +677,44 @@ public class playerMovement : MonoBehaviour
                 doctorMask = false;
                 mouseMask = false;
                 demonMask = true;
+                skeletonMask = false;
+                ninjaMask = false;
+
+            }
+            if (ID == 8)
+            {
+                invulneravilityTime = 2.5f;
+                attackMultiplier = 1;
+                speedMultiplier = 1;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
+                demonMask = false;
+                skeletonMask = true;
+                ninjaMask = false;
+
+            }
+            if (ID == 9)
+            {
+                invulneravilityTime = 5;
+                attackMultiplier = 0.75f;
+                speedMultiplier = 1.1f;
+                maxCorn = 99;
+                loafy.GetComponent<SpriteRenderer>().enabled = false;
+                if (shield.activeSelf == true)
+                {
+                    shield.SetActive(false);
+                }
+                doctorMask = false;
+                mouseMask = false;
+                demonMask = false;
+                skeletonMask = false;
+                ninjaMask = true;
 
             }
         }

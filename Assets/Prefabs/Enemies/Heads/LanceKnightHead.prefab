@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6489636575379299655}
   - component: {fileID: 7246010668764609847}
   - component: {fileID: -4222988708060724648}
+  - component: {fileID: 4646217930518596166}
   m_Layer: 0
   m_Name: LanceKnightHead
   m_TagString: SpecialEnemy
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -149,3 +150,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.175035}
   m_Size: {x: 0.6203531, y: 0.16526295}
   m_Direction: 1
+--- !u!114 &4646217930518596166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734591715635799937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51a9d041d50678419164a31ff8e8caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proyectile: {fileID: 3069411289465273389, guid: c1cf048338ca19f42863bee183039bad, type: 3}
+  proyectileNumber: 1
+  destroyProb: 0.01

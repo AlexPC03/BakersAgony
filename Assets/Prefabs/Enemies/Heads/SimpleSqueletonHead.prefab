@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3948901516228437834}
   - component: {fileID: 598278751259068218}
   - component: {fileID: -8482460071999531193}
+  - component: {fileID: 6931576327016116927}
   m_Layer: 0
   m_Name: SimpleSqueletonHead
   m_TagString: SpecialEnemy
@@ -149,3 +150,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.12769751}
   m_Size: {x: 0.48224616, y: 0.094500825}
   m_Direction: 1
+--- !u!114 &6931576327016116927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417230920282480012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51a9d041d50678419164a31ff8e8caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proyectile: {fileID: 5463967572561347326, guid: b5d4524e0b06e304d83c9e6fd6c4147b, type: 3}
+  proyectileNumber: 1
+  destroyProb: 0.15
