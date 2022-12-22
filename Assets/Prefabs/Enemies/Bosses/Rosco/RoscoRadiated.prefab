@@ -196,6 +196,10 @@ PrefabInstance:
       value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1943480776464050977, guid: 761c7469d356f654287b328d48a7d002, type: 3}
+      propertyPath: codeName
+      value: Rosco3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943480776464050977, guid: 761c7469d356f654287b328d48a7d002, type: 3}
       propertyPath: attackTime
       value: 20
       objectReference: {fileID: 0}

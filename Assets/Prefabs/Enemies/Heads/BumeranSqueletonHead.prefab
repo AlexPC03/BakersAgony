@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7498243213168111998}
   - component: {fileID: 1951396740924524109}
   - component: {fileID: 4781005788987758648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BumeranSqueletonHead
   m_TagString: SpecialEnemy
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff44ed997fe14496c4814f92d6f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difference: -0.7
+  difference: -0.25
 --- !u!114 &7498243213168111998
 MonoBehaviour:
   m_ObjectHideFlags: 0

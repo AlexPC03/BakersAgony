@@ -4978,6 +4978,10 @@ PrefabInstance:
       value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
+      propertyPath: codeName
+      value: AlphaBun1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616631451335678248, guid: cbd9b87b248e1394d9b60a0e01a30d01, type: 3}
       propertyPath: nearRange
       value: 4
       objectReference: {fileID: 0}

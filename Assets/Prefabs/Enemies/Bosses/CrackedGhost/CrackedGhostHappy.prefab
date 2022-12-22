@@ -230,9 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e9253efe0228804bb95b3f4dd7c7e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: CrackedGhost1
   pitch: 1.75
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
+  destroyOnSpawn: 0
   cornWeight: 0.99
   head: {fileID: 0}
   explosion: {fileID: 0}

@@ -345,6 +345,10 @@ public class playerMovement : MonoBehaviour
                 ninjaSpeedMultiplier = 1;
             }
         }
+        else
+        {
+            ninjaSpeedMultiplier = 1;
+        }
 
         CheckStates();
     }

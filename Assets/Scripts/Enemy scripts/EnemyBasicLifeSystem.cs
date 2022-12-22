@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBasicLifeSystem : MonoBehaviour
 {
+    public string codeName;
+    private GameObject progresController;
     private float ghostTime;
     private playerMovement playerController;
     protected Color originalColor;
@@ -30,6 +32,7 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     // Start is called before the first frame update
     public void StartVida()
     {
+        
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
         if(!dontScaleLife)
         {
@@ -56,8 +59,8 @@ public class EnemyBasicLifeSystem : MonoBehaviour
         if(destroyOnSpawn)
         {
             TakeDamage(1);
-        }
-        
+        }        
+        progresController = GameObject.Find("ProgressControl");
     }
     void Start()
     {
@@ -128,6 +131,10 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                 Destroy(gameObject, deathTime);
             }
         }
+        if(transform.Find("DamageModule")!=null)
+        {
+            transform.Find("DamageModule").GetComponent<ParticleSystem>().Play();
+        }
     }
     private void ChangeBack()
     {
@@ -145,7 +152,13 @@ public class EnemyBasicLifeSystem : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if(GetComponent<SpawnOnDestroy>()==null && playerController!=null&&playerController.demonMask && explosion!=null && Random.Range(0,2)==1)
+        //Check if discovered
+        if (!progresController.GetComponent<ProgressConroller>().saveFile.CheckForEnemy(codeName))
+        {
+            progresController.GetComponent<ProgressConroller>().saveFile.AddEnemy(codeName);
+            progresController.GetComponent<ProgressConroller>().Save();
+        }
+        if (GetComponent<SpawnOnDestroy>()==null && playerController!=null&&playerController.demonMask && explosion!=null && Random.Range(0,2)==1)
         {
             Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
         }
@@ -189,5 +202,6 @@ public class EnemyBasicLifeSystem : MonoBehaviour
                 }
             }
         }
+
     }
 }

@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 6283416747614050851}
   - component: {fileID: 6283416747614050854}
   - component: {fileID: -3197267413837266662}
+  - component: {fileID: 3787620246283728918}
   m_Layer: 7
   m_Name: CrunchGhostSeeker
   m_TagString: SpecialEnemy
@@ -293,9 +294,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6cee8bbe9d2f04a956fee09cab750a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: CrunchGhost
   pitch: 3
   corn: {fileID: 0}
   corncub: {fileID: 0}
+  destroyOnSpawn: 0
   cornWeight: 0
   head: {fileID: 0}
   explosion: {fileID: 1332363219654847884, guid: edfce432ed7ce3c43835ec9a0022a8d7, type: 3}
@@ -407,3 +410,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3787620246283728918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283416747614050850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa99efcb2dd7254ca36d459d61d941a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -30,7 +30,14 @@ public class RoscoController : BossController
     {
         hitTime += Time.deltaTime;
         time += Time.deltaTime;
-        rb.velocity = rb.velocity.normalized * speed;
+        if(vida>maxVida/2)
+        {
+            rb.velocity = rb.velocity.normalized * speed;
+        }
+        else
+        {
+            rb.velocity = rb.velocity.normalized * speed*1.5f;
+        }
         if(time>attackTime)
         {
             anim.SetTrigger("Stand");

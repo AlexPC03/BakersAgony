@@ -1,0 +1,13 @@
+{
+    "EnemyList": [
+        ""
+    ],
+    "ZoneList": [
+        ""
+    ],
+    "MaskList": [
+        ""
+    ],
+    "WinedRuns": 0,
+    "SecondHalf": false
+}

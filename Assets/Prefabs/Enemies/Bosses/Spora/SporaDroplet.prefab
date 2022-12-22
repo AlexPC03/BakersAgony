@@ -5211,6 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d73b777c85e2aa46ace50351cd22703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: Spora1
   pitch: 1.5
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}

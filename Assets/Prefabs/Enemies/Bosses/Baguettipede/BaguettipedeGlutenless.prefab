@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -437,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -753,6 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -1072,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: Baguettipede1
   pitch: 0.8
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
@@ -6258,6 +6262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -6575,6 +6580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -11666,6 +11672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -16759,6 +16766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: Baguettipede1
   pitch: 0.8
   corn: {fileID: 4730951628084761251, guid: 4f6d5d8d485c384489b4b195366e0302, type: 3}
   corncub: {fileID: 7465118243670936915, guid: f9b4664305616ea4e9523e3e368a18d0, type: 3}
@@ -21990,6 +21998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}
@@ -22306,6 +22315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67421c8c27b02fd45863ee36d66178bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   pitch: 1
   corn: {fileID: 0}
   corncub: {fileID: 0}

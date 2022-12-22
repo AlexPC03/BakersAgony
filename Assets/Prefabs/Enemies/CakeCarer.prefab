@@ -561,6 +561,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4250684462500088256}
     m_Modifications:
+    - target: {fileID: 2111611507917918169, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3eab7e9b8af43e94bb46df6517195a20, type: 2}
+    - target: {fileID: 4116873179025206021, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6794592645160687888, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -584,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 9068487438309388596, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
       propertyPath: maxVida
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068487438309388596, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
+      propertyPath: codeName
+      value: CakeSkeleton
       objectReference: {fileID: 0}
     - target: {fileID: 9068487438309388596, guid: 1225acd010e0b2f4ebbb30d85be8fe1c, type: 3}
       propertyPath: nearSpeed
